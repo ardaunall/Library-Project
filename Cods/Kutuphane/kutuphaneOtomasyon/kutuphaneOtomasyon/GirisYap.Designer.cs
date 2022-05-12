@@ -88,6 +88,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Giriş Yap";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -204,6 +205,8 @@
             this.Name = "GirisYap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş Sayfası";
+            this.Load += new System.EventHandler(this.GirisYap_Load);
+            this.Shown += new System.EventHandler(this.GirisYap_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
