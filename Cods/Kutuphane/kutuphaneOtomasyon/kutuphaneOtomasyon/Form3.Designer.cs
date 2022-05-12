@@ -55,9 +55,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(304, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(648, 29);
+            this.label1.Size = new System.Drawing.Size(643, 29);
             this.label1.TabIndex = 3;
-            this.label1.Text = "ULUDAĞ ÜNİVERSİTESİ KÜTÜPHANE KAYIT SAYFASI";
+            this.label1.Text = "ULUDAĞ ÜNİVERSİTESİ KÜTÜPHANE GİRİŞ SAYFASI";
             // 
             // groupBox1
             // 
@@ -76,7 +76,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(397, 118);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(401, 336);
+            this.groupBox1.Size = new System.Drawing.Size(401, 329);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "KAYIT SAYFASI";
