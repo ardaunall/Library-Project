@@ -16,5 +16,20 @@ namespace kutuphaneOtomasyon
         {
             InitializeComponent();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.CheckState == CheckState.Checked) 
+            {
+                textBox2.UseSystemPasswordChar = true;
+                checkBox1.Text = "Göster";
+            }
+
+           else if (checkBox1.CheckState == CheckState.Unchecked)
+            {
+                textBox2.UseSystemPasswordChar = false;
+                checkBox1.Text = "Gizle";
+            }
+        }
     }
 }
