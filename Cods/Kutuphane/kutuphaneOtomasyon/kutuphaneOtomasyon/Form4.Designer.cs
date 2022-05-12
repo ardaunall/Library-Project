@@ -148,9 +148,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.Location = new System.Drawing.Point(102, 167);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 29);
+            this.label5.Size = new System.Drawing.Size(93, 29);
             this.label5.TabIndex = 0;
-            this.label5.Text = "e-mail:";
+            this.label5.Text = "E-mail:";
             // 
             // label6
             // 
@@ -158,9 +158,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.Location = new System.Drawing.Point(49, 204);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 29);
+            this.label6.Size = new System.Drawing.Size(147, 29);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Öğrenci no:";
+            this.label6.Text = "Öğrenci No:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label1
