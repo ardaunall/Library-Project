@@ -58,6 +58,12 @@
     <Compile Include="AdminKayit.Designer.cs">
       <DependentUpon>AdminKayit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ogrenciİsleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ogrenciİsleri.Designer.cs">
+      <DependentUpon>Ogrenciİsleri.cs</DependentUpon>
+    </Compile>
     <Compile Include=".cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,43 +71,34 @@
       <DependentUpon>.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Homepage.cs">
+    <Compile Include="KitapEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Homepage.Designer.cs">
-      <DependentUpon>Homepage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form6.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="KitapEkle.Designer.cs">
+      <DependentUpon>KitapEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="studentKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentKayit.Designer.cs">
+      <DependentUpon>studentKayit.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminKayit.resx">
       <DependentUpon>AdminKayit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ogrenciİsleri.resx">
+      <DependentUpon>Ogrenciİsleri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include=".resx">
       <DependentUpon>.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Homepage.resx">
-      <DependentUpon>Homepage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="KitapEkle.resx">
+      <DependentUpon>KitapEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
