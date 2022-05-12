@@ -43,7 +43,7 @@ namespace kutuphaneOtomasyon
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(182, 57);
+            this.label1.Location = new System.Drawing.Point(196, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(555, 31);
             this.label1.TabIndex = 0;
@@ -70,7 +70,7 @@ namespace kutuphaneOtomasyon
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(417, 215);
+            this.button1.Location = new System.Drawing.Point(413, 214);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 49);
             this.button1.TabIndex = 3;
@@ -80,7 +80,7 @@ namespace kutuphaneOtomasyon
             // pictureBox1
             // 
             this.pictureBox1.Image = global::kutuphaneOtomasyon.Properties.Resources.uu_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(81, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(90, 30);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(72, 70);
