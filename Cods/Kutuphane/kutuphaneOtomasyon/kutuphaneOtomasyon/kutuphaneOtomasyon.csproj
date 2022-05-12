@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="GirisYap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GirisYap.Designer.cs">
+      <DependentUpon>GirisYap.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminKayit.cs">
       <SubType>Form</SubType>
@@ -85,8 +85,8 @@
     <Compile Include="studentKayit.Designer.cs">
       <DependentUpon>studentKayit.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="GirisYap.resx">
+      <DependentUpon>GirisYap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminKayit.resx">
       <DependentUpon>AdminKayit.cs</DependentUpon>
