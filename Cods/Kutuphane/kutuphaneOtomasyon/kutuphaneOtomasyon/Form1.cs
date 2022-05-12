@@ -31,5 +31,10 @@ namespace kutuphaneOtomasyon
                 checkBox1.Text = "Gizle";
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
