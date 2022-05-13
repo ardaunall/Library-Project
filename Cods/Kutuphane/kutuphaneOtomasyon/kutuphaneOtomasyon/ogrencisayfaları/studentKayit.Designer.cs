@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -40,8 +42,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +66,23 @@
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "KAYIT SAYFASI";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(193, 207);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(127, 22);
+            this.textBox5.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(31, 200);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(147, 29);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Öğrenci No:";
             // 
             // button1
             // 
@@ -151,39 +168,22 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(372, 56);
+            this.label1.Location = new System.Drawing.Point(243, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(481, 29);
+            this.label1.Size = new System.Drawing.Size(793, 29);
             this.label1.TabIndex = 17;
-            this.label1.Text = "ULUDAĞ ÜNİVERSİTESİ KÜTÜPHANESİ";
+            this.label1.Text = "ULUDAĞ ÜNİVERSİTESİ KÜTÜPHANESİ ÖĞRENCİ KAYIT SAYFASI";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::kutuphaneOtomasyon.Properties.Resources.uu_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(283, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(154, 36);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(83, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(31, 200);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 29);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Öğrenci No:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(193, 207);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(127, 22);
-            this.textBox5.TabIndex = 18;
             // 
             // Form5
             // 
