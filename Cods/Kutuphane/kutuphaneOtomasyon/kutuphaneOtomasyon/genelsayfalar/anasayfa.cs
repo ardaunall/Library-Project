@@ -19,9 +19,7 @@ namespace kutuphaneOtomasyon
 
         private void cikis_Click(object sender, EventArgs e)
         {
-            this.Close();
-            GirisYap lgn = new GirisYap();
-            lgn.Show();
+            
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -32,6 +30,13 @@ namespace kutuphaneOtomasyon
         private void anasayfa_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            GirisYap lgn = new GirisYap();
+            lgn.Show();
         }
     }
 }
