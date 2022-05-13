@@ -65,6 +65,12 @@
     <Compile Include="adminsayfaları\AdminKayit.Designer.cs">
       <DependentUpon>AdminKayit.cs</DependentUpon>
     </Compile>
+    <Compile Include="kitapsayfaları\KitapCikar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kitapsayfaları\KitapCikar.Designer.cs">
+      <DependentUpon>KitapCikar.cs</DependentUpon>
+    </Compile>
     <Compile Include="metod.cs" />
     <Compile Include="adminsayfaları\Ogrenciİsleri.cs">
       <SubType>Form</SubType>
@@ -72,12 +78,9 @@
     <Compile Include="adminsayfaları\Ogrenciİsleri.Designer.cs">
       <DependentUpon>Ogrenciİsleri.cs</DependentUpon>
     </Compile>
-    <Compile Include="adminsayfaları\personelkayit.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="adminsayfaları\personelkayit.cs" />
     <Compile Include="adminsayfaları\.Designer.cs">
       <DependentUpon>personelkayit.cs</DependentUpon>
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="kitapsayfaları\KitapEkle.cs">
       <SubType>Form</SubType>
@@ -108,8 +111,14 @@
     <EmbeddedResource Include="adminsayfaları\personelkayit.resx">
       <DependentUpon>personelkayit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="kitapsayfaları\KitapCikar.resx">
+      <DependentUpon>KitapCikar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="kitapsayfaları\KitapEkle.resx">
       <DependentUpon>KitapEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ogrencisayfaları\studentKayit.resx">
+      <DependentUpon>studentKayit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -163,6 +172,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_shutdown_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitap1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emanet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ceza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istatistik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
