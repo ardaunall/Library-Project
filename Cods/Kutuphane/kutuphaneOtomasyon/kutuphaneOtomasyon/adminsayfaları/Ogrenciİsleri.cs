@@ -24,10 +24,14 @@ namespace kutuphaneOtomasyon
 
         private void cikis_yap_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
             this.Close();
             GirisYap lgn = new GirisYap();
             lgn.Show();
         }
-
     }
 }
