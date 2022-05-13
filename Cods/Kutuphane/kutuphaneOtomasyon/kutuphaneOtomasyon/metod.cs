@@ -10,15 +10,16 @@ namespace kutuphaneOtomasyon
     public class metod
     {
         #region Admin kontrol
+        /*
         string ConStr = "SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.";
 
-        public int KullaniciKontrol(string kAd, string kSifre)
+        public int KullaniciKontrol(string kAd, string kSifre, string kDepartman)
         {
             int sonuc = 0;
 
             using (var con = new MySqlConnection(ConStr))
             {
-                using (var cmd = new MySqlCommand($"SELECT kullaniciadi,sifre FROM admin WHERE kullaniciadi='{kAd}' AND sifre='{kSifre}'",con))
+                using (var cmd = new MySqlCommand($"SELECT kullaniciadi,sifre,departman FROM admin WHERE kullaniciadi='{kAd}', sifre='{kSifre}', departman='{kDepartman}'",con))
                 {
                     try
                     {
@@ -28,7 +29,8 @@ namespace kutuphaneOtomasyon
                         {
                             string d_k = dtr["kullaniciadi"].ToString();
                             string d_s = dtr["sifre"].ToString();
-                            if(d_k==kAd && d_s==kSifre)
+                            string d_d = dtr["departman"].ToString();
+                            if(d_k==kAd && d_s==kSifre && d_d==kDepartman)
                             {
                                 sonuc = 1;
                             }
@@ -48,7 +50,7 @@ namespace kutuphaneOtomasyon
 
                 return sonuc;
         }
-
+       */
         #endregion
     }
 }
