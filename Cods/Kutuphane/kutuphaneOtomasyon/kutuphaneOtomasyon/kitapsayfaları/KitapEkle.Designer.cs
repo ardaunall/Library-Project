@@ -41,6 +41,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -52,7 +53,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -217,11 +217,20 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(97, 125);
+            this.groupBox1.Location = new System.Drawing.Point(120, 125);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(805, 311);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(681, 246);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(82, 29);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Kitap Ekle";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox11
             // 
@@ -300,15 +309,6 @@
             this.textBox1.Size = new System.Drawing.Size(170, 22);
             this.textBox1.TabIndex = 18;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(681, 246);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 29);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Kitap Ekle";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::kutuphaneOtomasyon.Properties.Resources.uu_logo;
@@ -325,7 +325,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(86)))), ((int)(((byte)(131)))));
-            this.ClientSize = new System.Drawing.Size(962, 524);
+            this.ClientSize = new System.Drawing.Size(1016, 524);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
