@@ -90,10 +90,6 @@
     <Compile Include="adminsayfaları\Ogrenciİsleri.Designer.cs">
       <DependentUpon>Ogrenciİsleri.cs</DependentUpon>
     </Compile>
-    <Compile Include="adminsayfaları\personelkayit.cs" />
-    <Compile Include="adminsayfaları\.Designer.cs">
-      <DependentUpon>personelkayit.cs</DependentUpon>
-    </Compile>
     <Compile Include="kitapsayfaları\KitapEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,9 +121,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminsayfaları\Ogrenciİsleri.resx">
       <DependentUpon>Ogrenciİsleri.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="adminsayfaları\personelkayit.resx">
-      <DependentUpon>personelkayit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kitapsayfaları\KitapCikar.resx">
       <DependentUpon>KitapCikar.cs</DependentUpon>
