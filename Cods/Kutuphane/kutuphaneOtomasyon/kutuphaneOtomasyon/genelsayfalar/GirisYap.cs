@@ -66,6 +66,11 @@ namespace kutuphaneOtomasyon
 
         }
 
+        private void GirisYap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             #region Kullanıcı Tipine Göre Giriş
