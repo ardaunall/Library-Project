@@ -43,7 +43,13 @@ namespace kutuphaneOtomasyon
 
         private void button2_Click(object sender, EventArgs e)
         {
+            #region kayıt ol sayfası açılıyor
 
+            AdminKayit acc = new AdminKayit();
+            this.Hide();
+            acc.Show();
+
+            #endregion
         }
 
         private void GirisYap_Shown(object sender, EventArgs e)
@@ -68,7 +74,7 @@ namespace kutuphaneOtomasyon
             MySqlDataReader oku = sorgu.ExecuteReader();
             while (oku.Read() == true)
             {
-                if (oku["kullaniciadi"].ToString() == textBox1.Text && oku["sifre"].ToString() == textBox2.Text && oku["departman"].ToString() == "kutuphane_gorevlisi")
+                if (oku["kullaniciadi"].ToString() == textBox1.Text && oku["sifre"].ToString() == textBox2.Text && oku["departman"].ToString() == "Kütüphane Görevlisi")
                 {
                     kontrol = true;
                     ad = oku.GetValue(1).ToString();
@@ -84,7 +90,7 @@ namespace kutuphaneOtomasyon
                     break;
                 }
 
-                if (oku["kullaniciadi"].ToString() == textBox1.Text && oku["sifre"].ToString() == textBox2.Text && oku["departman"].ToString() == "ogrenci_isleri")
+                if (oku["kullaniciadi"].ToString() == textBox1.Text && oku["sifre"].ToString() == textBox2.Text && oku["departman"].ToString() == "Ögrenci Isleri")
                 {
                     kontrol = true;
                     ad = oku.GetValue(1).ToString();
