@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminsayfaları\ceza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminsayfaları\ceza.Designer.cs">
+      <DependentUpon>ceza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminsayfaları\emanetAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminsayfaları\emanetAl.Designer.cs">
+      <DependentUpon>emanetAl.cs</DependentUpon>
+    </Compile>
     <Compile Include="genelsayfalar\anasayfa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,12 @@
     <Compile Include="ogrencisayfaları\studentKayit.Designer.cs">
       <DependentUpon>studentKayit.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="adminsayfaları\ceza.resx">
+      <DependentUpon>ceza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminsayfaları\emanetAl.resx">
+      <DependentUpon>emanetAl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="genelsayfalar\anasayfa.resx">
       <DependentUpon>anasayfa.cs</DependentUpon>
     </EmbeddedResource>
