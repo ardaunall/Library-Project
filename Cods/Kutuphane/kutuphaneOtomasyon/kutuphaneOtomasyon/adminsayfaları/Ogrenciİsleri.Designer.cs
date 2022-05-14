@@ -35,9 +35,9 @@ namespace kutuphaneOtomasyon
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listele = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +59,7 @@ namespace kutuphaneOtomasyon
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(255, 196);
+            this.label2.Location = new System.Drawing.Point(249, 186);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(180, 25);
@@ -68,16 +68,16 @@ namespace kutuphaneOtomasyon
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(443, 200);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(437, 190);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(237, 22);
             this.textBox1.TabIndex = 2;
             // 
             // listele
             // 
-            this.listele.Location = new System.Drawing.Point(443, 230);
-            this.listele.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listele.Location = new System.Drawing.Point(437, 220);
+            this.listele.Margin = new System.Windows.Forms.Padding(4);
             this.listele.Name = "listele";
             this.listele.Size = new System.Drawing.Size(116, 33);
             this.listele.TabIndex = 3;
@@ -86,7 +86,7 @@ namespace kutuphaneOtomasyon
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(567, 230);
+            this.button1.Location = new System.Drawing.Point(561, 220);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 33);
@@ -94,10 +94,19 @@ namespace kutuphaneOtomasyon
             this.button1.Text = "Öğrenciyi Sil";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(827, 185);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(138, 68);
+            this.listBox1.TabIndex = 9;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::kutuphaneOtomasyon.Properties.Resources.exit;
-            this.pictureBox2.Location = new System.Drawing.Point(931, 337);
+            this.pictureBox2.Location = new System.Drawing.Point(925, 327);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -116,21 +125,12 @@ namespace kutuphaneOtomasyon
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(833, 195);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(138, 68);
-            this.listBox1.TabIndex = 9;
-            // 
             // Ogrenciİsleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(86)))), ((int)(((byte)(131)))));
-            this.ClientSize = new System.Drawing.Size(1176, 575);
+            this.ClientSize = new System.Drawing.Size(1259, 575);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
@@ -140,7 +140,7 @@ namespace kutuphaneOtomasyon
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Ogrenciİsleri";
             this.Text = "Öğrenci İşleri";
             this.Load += new System.EventHandler(this.Form2_Load);
