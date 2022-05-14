@@ -34,8 +34,7 @@ namespace kutuphaneOtomasyon
             cmdekle.Parameters.AddWithValue("@soyad", txt_soyad.Text);
             cmdekle.Parameters.AddWithValue("@bolum_ad", cmb_bolum.Text);
             cmdekle.Parameters.AddWithValue("@email", txt_email.Text);
-            cmdekle.ExecuteNonQuery();
-            baglanti.Close();
+            
 
             if (String.IsNullOrEmpty(txt_ogrno.Text) || String.IsNullOrEmpty(txt_ad.Text) || String.IsNullOrEmpty(txt_soyad.Text) || String.IsNullOrEmpty(cmb_bolum.Text) || String.IsNullOrEmpty(txt_email.Text))
             {
@@ -46,8 +45,9 @@ namespace kutuphaneOtomasyon
                 MessageBox.Show("Kayıt Başarılı");
 
             }
+            cmdekle.ExecuteNonQuery();
+            baglanti.Close();
 
-            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
