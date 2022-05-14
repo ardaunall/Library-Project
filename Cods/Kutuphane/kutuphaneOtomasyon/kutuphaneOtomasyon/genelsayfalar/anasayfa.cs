@@ -38,5 +38,12 @@ namespace kutuphaneOtomasyon
             GirisYap lgn = new GirisYap();
             lgn.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+           this.Close();
+           studentKayit ogr = new studentKayit();
+           ogr.Show();
+        }
     }
 }
