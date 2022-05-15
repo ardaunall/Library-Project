@@ -123,9 +123,29 @@ namespace kutuphaneOtomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_back_to_64px_1___Kopya {
+            get {
+                object obj = ResourceManager.GetObject("icons8_back_to_64px_1 - Kopya", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_book_reading_100px {
             get {
                 object obj = ResourceManager.GetObject("icons8_book_reading_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_circled_down_right_64px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_circled_down_right_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
