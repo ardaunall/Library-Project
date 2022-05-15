@@ -53,19 +53,22 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -334,17 +337,6 @@
             this.textBox1.Size = new System.Drawing.Size(169, 22);
             this.textBox1.TabIndex = 18;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::kutuphaneOtomasyon.Properties.Resources.uu_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(221, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.textBox12);
@@ -409,34 +401,68 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Kitap İsmi:";
             // 
-            // label15
+            // pictureBox3
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(81, 78);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(68, 18);
-            this.label15.TabIndex = 24;
-            this.label15.Text = "Geri Dön";
+            this.pictureBox3.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_back_to_64px_1___Kopya;
+            this.pictureBox3.Location = new System.Drawing.Point(1222, 443);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 25;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_back_to_64px_1;
-            this.pictureBox2.Location = new System.Drawing.Point(84, 11);
+            this.pictureBox2.Location = new System.Drawing.Point(1124, 443);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(64, 64);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::kutuphaneOtomasyon.Properties.Resources.uu_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(221, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(77, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.Location = new System.Drawing.Point(1124, 512);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(64, 45);
+            this.button3.TabIndex = 23;
+            this.button3.Text = "Geri Dön";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button4.Location = new System.Drawing.Point(1222, 512);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(64, 45);
+            this.button4.TabIndex = 26;
+            this.button4.Text = "Kitapları Listele";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // KitapEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(86)))), ((int)(((byte)(131)))));
-            this.ClientSize = new System.Drawing.Size(1371, 550);
-            this.Controls.Add(this.label15);
+            this.ClientSize = new System.Drawing.Size(1371, 590);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -447,10 +473,11 @@
             this.Text = "Form6";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -490,7 +517,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
