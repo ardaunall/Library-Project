@@ -256,7 +256,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_back_to_64px_1;
-            this.pictureBox2.Location = new System.Drawing.Point(52, 27);
+            this.pictureBox2.Location = new System.Drawing.Point(88, 27);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(64, 64);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -279,7 +279,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(49, 94);
+            this.label8.Location = new System.Drawing.Point(85, 94);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 18);
             this.label8.TabIndex = 22;
