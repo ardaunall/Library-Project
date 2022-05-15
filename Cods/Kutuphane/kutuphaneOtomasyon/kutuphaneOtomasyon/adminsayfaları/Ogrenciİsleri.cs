@@ -57,7 +57,7 @@ namespace kutuphaneOtomasyon
             else
             {
                 komut.ExecuteNonQuery();
-                MessageBox.Show("Kayıt Başarılı");
+                MessageBox.Show("Silme İşlemi Başarılı");
             }
 
             baglanti.Close();

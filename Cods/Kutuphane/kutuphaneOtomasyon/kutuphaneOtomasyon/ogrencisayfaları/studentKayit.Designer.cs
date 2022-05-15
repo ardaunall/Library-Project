@@ -296,6 +296,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimizeBox = false;
             this.Name = "studentKayit";
             this.Text = " ";
             this.Load += new System.EventHandler(this.Form5_Load);

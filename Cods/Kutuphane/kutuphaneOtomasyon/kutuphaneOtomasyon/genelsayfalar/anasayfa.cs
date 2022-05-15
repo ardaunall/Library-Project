@@ -52,5 +52,12 @@ namespace kutuphaneOtomasyon
             KitapEkle kitapE = new KitapEkle();
             kitapE.Show();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime dt = DateTime.Now;
+            label8.Text = dt.ToShortDateString();
+            label9.Text = dt.ToLongTimeString();
+        }
     }
 }

@@ -153,6 +153,7 @@ namespace kutuphaneOtomasyon
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimizeBox = false;
             this.Name = "Ogrenciİsleri";
             this.Text = "Öğrenci İşleri";
             this.Load += new System.EventHandler(this.Form2_Load);

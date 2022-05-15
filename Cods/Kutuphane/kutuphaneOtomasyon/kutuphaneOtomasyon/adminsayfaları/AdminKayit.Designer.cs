@@ -299,6 +299,7 @@
             this.Controls.Add(this.pictureBox1);
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimizeBox = false;
             this.Name = "AdminKayit";
             this.Load += new System.EventHandler(this.AdminKayit_Load);
             this.groupBox1.ResumeLayout(false);
