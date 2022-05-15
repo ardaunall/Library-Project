@@ -58,10 +58,9 @@ namespace kutuphaneOtomasyon
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(233, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(311, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(383, 25);
+            this.label1.Size = new System.Drawing.Size(481, 29);
             this.label1.TabIndex = 7;
             this.label1.Text = "ULUDAĞ ÜNİVERSİTESİ KÜTÜPHANESİ";
             // 
@@ -70,10 +69,9 @@ namespace kutuphaneOtomasyon
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(238, 204);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(317, 251);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 18);
+            this.label2.Size = new System.Drawing.Size(99, 24);
             this.label2.TabIndex = 13;
             this.label2.Text = "Öğrenciler";
             // 
@@ -82,10 +80,9 @@ namespace kutuphaneOtomasyon
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(359, 204);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(489, 251);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 18);
+            this.label3.Size = new System.Drawing.Size(71, 24);
             this.label3.TabIndex = 14;
             this.label3.Text = "Kitaplar";
             // 
@@ -94,10 +91,9 @@ namespace kutuphaneOtomasyon
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(476, 204);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(635, 251);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 18);
+            this.label4.Size = new System.Drawing.Size(96, 24);
             this.label4.TabIndex = 15;
             this.label4.Text = "Emanetler";
             // 
@@ -106,10 +102,9 @@ namespace kutuphaneOtomasyon
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(238, 327);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(317, 402);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 18);
+            this.label5.Size = new System.Drawing.Size(73, 24);
             this.label5.TabIndex = 16;
             this.label5.Text = "Cezalar";
             // 
@@ -118,10 +113,9 @@ namespace kutuphaneOtomasyon
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(359, 327);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(472, 402);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 18);
+            this.label6.Size = new System.Drawing.Size(92, 24);
             this.label6.TabIndex = 17;
             this.label6.Text = "İstatistikler";
             // 
@@ -130,20 +124,19 @@ namespace kutuphaneOtomasyon
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(476, 327);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(654, 402);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 18);
+            this.label7.Size = new System.Drawing.Size(49, 24);
             this.label7.TabIndex = 18;
             this.label7.Text = "Çıkış";
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::kutuphaneOtomasyon.Properties.Resources.exit1;
-            this.pictureBox7.Location = new System.Drawing.Point(479, 251);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Location = new System.Drawing.Point(639, 309);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(63, 66);
+            this.pictureBox7.Size = new System.Drawing.Size(84, 81);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 12;
             this.pictureBox7.TabStop = false;
@@ -152,10 +145,10 @@ namespace kutuphaneOtomasyon
             // pictureBox5
             // 
             this.pictureBox5.Image = global::kutuphaneOtomasyon.Properties.Resources.ceza1;
-            this.pictureBox5.Location = new System.Drawing.Point(242, 251);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(316, 309);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(63, 66);
+            this.pictureBox5.Size = new System.Drawing.Size(84, 81);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
@@ -163,10 +156,10 @@ namespace kutuphaneOtomasyon
             // pictureBox4
             // 
             this.pictureBox4.Image = global::kutuphaneOtomasyon.Properties.Resources.istatistik;
-            this.pictureBox4.Location = new System.Drawing.Point(362, 251);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(476, 309);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(63, 66);
+            this.pictureBox4.Size = new System.Drawing.Size(84, 81);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.TabStop = false;
@@ -174,10 +167,10 @@ namespace kutuphaneOtomasyon
             // pictureBox3
             // 
             this.pictureBox3.Image = global::kutuphaneOtomasyon.Properties.Resources.emanet;
-            this.pictureBox3.Location = new System.Drawing.Point(479, 123);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(639, 151);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(63, 66);
+            this.pictureBox3.Size = new System.Drawing.Size(84, 81);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
@@ -185,10 +178,10 @@ namespace kutuphaneOtomasyon
             // pictureBox2
             // 
             this.pictureBox2.Image = global::kutuphaneOtomasyon.Properties.Resources.kitap1;
-            this.pictureBox2.Location = new System.Drawing.Point(362, 123);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(476, 151);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(63, 66);
+            this.pictureBox2.Size = new System.Drawing.Size(84, 81);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -196,10 +189,10 @@ namespace kutuphaneOtomasyon
             // pictureBox6
             // 
             this.pictureBox6.Image = global::kutuphaneOtomasyon.Properties.Resources.uu_logo;
-            this.pictureBox6.Location = new System.Drawing.Point(164, 9);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox6.Location = new System.Drawing.Point(219, 11);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(64, 63);
+            this.pictureBox6.Size = new System.Drawing.Size(85, 78);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 6;
             this.pictureBox6.TabStop = false;
@@ -207,10 +200,10 @@ namespace kutuphaneOtomasyon
             // pictureBox1
             // 
             this.pictureBox1.Image = global::kutuphaneOtomasyon.Properties.Resources.student;
-            this.pictureBox1.Location = new System.Drawing.Point(242, 123);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(316, 151);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 66);
+            this.pictureBox1.Size = new System.Drawing.Size(84, 81);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -218,10 +211,10 @@ namespace kutuphaneOtomasyon
             // 
             // anasayfa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(86)))), ((int)(((byte)(131)))));
-            this.ClientSize = new System.Drawing.Size(782, 450);
+            this.ClientSize = new System.Drawing.Size(1043, 554);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -236,6 +229,7 @@ namespace kutuphaneOtomasyon
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "anasayfa";
             this.Text = "Ana Sayfa";
             this.Load += new System.EventHandler(this.anasayfa_Load);
