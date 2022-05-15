@@ -41,14 +41,13 @@ namespace kutuphaneOtomasyon
 
             if (String.IsNullOrEmpty(txt_ogrno.Text) || String.IsNullOrEmpty(txt_ad.Text) || String.IsNullOrEmpty(txt_soyad.Text) || String.IsNullOrEmpty(cmb_bolum.Text) || String.IsNullOrEmpty(txt_email.Text))
             {
-                MessageBox.Show("Boş Geçilemez");
-            }
+                MessageBox.Show("Boş Geçilemez");            }
             else
             {
+                cmdekle.ExecuteNonQuery();
                 MessageBox.Show("Kayıt Başarılı");
-
             }
-            cmdekle.ExecuteNonQuery();
+            
             baglanti.Close();
 
             #endregion
@@ -63,34 +62,57 @@ namespace kutuphaneOtomasyon
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            /*
-            gecici.Tables["ogrenci"].Clear();
-            baglanti.Open();
-            MySqlDataAdapter adap = new MySqlDataAdapter("select *from ogrenci where ogrenci_id like '%"+textBox1.Text+ "%'",baglanti);
-            adap.Fill(gecici,"ogrenci");
-            dataGridView1.DataSource = gecici.Tables["ogrenci"];
-            baglanti.Close();
-            */
         }
 
-        private void uyeListele()
-        {
-            baglanti.Open();
-            MySqlDataAdapter adtr = new MySqlDataAdapter("select *from ogrenci",baglanti);
-            adtr.Fill(gecici,"ogrenci");
-            dataGridView1.DataSource = gecici.Tables["ogrenci"];
-            baglanti.Close();
-        }
 
         DataSet gecici = new DataSet();
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-           // textBox1.Text = dataGridView1.CurrentRow.Cells["ogrenci_id"].Value.ToString();
         }
 
         private void btn_listele_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            anasayfa ac = new anasayfa();
+            ac.Show();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #region Öğrenci Listeleme
+        public static void displayAndSearch(string query, DataGridView dgv)
+        {
+            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
+
+            string sql = query;
+            MySqlCommand cmd = new MySqlCommand(sql,baglanti);
+            MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+            DataTable tbl = new DataTable();
+            adp.Fill(tbl);
+            dgv.DataSource = tbl;
+            baglanti.Close();
+
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            displayAndSearch("SELECT ogrenci_id,ad,soyad,bolum_ad,email FROM ogrenci WHERE ogrenci_id LIKE '%" + textBox4.Text + "%'", dataGridView1);
+        }
+
+        #endregion
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
