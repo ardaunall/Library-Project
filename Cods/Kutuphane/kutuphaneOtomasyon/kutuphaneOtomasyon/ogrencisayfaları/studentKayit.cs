@@ -13,6 +13,8 @@ namespace kutuphaneOtomasyon
 {
     public partial class studentKayit : Form
     {
+        MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
+
         public studentKayit()
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace kutuphaneOtomasyon
 
         private void button1_Click(object sender, EventArgs e)
         {
+            #region Öğrenci Ekleme
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
 
@@ -48,6 +51,7 @@ namespace kutuphaneOtomasyon
             cmdekle.ExecuteNonQuery();
             baglanti.Close();
 
+            #endregion
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -55,6 +59,38 @@ namespace kutuphaneOtomasyon
             this.Close();
             anasayfa don = new anasayfa();
             don.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            /*
+            gecici.Tables["ogrenci"].Clear();
+            baglanti.Open();
+            MySqlDataAdapter adap = new MySqlDataAdapter("select *from ogrenci where ogrenci_id like '%"+textBox1.Text+ "%'",baglanti);
+            adap.Fill(gecici,"ogrenci");
+            dataGridView1.DataSource = gecici.Tables["ogrenci"];
+            baglanti.Close();
+            */
+        }
+
+        private void uyeListele()
+        {
+            baglanti.Open();
+            MySqlDataAdapter adtr = new MySqlDataAdapter("select *from ogrenci",baglanti);
+            adtr.Fill(gecici,"ogrenci");
+            dataGridView1.DataSource = gecici.Tables["ogrenci"];
+            baglanti.Close();
+        }
+
+        DataSet gecici = new DataSet();
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           // textBox1.Text = dataGridView1.CurrentRow.Cells["ogrenci_id"].Value.ToString();
+        }
+
+        private void btn_listele_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
