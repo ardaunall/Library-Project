@@ -113,6 +113,16 @@ namespace kutuphaneOtomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_back_to_64px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_back_to_64px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_book_reading_100px {
             get {
                 object obj = ResourceManager.GetObject("icons8_book_reading_100px", resourceCulture);
