@@ -45,5 +45,12 @@ namespace kutuphaneOtomasyon
            studentKayit ogr = new studentKayit();
            ogr.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            KitapEkle kitapE = new KitapEkle();
+            kitapE.Show();
+        }
     }
 }
