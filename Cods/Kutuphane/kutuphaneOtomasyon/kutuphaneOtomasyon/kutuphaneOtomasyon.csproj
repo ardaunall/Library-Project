@@ -77,16 +77,6 @@
     <Compile Include="adminsayfaları\AdminKayit.Designer.cs">
       <DependentUpon>AdminKayit.cs</DependentUpon>
     </Compile>
-    <Compile Include="kitapsayfaları\KitapCikar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="kitapsayfaları\KitapCikar.Designer.cs">
-      <DependentUpon>KitapCikar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="kitapsayfaları\kitapListele.cs" />
-    <Compile Include="kitapsayfaları\kitapListele.Designer.cs">
-      <DependentUpon>kitapListele.cs</DependentUpon>
-    </Compile>
     <Compile Include="metod.cs" />
     <Compile Include="adminsayfaları\Ogrenciİsleri.cs">
       <SubType>Form</SubType>
@@ -126,14 +116,8 @@
     <EmbeddedResource Include="adminsayfaları\Ogrenciİsleri.resx">
       <DependentUpon>Ogrenciİsleri.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="kitapsayfaları\KitapCikar.resx">
-      <DependentUpon>KitapCikar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="kitapsayfaları\KitapEkle.resx">
       <DependentUpon>KitapEkle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="kitapsayfaları\kitapListele.resx">
-      <DependentUpon>kitapListele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ogrencisayfaları\studentKayit.resx">
       <DependentUpon>studentKayit.cs</DependentUpon>
