@@ -46,6 +46,7 @@ namespace kutuphaneOtomasyon
 
         private void button1_Click(object sender, EventArgs e)
         {
+            #region Öğrenci Silme İşlemi
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
             MySqlCommand komut = new MySqlCommand("delete from ogrenci where ogrenci_id='" + textBox1.Text + "'", baglanti);
@@ -61,8 +62,8 @@ namespace kutuphaneOtomasyon
             }
 
             baglanti.Close();
-           
 
+            #endregion
         }
     }
 }
