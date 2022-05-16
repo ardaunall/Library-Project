@@ -216,6 +216,7 @@
             this.label12.Size = new System.Drawing.Size(159, 25);
             this.label12.TabIndex = 16;
             this.label12.Text = "Emanet Durumu:";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // groupBox1
             // 
@@ -246,17 +247,17 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(604, 253);
+            this.groupBox1.Size = new System.Drawing.Size(604, 301);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kitap Ekleme";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(511, 200);
+            this.button1.Location = new System.Drawing.Point(466, 223);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 24);
+            this.button1.Size = new System.Drawing.Size(107, 47);
             this.button1.TabIndex = 18;
             this.button1.Text = "Kitap Ekle";
             this.button1.UseVisualStyleBackColor = true;
