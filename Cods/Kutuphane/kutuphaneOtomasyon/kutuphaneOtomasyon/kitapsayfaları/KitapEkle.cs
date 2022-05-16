@@ -35,5 +35,10 @@ namespace kutuphaneOtomasyon
             anasayfa ac = new anasayfa();
             ac.Show();
         }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
