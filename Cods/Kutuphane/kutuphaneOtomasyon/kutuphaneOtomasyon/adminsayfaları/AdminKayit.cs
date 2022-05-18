@@ -47,8 +47,7 @@ namespace kutuphaneOtomasyon
             if (String.IsNullOrEmpty(txt_id.Text) || String.IsNullOrEmpty(txt_ad.Text) || String.IsNullOrEmpty(txt_soyad.Text) || String.IsNullOrEmpty(txt_email.Text) || String.IsNullOrEmpty(txt_kullaniciadi.Text) || String.IsNullOrEmpty(txt_sifre.Text) || String.IsNullOrEmpty(cmb_departman.Text))
             {
                 MessageBox.Show("Boş Geçilemez");
-               // AdminKayit don = new AdminKayit();
-                //don.Show();
+               
             }
             else
             {
