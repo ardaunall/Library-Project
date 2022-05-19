@@ -55,7 +55,7 @@ namespace kutuphaneOtomasyon
             MySqlCommand yazar = new MySqlCommand("insert into yazar (ad) values (@ad)", baglanti);
             yazar.Parameters.AddWithValue("@ad", txt_yazar.Text);
             yazar.ExecuteNonQuery();
-
+            
             MySqlCommand kategori = new MySqlCommand("insert into kategori (kategoritur) values (@tur)", baglanti);
             kategori.Parameters.AddWithValue("@tur", txt_kategori.Text);
             kategori.ExecuteNonQuery();
@@ -67,6 +67,18 @@ namespace kutuphaneOtomasyon
             MySqlCommand konum = new MySqlCommand("insert into konum (kategorikonum) values (@konum)",baglanti);
             konum.Parameters.AddWithValue("@konum", txt_konum.Text);
             konum.ExecuteNonQuery();
+
+            MySqlCommand yzr = new MySqlCommand("SELECT * FROM `kitap` WHERE yazar_id=(SELECT MAX(id) FROM `yazar`)", baglanti);
+            yzr.ExecuteNonQuery();
+
+            MySqlCommand ktg = new MySqlCommand("SELECT * FROM `kitap` WHERE kategori_id=(SELECT MAX(id) FROM `kategori`)", baglanti);
+            ktg.ExecuteNonQuery();
+
+            MySqlCommand yayn = new MySqlCommand("SELECT * FROM `kitap` WHERE yayinevi_id=(SELECT MAX(id) FROM `yayinevi`)", baglanti);
+            yayn.ExecuteNonQuery();
+
+            MySqlCommand knm = new MySqlCommand("SELECT * FROM `kitap` WHERE konum_id=(SELECT MAX(id) FROM `konum`)", baglanti);
+            knm.ExecuteNonQuery();
 
             MySqlCommand ekle = new MySqlCommand("insert into kitap (dil,sayfasayisi,yayintarih,ciltsayisi,stok,cevirmen,kitap_ad) values (@dil,@sayfa,@yayin,@cilt,@stok,@cevirmen,@ad)", baglanti);
             ekle.Parameters.AddWithValue("@dil", txt_dil.Text);
