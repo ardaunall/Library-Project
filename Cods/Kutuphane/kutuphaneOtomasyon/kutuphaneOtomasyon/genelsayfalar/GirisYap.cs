@@ -95,7 +95,7 @@ namespace kutuphaneOtomasyon
                     break;
                 }
 
-                if (oku["kullaniciadi"].ToString() == textBox1.Text && oku["sifre"].ToString() == textBox2.Text && oku["departman"].ToString() == "Ögrenci Isleri")
+                if (oku["kullaniciadi"].ToString() == textBox1.Text && oku["sifre"].ToString() == textBox2.Text && oku["departman"].ToString() == "Öğrenci İşleri")
                 {
                     kontrol = true;
                     ad = oku.GetValue(1).ToString();

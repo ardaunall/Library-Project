@@ -77,6 +77,12 @@
     <Compile Include="adminsayfaları\AdminKayit.Designer.cs">
       <DependentUpon>AdminKayit.cs</DependentUpon>
     </Compile>
+    <Compile Include="kitapsayfaları\kitapListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kitapsayfaları\kitapListele.Designer.cs">
+      <DependentUpon>kitapListele.cs</DependentUpon>
+    </Compile>
     <Compile Include="metod.cs" />
     <Compile Include="adminsayfaları\Ogrenciİsleri.cs">
       <SubType>Form</SubType>
@@ -98,6 +104,30 @@
     <Compile Include="ogrencisayfaları\studentKayit.Designer.cs">
       <DependentUpon>studentKayit.cs</DependentUpon>
     </Compile>
+    <Compile Include="kitapsayfaları\yazarekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kitapsayfaları\yazarekle.Designer.cs">
+      <DependentUpon>yazarekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kitapsayfaları\kateoriEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kitapsayfaları\kateoriEkle.Designer.cs">
+      <DependentUpon>kateoriEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kitapsayfaları\raf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kitapsayfaları\raf.Designer.cs">
+      <DependentUpon>raf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kitapsayfaları\yayinEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kitapsayfaları\yayinEkle.Designer.cs">
+      <DependentUpon>yayinEkle.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="adminsayfaları\ceza.resx">
       <DependentUpon>ceza.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +146,9 @@
     <EmbeddedResource Include="adminsayfaları\Ogrenciİsleri.resx">
       <DependentUpon>Ogrenciİsleri.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="kitapsayfaları\kitapListele.resx">
+      <DependentUpon>kitapListele.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="kitapsayfaları\KitapEkle.resx">
       <DependentUpon>KitapEkle.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +165,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="kitapsayfaları\yazarekle.resx">
+      <DependentUpon>yazarekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kitapsayfaları\kateoriEkle.resx">
+      <DependentUpon>kateoriEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kitapsayfaları\raf.resx">
+      <DependentUpon>raf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kitapsayfaları\yayinEkle.resx">
+      <DependentUpon>yayinEkle.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

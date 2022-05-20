@@ -65,5 +65,10 @@ namespace kutuphaneOtomasyon
 
             #endregion
         }
+
+        private void listele_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

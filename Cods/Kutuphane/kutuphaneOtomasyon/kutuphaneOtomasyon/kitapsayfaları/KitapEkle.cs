@@ -25,14 +25,14 @@ namespace kutuphaneOtomasyon
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
-            anasayfa ac = new anasayfa();
+            kitapListele ac = new kitapListele();
             ac.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
-            anasayfa ac = new anasayfa();
+            kitapListele ac = new kitapListele();
             ac.Show();
         }
 
@@ -43,7 +43,7 @@ namespace kutuphaneOtomasyon
 
         private void KitapEkle_Load(object sender, EventArgs e)
         {
-
+            
             string conString = "SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.";
             #region Yazar Listeleme
             using (var baglanti  = new MySqlConnection(conString))
@@ -59,7 +59,7 @@ namespace kutuphaneOtomasyon
                             comboYazar.Items.Add(yz["ad"]).ToString();
 
                         }
-                        comboYazar.SelectedIndex = 0;
+                       comboYazar.SelectedIndex = 0;
 
                     }
                     catch (Exception hata)
@@ -68,6 +68,7 @@ namespace kutuphaneOtomasyon
                         MessageBox.Show($"{hata}");
                     }
                 }
+                
             }
             #endregion
             #region Kategori Listeleme
@@ -84,7 +85,7 @@ namespace kutuphaneOtomasyon
                             comboKategori.Items.Add(ktg["kategoritur"]).ToString();
 
                         }
-                        comboKategori.SelectedIndex = 0;
+                     comboKategori.SelectedIndex = 0;
 
                     }
                     catch (Exception hata)
@@ -134,7 +135,7 @@ namespace kutuphaneOtomasyon
                             comboRaf.Items.Add(knm["kategorikonum"]).ToString();
 
                         }
-                        comboRaf.SelectedIndex = 0;
+                       comboRaf.SelectedIndex = 0;
 
                     }
                     catch (Exception hata)
@@ -145,6 +146,7 @@ namespace kutuphaneOtomasyon
                 }
             }
             #endregion
+
         }
         private MySqlConnection getConnection()
         {
@@ -158,7 +160,6 @@ namespace kutuphaneOtomasyon
             MySqlCommand lastInsertedIdCmd = new MySqlCommand("SELECT LAST_INSERT_ID();", baglanti);
             var lastInsertedIdValue = lastInsertedIdCmd.ExecuteScalar().ToString();
             return int.Parse(lastInsertedIdValue);
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -166,31 +167,30 @@ namespace kutuphaneOtomasyon
             MySqlConnection baglanti = getConnection();
 
             MySqlCommand yazar = new MySqlCommand("insert into yazar (ad) values (@ad)", baglanti);
-            yazar.Parameters.AddWithValue("@ad", txt_yazar.Text);
+            yazar.Parameters.AddWithValue("@ad", comboYazar.Text);
             yazar.ExecuteNonQuery();
             int lastInsertedYazarIdValue = getLastInsertedId(baglanti);
 
             MySqlCommand kategori = new MySqlCommand("insert into kategori (kategoritur) values (@tur)", baglanti);
-            kategori.Parameters.AddWithValue("@tur", txt_kategori.Text);
+            kategori.Parameters.AddWithValue("@tur", comboKategori.Text);
             kategori.ExecuteNonQuery();
             int lastInsertedKategoriId = getLastInsertedId(baglanti);
 
-            MySqlCommand yayin = new MySqlCommand("insert into yayinevi (ad) values (@yayinev)",baglanti);
-            yayin.Parameters.AddWithValue("@yayinev", txt_yayinevi.Text);
+            MySqlCommand yayin = new MySqlCommand("insert into yayinevi (ad) values (@yayinev)", baglanti);
+            yayin.Parameters.AddWithValue("@yayinev", comboYayin.Text);
             yayin.ExecuteNonQuery();
             int lastInsertedYayinEviId = getLastInsertedId(baglanti);
 
 
-            MySqlCommand konum = new MySqlCommand("insert into konum (kategorikonum) values (@konum)",baglanti);
-            konum.Parameters.AddWithValue("@konum", txt_konum.Text);
+            MySqlCommand konum = new MySqlCommand("insert into konum (kategorikonum) values (@konum)", baglanti);
+            konum.Parameters.AddWithValue("@konum", comboRaf.Text);
             konum.ExecuteNonQuery();
-            int lastInsertedKategoriKonumId = getLastInsertedId(baglanti);            
-
+            int lastInsertedKategoriKonumId = getLastInsertedId(baglanti);
             MySqlCommand ekle = new MySqlCommand("insert into kitap (yazar_id,kategori_id,yayinevi_id,konum_id,dil,sayfasayisi,yayintarih,ciltsayisi,stok,cevirmen,kitap_ad) values (@yazarId,@kategoriId,@yayinEviId,@konumId,@dil,@sayfa,@yayin,@cilt,@stok,@cevirmen,@ad)", baglanti);
-            ekle.Parameters.AddWithValue("@yazarId", lastInsertedYazarIdValue);
-            ekle.Parameters.AddWithValue("@kategoriId", lastInsertedKategoriId);
-            ekle.Parameters.AddWithValue("@yayinEviId", lastInsertedYayinEviId);
-            ekle.Parameters.AddWithValue("@konumId", lastInsertedKategoriKonumId);
+            ekle.Parameters.AddWithValue("@yazarId", comboYazar.Items);
+            ekle.Parameters.AddWithValue("@kategoriId", comboKategori.Items);
+            ekle.Parameters.AddWithValue("@yayinEviId", comboYayin.Items);
+            ekle.Parameters.AddWithValue("@konumId", comboRaf.Items);
             ekle.Parameters.AddWithValue("@dil", txt_dil.Text);
             ekle.Parameters.AddWithValue("@sayfa", txt_sayfasayi.Text);
             ekle.Parameters.AddWithValue("@yayin", txt_yayintarih.Text);
@@ -199,7 +199,7 @@ namespace kutuphaneOtomasyon
             ekle.Parameters.AddWithValue("@cevirmen", txt_cevirmen.Text);
             ekle.Parameters.AddWithValue("@ad", txt_kitapad.Text);
 
-            if (String.IsNullOrEmpty(txt_dil.Text) || String.IsNullOrEmpty(txt_sayfasayi.Text) || String.IsNullOrEmpty(txt_yayintarih.Text) || String.IsNullOrEmpty(txt_cilt.Text) || String.IsNullOrEmpty(txt_stok.Text) || String.IsNullOrEmpty(txt_cevirmen.Text) || String.IsNullOrEmpty(txt_kitapad.Text) ||)
+            if (String.IsNullOrEmpty(txt_dil.Text) || String.IsNullOrEmpty(txt_sayfasayi.Text) || String.IsNullOrEmpty(txt_yayintarih.Text) || String.IsNullOrEmpty(txt_cilt.Text) || String.IsNullOrEmpty(txt_stok.Text) || String.IsNullOrEmpty(txt_cevirmen.Text) || String.IsNullOrEmpty(txt_kitapad.Text))
             {
                 MessageBox.Show("Alanlar Boş Geçilemez"); 
             }
@@ -212,5 +212,34 @@ namespace kutuphaneOtomasyon
 
         }
         #endregion
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            yazarekle yz = new yazarekle();
+            yz.Show();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            kategoriEkle ktg = new kategoriEkle();
+            ktg.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            yayinEkle yyn = new yayinEkle();
+            yyn.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            raf rf = new raf();
+            rf.Show();
+        }
     }
 }

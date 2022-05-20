@@ -81,6 +81,7 @@ namespace kutuphaneOtomasyon
             this.listele.TabIndex = 3;
             this.listele.Text = "Listele";
             this.listele.UseVisualStyleBackColor = true;
+            this.listele.Click += new System.EventHandler(this.listele_Click);
             // 
             // button1
             // 

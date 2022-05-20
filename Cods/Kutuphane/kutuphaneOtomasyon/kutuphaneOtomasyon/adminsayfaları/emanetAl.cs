@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace kutuphaneOtomasyon.adminsayfaları
 {
-    public partial class emanetAl : Form
+    public partial class Emanet : Form
     {
-        public emanetAl()
+        public Emanet()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

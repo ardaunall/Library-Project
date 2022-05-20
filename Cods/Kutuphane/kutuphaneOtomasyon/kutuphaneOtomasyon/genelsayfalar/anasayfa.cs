@@ -49,7 +49,7 @@ namespace kutuphaneOtomasyon
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
-            KitapEkle kitapE = new KitapEkle();
+            kitapListele kitapE = new kitapListele();
             kitapE.Show();
         }
 
@@ -58,6 +58,11 @@ namespace kutuphaneOtomasyon
             DateTime dt = DateTime.Now;
             label8.Text = dt.ToShortDateString();
             label9.Text = dt.ToLongTimeString();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
