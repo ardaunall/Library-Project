@@ -41,7 +41,8 @@ namespace kutuphaneOtomasyon
 
             if (String.IsNullOrEmpty(txt_ogrno.Text) || String.IsNullOrEmpty(txt_ad.Text) || String.IsNullOrEmpty(txt_soyad.Text) || String.IsNullOrEmpty(cmb_bolum.Text) || String.IsNullOrEmpty(txt_email.Text))
             {
-                MessageBox.Show("Boş Geçilemez");            }
+                MessageBox.Show("Boş Geçilemez");           
+            }
             else
             {
                 cmdekle.ExecuteNonQuery();
