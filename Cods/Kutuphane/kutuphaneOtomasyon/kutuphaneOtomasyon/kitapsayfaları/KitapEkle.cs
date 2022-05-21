@@ -24,16 +24,11 @@ namespace kutuphaneOtomasyon
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Close();
-            kitapListele ac = new kitapListele();
-            ac.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
-            kitapListele ac = new kitapListele();
-            ac.Show();
+            
         }
 
         private void label12_Click(object sender, EventArgs e)

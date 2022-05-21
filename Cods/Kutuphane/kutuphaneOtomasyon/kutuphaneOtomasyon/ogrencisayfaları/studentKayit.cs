@@ -114,5 +114,17 @@ namespace kutuphaneOtomasyon
         {
             
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+            anasayfa ac = new anasayfa();
+            ac.Show();
+        }
     }
 }

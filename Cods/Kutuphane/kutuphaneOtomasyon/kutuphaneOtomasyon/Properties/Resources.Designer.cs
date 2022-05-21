@@ -19,7 +19,7 @@ namespace kutuphaneOtomasyon.Properties {
     // sınıfı tarafından otomatik olarak oluşturuldu.
     // Üye eklemek veya kaldırmak için .ResX dosyanızı düzenleyin ve sonra da ResGen
     // komutunu /str seçeneğiyle yeniden çalıştırın veya VS projenizi yeniden oluşturun.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -113,6 +113,16 @@ namespace kutuphaneOtomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_back_arrow_30px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_back_arrow_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_back_to_64px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_back_to_64px_1", resourceCulture);
@@ -153,9 +163,79 @@ namespace kutuphaneOtomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_compose_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_compose_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_gmail_logo_64px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_gmail_logo_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_graduation_cap_48px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_graduation_cap_48px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_identification_documents_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_identification_documents_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_identification_documents_48px1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_identification_documents_48px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_name_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_name_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_password_40px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_password_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_pay_date_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_pay_date_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,6 +263,16 @@ namespace kutuphaneOtomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_school_40px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_school_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_shutdown_100px {
             get {
                 object obj = ResourceManager.GetObject("icons8_shutdown_100px", resourceCulture);
@@ -203,9 +293,29 @@ namespace kutuphaneOtomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_student_male_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_student_male_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_student_male_50px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_student_male_50px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_token_card_code_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_token_card_code_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +346,16 @@ namespace kutuphaneOtomasyon.Properties {
         internal static System.Drawing.Bitmap kitap1 {
             get {
                 object obj = ResourceManager.GetObject("kitap1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap kitap2 {
+            get {
+                object obj = ResourceManager.GetObject("kitap2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

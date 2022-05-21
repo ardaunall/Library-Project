@@ -48,9 +48,7 @@ namespace kutuphaneOtomasyon
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Close();
-            kitapListele kitapE = new kitapListele();
-            kitapE.Show();
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -63,6 +61,13 @@ namespace kutuphaneOtomasyon
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            studentKayit ac = new studentKayit();
+            ac.Show();
         }
     }
 }

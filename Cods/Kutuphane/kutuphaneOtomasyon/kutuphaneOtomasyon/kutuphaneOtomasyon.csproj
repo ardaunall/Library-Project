@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="adminsayfaları\ceza.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="adminsayfaları\ceza.Designer.cs">
-      <DependentUpon>ceza.cs</DependentUpon>
-    </Compile>
     <Compile Include="adminsayfaları\emanetAl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,12 +70,6 @@
     </Compile>
     <Compile Include="adminsayfaları\AdminKayit.Designer.cs">
       <DependentUpon>AdminKayit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="kitapsayfaları\kitapListele.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="kitapsayfaları\kitapListele.Designer.cs">
-      <DependentUpon>kitapListele.cs</DependentUpon>
     </Compile>
     <Compile Include="metod.cs" />
     <Compile Include="adminsayfaları\Ogrenciİsleri.cs">
@@ -128,9 +116,6 @@
     <Compile Include="kitapsayfaları\yayinEkle.Designer.cs">
       <DependentUpon>yayinEkle.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="adminsayfaları\ceza.resx">
-      <DependentUpon>ceza.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="adminsayfaları\emanetAl.resx">
       <DependentUpon>emanetAl.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,9 +130,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminsayfaları\Ogrenciİsleri.resx">
       <DependentUpon>Ogrenciİsleri.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="kitapsayfaları\kitapListele.resx">
-      <DependentUpon>kitapListele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kitapsayfaları\KitapEkle.resx">
       <DependentUpon>KitapEkle.cs</DependentUpon>
@@ -249,6 +231,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_back_to_64px_1 - Kopya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_student_male_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_back_arrow_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_name_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_identification_documents_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_gmail_logo_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_identification_documents_48px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_token_card_code_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_password_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitap2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_compose_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_pay_date_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_school_40px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
