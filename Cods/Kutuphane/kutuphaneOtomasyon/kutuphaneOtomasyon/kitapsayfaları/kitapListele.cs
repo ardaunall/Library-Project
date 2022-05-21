@@ -13,6 +13,8 @@ namespace kutuphaneOtomasyon
 {
     public partial class kitapListele : Form
     {
+        MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
+
         public kitapListele()
         {
             InitializeComponent();
@@ -20,7 +22,6 @@ namespace kutuphaneOtomasyon
 
         private void kitapListele_Load(object sender, EventArgs e)
         {
-            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
         }
         public static void displayAndSearch(string query, DataGridView dgv)
         {
@@ -36,7 +37,7 @@ namespace kutuphaneOtomasyon
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            displayAndSearch("SELECT id,kitap_ad,yazar_id,kategori_id,yayinevi_id,konum_id,dil,sayfasayisi,yayintarih,ciltsayisi,stok,cevirmen FROM kitap WHERE kitap_ad LIKE '%" + textBox1.Text + "%'", dataGridView1);
+            displayAndSearch("SELECT id,kitap_ad,yazar_id,kategori_id,yayinevi_id,konum_id,dil,sayfasayisi,yayintarih,ciltsayisi,stok,cevirmen FROM kitap WHERE id LIKE '%" + textBox1.Text + "%'", dataGridView1);
         }
 
         private void button3_Click(object sender, EventArgs e)
