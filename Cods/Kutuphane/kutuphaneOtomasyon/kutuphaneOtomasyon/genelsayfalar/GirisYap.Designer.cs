@@ -105,7 +105,7 @@
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox1.ForeColor = System.Drawing.Color.White;
             this.checkBox1.Location = new System.Drawing.Point(219, 222);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(116, 21);
             this.checkBox1.TabIndex = 12;
@@ -132,7 +132,7 @@
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox2.ForeColor = System.Drawing.Color.White;
             this.checkBox2.Location = new System.Drawing.Point(357, 222);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(103, 21);
             this.checkBox2.TabIndex = 15;
@@ -270,7 +270,6 @@
             this.MaximizeBox = false;
             this.Name = "GirisYap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Giriş Sayfası";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GirisYap_FormClosing);
             this.Load += new System.EventHandler(this.GirisYap_Load);
             this.Shown += new System.EventHandler(this.GirisYap_Shown);

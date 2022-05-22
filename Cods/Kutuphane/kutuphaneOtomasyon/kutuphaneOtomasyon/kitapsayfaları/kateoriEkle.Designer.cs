@@ -29,11 +29,12 @@ namespace kutuphaneOtomasyon
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(kategoriEkle));
             this.txt_kate = new System.Windows.Forms.TextBox();
             this.ktgBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
@@ -70,17 +71,6 @@ namespace kutuphaneOtomasyon
             this.panel1.Size = new System.Drawing.Size(519, 181);
             this.panel1.TabIndex = 27;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(28, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 29);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Kategori Adı:";
-            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_opened_folder_40px;
@@ -92,6 +82,17 @@ namespace kutuphaneOtomasyon
             this.pictureBox7.TabIndex = 48;
             this.pictureBox7.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(28, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(158, 29);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Kategori Adı:";
+            // 
             // kategoriEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -99,9 +100,9 @@ namespace kutuphaneOtomasyon
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(520, 181);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "kategoriEkle";
-            this.Text = "yayinEkle";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

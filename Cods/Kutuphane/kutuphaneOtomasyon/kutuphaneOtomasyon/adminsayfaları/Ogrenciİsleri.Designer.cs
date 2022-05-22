@@ -243,7 +243,6 @@ namespace kutuphaneOtomasyon
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
             this.Name = "Ogrenciİsleri";
-            this.Text = "Öğrenci İşleri";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(studentKayit));
             this.cmb_bolum = new System.Windows.Forms.ComboBox();
             this.txt_ogrno = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -85,7 +86,7 @@
             "İşletme",
             "Uluslararası Ticaret ve İşletmecilik"});
             this.cmb_bolum.Location = new System.Drawing.Point(192, 198);
-            this.cmb_bolum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_bolum.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_bolum.Name = "cmb_bolum";
             this.cmb_bolum.Size = new System.Drawing.Size(169, 24);
             this.cmb_bolum.TabIndex = 19;
@@ -199,7 +200,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(90)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(4, 111);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(407, 286);
@@ -455,6 +456,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(86)))), ((int)(((byte)(131)))));
             this.ClientSize = new System.Drawing.Size(1191, 613);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimizeBox = false;
             this.Name = "studentKayit";
