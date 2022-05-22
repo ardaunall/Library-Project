@@ -38,19 +38,19 @@ namespace kutuphaneOtomasyon
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +69,7 @@ namespace kutuphaneOtomasyon
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(293, 111);
+            this.textBox1.Location = new System.Drawing.Point(288, 111);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -79,7 +79,7 @@ namespace kutuphaneOtomasyon
             // listele
             // 
             this.listele.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.listele.Location = new System.Drawing.Point(293, 149);
+            this.listele.Location = new System.Drawing.Point(288, 149);
             this.listele.Margin = new System.Windows.Forms.Padding(4);
             this.listele.Name = "listele";
             this.listele.Size = new System.Drawing.Size(116, 33);
@@ -91,7 +91,7 @@ namespace kutuphaneOtomasyon
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.Location = new System.Drawing.Point(414, 149);
+            this.button1.Location = new System.Drawing.Point(409, 149);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 33);
@@ -151,6 +151,17 @@ namespace kutuphaneOtomasyon
             this.panel3.Size = new System.Drawing.Size(1018, 367);
             this.panel3.TabIndex = 29;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_token_card_code_48px;
+            this.pictureBox4.Location = new System.Drawing.Point(256, 111);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 32;
+            this.pictureBox4.TabStop = false;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -184,6 +195,17 @@ namespace kutuphaneOtomasyon
             this.panel4.Size = new System.Drawing.Size(1188, 102);
             this.panel4.TabIndex = 28;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::kutuphaneOtomasyon.Properties.Resources.uu_logo;
+            this.pictureBox5.Location = new System.Drawing.Point(278, 11);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(85, 78);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 22;
+            this.pictureBox5.TabStop = false;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -196,28 +218,6 @@ namespace kutuphaneOtomasyon
             this.label12.Size = new System.Drawing.Size(557, 33);
             this.label12.TabIndex = 23;
             this.label12.Text = "ULUDAĞ ÜNİVERSİTESİ KÜTÜPHANESİ";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_token_card_code_48px;
-            this.pictureBox4.Location = new System.Drawing.Point(256, 111);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 32;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::kutuphaneOtomasyon.Properties.Resources.uu_logo;
-            this.pictureBox5.Location = new System.Drawing.Point(278, 11);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(85, 78);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 22;
-            this.pictureBox5.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -250,10 +250,10 @@ namespace kutuphaneOtomasyon
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

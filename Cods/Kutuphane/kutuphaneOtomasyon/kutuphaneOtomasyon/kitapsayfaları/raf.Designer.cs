@@ -30,56 +30,91 @@ namespace kutuphaneOtomasyon
         private void InitializeComponent()
         {
             this.txt_raf = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.rafeklebtn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_raf
             // 
-            this.txt_raf.Location = new System.Drawing.Point(129, 49);
+            this.txt_raf.Location = new System.Drawing.Point(228, 31);
+            this.txt_raf.Margin = new System.Windows.Forms.Padding(4);
             this.txt_raf.Name = "txt_raf";
-            this.txt_raf.Size = new System.Drawing.Size(158, 20);
+            this.txt_raf.Size = new System.Drawing.Size(209, 22);
             this.txt_raf.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Raf Numarası";
             // 
             // rafeklebtn
             // 
-            this.rafeklebtn.Location = new System.Drawing.Point(157, 88);
+            this.rafeklebtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.rafeklebtn.Location = new System.Drawing.Point(323, 61);
+            this.rafeklebtn.Margin = new System.Windows.Forms.Padding(4);
             this.rafeklebtn.Name = "rafeklebtn";
-            this.rafeklebtn.Size = new System.Drawing.Size(79, 39);
+            this.rafeklebtn.Size = new System.Drawing.Size(114, 35);
             this.rafeklebtn.TabIndex = 3;
             this.rafeklebtn.Text = "Raf Ekle";
-            this.rafeklebtn.UseVisualStyleBackColor = true;
+            this.rafeklebtn.UseVisualStyleBackColor = false;
             this.rafeklebtn.Click += new System.EventHandler(this.rafeklebtn_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.pictureBox11);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.rafeklebtn);
+            this.panel1.Controls.Add(this.txt_raf);
+            this.panel1.Location = new System.Drawing.Point(2, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(519, 181);
+            this.panel1.TabIndex = 26;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(28, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(175, 29);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Raf Numarası:";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_book_shelf_40px;
+            this.pictureBox11.Location = new System.Drawing.Point(197, 26);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(29, 30);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 52;
+            this.pictureBox11.TabStop = false;
             // 
             // raf
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(86)))), ((int)(((byte)(131)))));
-            this.ClientSize = new System.Drawing.Size(364, 231);
-            this.Controls.Add(this.txt_raf);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.rafeklebtn);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(521, 179);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "raf";
             this.Text = "raf";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.TextBox txt_raf;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button rafeklebtn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox11;
     }
 }
