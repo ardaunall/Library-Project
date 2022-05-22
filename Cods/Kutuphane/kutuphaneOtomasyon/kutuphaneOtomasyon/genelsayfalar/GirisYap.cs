@@ -27,13 +27,13 @@ namespace kutuphaneOtomasyon
         #region Şifreyi Gizle
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.CheckState == CheckState.Checked) 
+            if (checkBox1.CheckState == CheckState.Checked)
             {
                 textBox2.UseSystemPasswordChar = true;
                 checkBox1.Text = "Şifreyi Göster";
             }
 
-           else if (checkBox1.CheckState == CheckState.Unchecked)
+            else if (checkBox1.CheckState == CheckState.Unchecked)
             {
                 textBox2.UseSystemPasswordChar = false;
                 checkBox1.Text = "Şifreyi Gizle";
@@ -69,6 +69,11 @@ namespace kutuphaneOtomasyon
         private void GirisYap_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)

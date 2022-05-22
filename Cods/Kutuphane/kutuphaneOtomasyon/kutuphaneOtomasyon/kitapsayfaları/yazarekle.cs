@@ -36,7 +36,7 @@ namespace kutuphaneOtomasyon
 
             }
             baglanti.Close();
-            #endregion
+            #endregion 
         }
 
         private void yazarekle_FormClosing(object sender, FormClosingEventArgs e)

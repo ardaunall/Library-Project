@@ -126,5 +126,10 @@ namespace kutuphaneOtomasyon
             anasayfa ac = new anasayfa();
             ac.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

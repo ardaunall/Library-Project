@@ -166,7 +166,7 @@ namespace kutuphaneOtomasyon
             yazar.ExecuteNonQuery();
             int lastInsertedYazarIdValue = getLastInsertedId(baglanti);
 
-            MySqlCommand kategori = new MySqlCommand("insert into kategori (kategoritur) values (@tur)", baglanti);
+            MySqlCommand kategori = new MySqlCommand("insert into kategori (kategoritur) select ", baglanti);
             kategori.Parameters.AddWithValue("@tur", comboKategori.Text);
             kategori.ExecuteNonQuery();
             int lastInsertedKategoriId = getLastInsertedId(baglanti);
@@ -181,6 +181,7 @@ namespace kutuphaneOtomasyon
             konum.Parameters.AddWithValue("@konum", comboRaf.Text);
             konum.ExecuteNonQuery();
             int lastInsertedKategoriKonumId = getLastInsertedId(baglanti);
+
             MySqlCommand ekle = new MySqlCommand("insert into kitap (yazar_id,kategori_id,yayinevi_id,konum_id,dil,sayfasayisi,yayintarih,ciltsayisi,stok,cevirmen,kitap_ad) values (@yazarId,@kategoriId,@yayinEviId,@konumId,@dil,@sayfa,@yayin,@cilt,@stok,@cevirmen,@ad)", baglanti);
             ekle.Parameters.AddWithValue("@yazarId", comboYazar.Items);
             ekle.Parameters.AddWithValue("@kategoriId", comboKategori.Items);
