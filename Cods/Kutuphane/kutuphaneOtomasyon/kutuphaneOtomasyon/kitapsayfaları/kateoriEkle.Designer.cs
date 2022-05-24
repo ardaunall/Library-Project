@@ -65,7 +65,7 @@ namespace kutuphaneOtomasyon
             this.panel1.Controls.Add(this.ktgBtn);
             this.panel1.Controls.Add(this.txt_kate);
             this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(389, 147);
             this.panel1.TabIndex = 27;
@@ -74,7 +74,7 @@ namespace kutuphaneOtomasyon
             // 
             this.pictureBox7.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_opened_folder_40px;
             this.pictureBox7.Location = new System.Drawing.Point(135, 23);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(22, 24);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -100,6 +100,7 @@ namespace kutuphaneOtomasyon
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(390, 147);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "kategoriEkle";
             this.panel1.ResumeLayout(false);

@@ -80,7 +80,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(883, 831);
+            this.panel1.Size = new System.Drawing.Size(883, 760);
             this.panel1.TabIndex = 10;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -89,7 +89,7 @@
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(110)))));
             this.panel7.Controls.Add(this.dataGridView1);
             this.panel7.Controls.Add(this.label5);
-            this.panel7.Location = new System.Drawing.Point(11, 482);
+            this.panel7.Location = new System.Drawing.Point(11, 378);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(849, 334);
@@ -149,14 +149,14 @@
             this.panel2.Location = new System.Drawing.Point(11, 104);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(849, 357);
+            this.panel2.Size = new System.Drawing.Size(849, 255);
             this.panel2.TabIndex = 30;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // comboKitap
             // 
             this.comboKitap.FormattingEnabled = true;
-            this.comboKitap.Location = new System.Drawing.Point(442, 144);
+            this.comboKitap.Location = new System.Drawing.Point(448, 104);
             this.comboKitap.Name = "comboKitap";
             this.comboKitap.Size = new System.Drawing.Size(128, 21);
             this.comboKitap.TabIndex = 48;
@@ -164,7 +164,7 @@
             // comboOgr
             // 
             this.comboOgr.FormattingEnabled = true;
-            this.comboOgr.Location = new System.Drawing.Point(442, 107);
+            this.comboOgr.Location = new System.Drawing.Point(448, 67);
             this.comboOgr.Name = "comboOgr";
             this.comboOgr.Size = new System.Drawing.Size(128, 21);
             this.comboOgr.TabIndex = 47;
@@ -172,7 +172,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.Location = new System.Drawing.Point(443, 244);
+            this.button1.Location = new System.Drawing.Point(449, 207);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 27);
@@ -184,7 +184,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(442, 217);
+            this.dateTimePicker2.Location = new System.Drawing.Point(448, 177);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(128, 20);
             this.dateTimePicker2.TabIndex = 46;
@@ -192,7 +192,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(442, 181);
+            this.dateTimePicker1.Location = new System.Drawing.Point(448, 141);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(128, 20);
             this.dateTimePicker1.TabIndex = 45;
@@ -200,7 +200,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_pay_date_48px;
-            this.pictureBox3.Location = new System.Drawing.Point(418, 180);
+            this.pictureBox3.Location = new System.Drawing.Point(424, 140);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(22, 24);
@@ -211,7 +211,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_pay_date_48px;
-            this.pictureBox6.Location = new System.Drawing.Point(419, 216);
+            this.pictureBox6.Location = new System.Drawing.Point(425, 176);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(22, 24);
@@ -222,7 +222,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::kutuphaneOtomasyon.Properties.Resources.kitap2;
-            this.pictureBox1.Location = new System.Drawing.Point(419, 143);
+            this.pictureBox1.Location = new System.Drawing.Point(425, 103);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(22, 24);
@@ -233,7 +233,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_token_card_code_48px;
-            this.pictureBox4.Location = new System.Drawing.Point(418, 107);
+            this.pictureBox4.Location = new System.Drawing.Point(424, 67);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(22, 24);
@@ -246,7 +246,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(291, 180);
+            this.label9.Location = new System.Drawing.Point(297, 140);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(135, 25);
@@ -258,7 +258,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(300, 217);
+            this.label11.Location = new System.Drawing.Point(306, 177);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(126, 25);
@@ -268,7 +268,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.Location = new System.Drawing.Point(312, 244);
+            this.button2.Location = new System.Drawing.Point(318, 207);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 27);
@@ -282,7 +282,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(329, 143);
+            this.label12.Location = new System.Drawing.Point(335, 103);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(97, 25);
@@ -294,7 +294,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(252, 107);
+            this.label13.Location = new System.Drawing.Point(258, 67);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(175, 25);
@@ -388,14 +388,16 @@
             // 
             // Emanet
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(878, 825);
+            this.ClientSize = new System.Drawing.Size(878, 758);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "Emanet";
             this.Load += new System.EventHandler(this.Emanet_Load);
             this.panel1.ResumeLayout(false);

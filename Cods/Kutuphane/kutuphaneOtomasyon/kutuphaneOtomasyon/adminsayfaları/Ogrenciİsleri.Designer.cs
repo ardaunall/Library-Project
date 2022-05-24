@@ -125,7 +125,7 @@ namespace kutuphaneOtomasyon
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(897, 502);
             this.panel1.TabIndex = 23;
@@ -143,7 +143,7 @@ namespace kutuphaneOtomasyon
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Location = new System.Drawing.Point(68, 121);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(764, 298);
             this.panel3.TabIndex = 29;
@@ -152,7 +152,7 @@ namespace kutuphaneOtomasyon
             // 
             this.pictureBox4.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_token_card_code_48px;
             this.pictureBox4.Location = new System.Drawing.Point(192, 90);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(22, 24);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -188,7 +188,7 @@ namespace kutuphaneOtomasyon
             this.panel4.Controls.Add(this.pictureBox5);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Location = new System.Drawing.Point(2, 2);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(891, 83);
             this.panel4.TabIndex = 28;
@@ -222,7 +222,7 @@ namespace kutuphaneOtomasyon
             // 
             this.pictureBox2.Image = global::kutuphaneOtomasyon.Properties.Resources.exit;
             this.pictureBox2.Location = new System.Drawing.Point(798, 448);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -238,8 +238,9 @@ namespace kutuphaneOtomasyon
             this.ClientSize = new System.Drawing.Size(898, 504);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "Ogrenciİsleri";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

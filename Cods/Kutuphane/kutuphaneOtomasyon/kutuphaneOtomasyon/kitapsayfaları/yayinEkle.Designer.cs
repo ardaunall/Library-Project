@@ -41,19 +41,17 @@ namespace kutuphaneOtomasyon
             // 
             // txt_yayin
             // 
-            this.txt_yayin.Location = new System.Drawing.Point(225, 31);
-            this.txt_yayin.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_yayin.Location = new System.Drawing.Point(169, 25);
             this.txt_yayin.Name = "txt_yayin";
-            this.txt_yayin.Size = new System.Drawing.Size(209, 22);
+            this.txt_yayin.Size = new System.Drawing.Size(158, 20);
             this.txt_yayin.TabIndex = 8;
             // 
             // yayinBtn
             // 
             this.yayinBtn.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.yayinBtn.Location = new System.Drawing.Point(320, 61);
-            this.yayinBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.yayinBtn.Location = new System.Drawing.Point(240, 50);
             this.yayinBtn.Name = "yayinBtn";
-            this.yayinBtn.Size = new System.Drawing.Size(114, 35);
+            this.yayinBtn.Size = new System.Drawing.Size(86, 28);
             this.yayinBtn.TabIndex = 6;
             this.yayinBtn.Text = "Yayın Evi Ekle";
             this.yayinBtn.UseVisualStyleBackColor = false;
@@ -67,17 +65,18 @@ namespace kutuphaneOtomasyon
             this.panel1.Controls.Add(this.yayinBtn);
             this.panel1.Controls.Add(this.txt_yayin);
             this.panel1.Location = new System.Drawing.Point(0, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(519, 181);
+            this.panel1.Size = new System.Drawing.Size(389, 147);
             this.panel1.TabIndex = 25;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_edit_property_50px;
-            this.pictureBox4.Location = new System.Drawing.Point(194, 26);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(146, 21);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(29, 30);
+            this.pictureBox4.Size = new System.Drawing.Size(22, 24);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 47;
             this.pictureBox4.TabStop = false;
@@ -87,21 +86,22 @@ namespace kutuphaneOtomasyon
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(28, 26);
+            this.label2.Location = new System.Drawing.Point(21, 21);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 29);
+            this.label2.Size = new System.Drawing.Size(135, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Yayınevi Ekle:";
             // 
             // yayinEkle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(517, 175);
+            this.ClientSize = new System.Drawing.Size(388, 142);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "yayinEkle";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

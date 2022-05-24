@@ -116,6 +116,7 @@ namespace kutuphaneOtomasyon
             this.label6.Size = new System.Drawing.Size(102, 25);
             this.label6.TabIndex = 17;
             this.label6.Text = "İstatistikler";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -200,7 +201,7 @@ namespace kutuphaneOtomasyon
             this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(278, 22);
+            this.label1.Location = new System.Drawing.Point(278, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(457, 29);
@@ -342,7 +343,6 @@ namespace kutuphaneOtomasyon
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "anasayfa";
             this.Load += new System.EventHandler(this.anasayfa_Load);
             this.panel1.ResumeLayout(false);

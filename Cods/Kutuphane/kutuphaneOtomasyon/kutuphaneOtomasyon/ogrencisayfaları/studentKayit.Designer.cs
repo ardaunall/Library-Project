@@ -85,14 +85,14 @@
             "Yönetim Bilişim Sistemleri",
             "İşletme",
             "Uluslararası Ticaret ve İşletmecilik"});
-            this.cmb_bolum.Location = new System.Drawing.Point(144, 161);
+            this.cmb_bolum.Location = new System.Drawing.Point(148, 190);
             this.cmb_bolum.Name = "cmb_bolum";
             this.cmb_bolum.Size = new System.Drawing.Size(128, 21);
             this.cmb_bolum.TabIndex = 19;
             // 
             // txt_ogrno
             // 
-            this.txt_ogrno.Location = new System.Drawing.Point(144, 233);
+            this.txt_ogrno.Location = new System.Drawing.Point(149, 78);
             this.txt_ogrno.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ogrno.Multiline = true;
             this.txt_ogrno.Name = "txt_ogrno";
@@ -104,7 +104,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(13, 233);
+            this.label6.Location = new System.Drawing.Point(9, 78);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(117, 25);
@@ -115,7 +115,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(142, 270);
+            this.button1.Location = new System.Drawing.Point(147, 266);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 24);
@@ -126,7 +126,7 @@
             // 
             // txt_email
             // 
-            this.txt_email.Location = new System.Drawing.Point(144, 195);
+            this.txt_email.Location = new System.Drawing.Point(148, 224);
             this.txt_email.Margin = new System.Windows.Forms.Padding(2);
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
@@ -135,7 +135,7 @@
             // 
             // txt_soyad
             // 
-            this.txt_soyad.Location = new System.Drawing.Point(144, 123);
+            this.txt_soyad.Location = new System.Drawing.Point(148, 153);
             this.txt_soyad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_soyad.Multiline = true;
             this.txt_soyad.Name = "txt_soyad";
@@ -144,7 +144,7 @@
             // 
             // txt_ad
             // 
-            this.txt_ad.Location = new System.Drawing.Point(144, 84);
+            this.txt_ad.Location = new System.Drawing.Point(148, 115);
             this.txt_ad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ad.Multiline = true;
             this.txt_ad.Name = "txt_ad";
@@ -156,7 +156,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(73, 84);
+            this.label2.Location = new System.Drawing.Point(73, 115);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 25);
@@ -168,7 +168,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(40, 121);
+            this.label3.Location = new System.Drawing.Point(39, 152);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 25);
@@ -180,7 +180,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(20, 158);
+            this.label4.Location = new System.Drawing.Point(19, 189);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 25);
@@ -192,7 +192,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(53, 196);
+            this.label5.Location = new System.Drawing.Point(53, 226);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 25);
@@ -294,14 +294,14 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.pictureBox9);
             this.panel2.Controls.Add(this.cmb_bolum);
             this.panel2.Controls.Add(this.pictureBox7);
             this.panel2.Controls.Add(this.pictureBox6);
-            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txt_ogrno);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.txt_email);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -320,7 +320,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_school_40px;
-            this.pictureBox4.Location = new System.Drawing.Point(121, 158);
+            this.pictureBox4.Location = new System.Drawing.Point(124, 190);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(22, 24);
@@ -331,7 +331,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_name_48px;
-            this.pictureBox9.Location = new System.Drawing.Point(121, 122);
+            this.pictureBox9.Location = new System.Drawing.Point(124, 153);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(22, 24);
@@ -342,7 +342,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_identification_documents_48px1;
-            this.pictureBox7.Location = new System.Drawing.Point(121, 234);
+            this.pictureBox7.Location = new System.Drawing.Point(124, 79);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(22, 24);
@@ -353,7 +353,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_gmail_logo_64px;
-            this.pictureBox6.Location = new System.Drawing.Point(121, 197);
+            this.pictureBox6.Location = new System.Drawing.Point(124, 224);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(22, 24);
@@ -386,7 +386,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_name_48px;
-            this.pictureBox1.Location = new System.Drawing.Point(121, 84);
+            this.pictureBox1.Location = new System.Drawing.Point(124, 116);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(22, 24);
@@ -462,11 +462,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(86)))), ((int)(((byte)(131)))));
-            this.ClientSize = new System.Drawing.Size(973, 498);
+            this.ClientSize = new System.Drawing.Size(971, 499);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "studentKayit";
             this.Text = " ";
             this.Load += new System.EventHandler(this.Form5_Load);

@@ -53,6 +53,12 @@
     <Compile Include="adminsayfaları\emanetAl.Designer.cs">
       <DependentUpon>emanetAl.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminsayfaları\analiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminsayfaları\analiz.Designer.cs">
+      <DependentUpon>analiz.cs</DependentUpon>
+    </Compile>
     <Compile Include="genelsayfalar\anasayfa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </Compile>
     <EmbeddedResource Include="adminsayfaları\emanetAl.resx">
       <DependentUpon>emanetAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminsayfaları\analiz.resx">
+      <DependentUpon>analiz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="genelsayfalar\anasayfa.resx">
       <DependentUpon>anasayfa.cs</DependentUpon>

@@ -149,5 +149,12 @@ namespace kutuphaneOtomasyon
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            analiz ac = new analiz();
+            ac.Show();
+        }
     }
 }
