@@ -52,5 +52,6 @@ namespace kutuphaneOtomasyon
         }
        */
         #endregion
+        public int RowIndex { get; }
     }
 }

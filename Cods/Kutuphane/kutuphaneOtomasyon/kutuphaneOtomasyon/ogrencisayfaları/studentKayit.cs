@@ -105,7 +105,7 @@ namespace kutuphaneOtomasyon
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            displayAndSearch("SELECT ogrenci_id,ad,soyad,bolum_ad,email FROM ogrenci WHERE ogrenci_id LIKE '%" + textBox4.Text + "%'", dataGridView1);
+            displayAndSearch("SELECT ogrenci_id'Öğrenci No',ad'Ad',soyad'Soyad',bolum_ad'Bölüm',email'E-Mail' FROM ogrenci WHERE ogrenci_id LIKE '%" + textBox4.Text + "%'", dataGridView1);
         }
 
         #endregion
