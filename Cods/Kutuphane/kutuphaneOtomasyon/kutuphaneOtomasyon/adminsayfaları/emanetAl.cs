@@ -22,7 +22,7 @@ namespace kutuphaneOtomasyon
         {
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT emanetkitap.emanet_id,emanetkitap.ogrenci_no,kitap.kitap_ad,emanetkitap.emanet_tarih,emanetkitap.teslimtarih FROM emanetkitap INNER JOIN ogrenci ON emanetkitap.ogrenci_no = ogrenci.ogrenci_id INNER JOIN kitap ON emanetkitap.kitap_id = kitap.id", baglanti);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT emanetkitap.emanet_id,emanetkitap.ogrenci_no,kitap.kitap_ad,emanetkitap.emanet_tarih,emanetkitap.teslimtarih, emanetkitap.teslimedildi FROM emanetkitap INNER JOIN ogrenci ON emanetkitap.ogrenci_no = ogrenci.ogrenci_id INNER JOIN kitap ON emanetkitap.kitap_id = kitap.id", baglanti);
             DataTable tablo = new DataTable();
             da.Fill(tablo);
             dataGridView1.DataSource = tablo;
@@ -128,12 +128,12 @@ namespace kutuphaneOtomasyon
             #region Emanet Silme
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
-            string sorgu = "DELETE FROM emanetkitap WHERE emanet_id=@id";
+            string sorgu = "UPDATE emanetkitap SET teslimedildi= \"Teslim Edildi\" where emanet_id=@id";
             MySqlCommand komut = new MySqlCommand(sorgu, baglanti);
             komut.Parameters.AddWithValue("@id", dataGridView1.CurrentRow.Cells[0].Value);
             komut.ExecuteNonQuery();
             baglanti.Close();
-            MessageBox.Show("Emanet Başarı İle Silinidi");
+            MessageBox.Show("Emanet Başarı İle güncellendi");
             KisiListele();
             #endregion
         }
