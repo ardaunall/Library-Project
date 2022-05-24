@@ -20,6 +20,7 @@ namespace kutuphaneOtomasyon
         private void Form2_Load(object sender, EventArgs e)
         {
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
+           
         }
 
         private void cikis_yap_Click(object sender, EventArgs e)
@@ -67,6 +68,11 @@ namespace kutuphaneOtomasyon
         }
 
         private void listele_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -19,10 +19,24 @@ namespace kutuphaneOtomasyon
         {
             InitializeComponent();
         }
-
+        void kitapListele()
+        {
+            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
+            baglanti.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter("Select * From ogrenci", baglanti);
+            DataTable tablo = new DataTable();
+            da.Fill(tablo);
+            dataGridView1.DataSource = tablo;
+            baglanti.Close();
+        }
         private void Form5_Load(object sender, EventArgs e)
         {
-           
+            kitapListele();
+            dataGridView1.Columns[0].HeaderText = "Öğrenci No";
+            dataGridView1.Columns[1].HeaderText = "Ad ";
+            dataGridView1.Columns[2].HeaderText = "Soyad";
+            dataGridView1.Columns[3].HeaderText = "Bölüm";
+            dataGridView1.Columns[4].HeaderText = "E-Mail";
         }
 
         private void button1_Click(object sender, EventArgs e)

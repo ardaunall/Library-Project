@@ -17,7 +17,7 @@ namespace kutuphaneOtomasyon
         {
            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
            baglanti.Open();
-           MySqlDataAdapter da = new MySqlDataAdapter("SELECT kitap.id,kitap.kitap_ad,yazar.ad,kategori.kategoritur,yayinevi.ad,konum.kategorikonum,kitap.dil,kitap.sayfasayisi,kitap.yayintarih,kitap.ciltsayisi,kitap.stok,kitap.cevirmen FROM kitap INNER JOIN yazar ON kitap.yazar_id = yazar.id INNER JOIN kategori ON kitap.kategori_id = kategori.id INNER JOIN yayinevi ON kitap.yayinevi_id = yayinevi.id INNER JOIN konum ON kitap.konum_id = konum.id", baglanti);
+           MySqlDataAdapter da = new MySqlDataAdapter("SELECT kitap.id,kitap.kitap_ad,yazar.ad,kategori.kategoritur,yayinevi.ad,konum.kategorikonum,kitap.dil,kitap.sayfasayisi,kitap.yayintarih,kitap.cevirmen,kitap.ciltsayisi,kitap.stok FROM kitap INNER JOIN yazar ON kitap.yazar_id = yazar.id INNER JOIN kategori ON kitap.kategori_id = kategori.id INNER JOIN yayinevi ON kitap.yayinevi_id = yayinevi.id INNER JOIN konum ON kitap.konum_id = konum.id", baglanti);
            DataTable tablo = new DataTable();
            da.Fill(tablo);
            dataGridView1.DataSource = tablo;
@@ -209,6 +209,7 @@ namespace kutuphaneOtomasyon
 
         private void btn_sil_Click(object sender, EventArgs e)
         {
+            #region Kitap Silme
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
             string sorgu = "DELETE FROM kitap WHERE id=@id";
@@ -216,9 +217,11 @@ namespace kutuphaneOtomasyon
             komut.Parameters.AddWithValue("@id",dataGridView1.CurrentRow.Cells[0].Value);
             komut.ExecuteNonQuery();
             baglanti.Close();
+            MessageBox.Show("Kitap Başarı İle Silinidi");
             KisiListele();
+            #endregion
         }
-        
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            
@@ -237,6 +240,11 @@ namespace kutuphaneOtomasyon
             txt_cevirmen.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
             txt_cilt.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
             txt_stok.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

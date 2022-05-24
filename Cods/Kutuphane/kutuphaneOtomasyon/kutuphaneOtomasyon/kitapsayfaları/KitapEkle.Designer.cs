@@ -311,7 +311,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.Location = new System.Drawing.Point(487, 259);
+            this.button1.Location = new System.Drawing.Point(568, 248);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 26);
@@ -379,7 +379,7 @@
             // btn_sil
             // 
             this.btn_sil.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btn_sil.Location = new System.Drawing.Point(624, 259);
+            this.btn_sil.Location = new System.Drawing.Point(1209, 475);
             this.btn_sil.Margin = new System.Windows.Forms.Padding(2);
             this.btn_sil.Name = "btn_sil";
             this.btn_sil.Size = new System.Drawing.Size(128, 26);
@@ -394,6 +394,7 @@
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.btn_sil);
             this.panel1.Location = new System.Drawing.Point(2, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -454,7 +455,6 @@
             this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.pictureBox10);
-            this.panel2.Controls.Add(this.btn_sil);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.pictureBox9);
             this.panel2.Controls.Add(this.button7);
