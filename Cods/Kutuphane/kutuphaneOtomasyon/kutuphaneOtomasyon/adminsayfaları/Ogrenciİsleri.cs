@@ -19,10 +19,19 @@ namespace kutuphaneOtomasyon
         }
         private void Form2_Load(object sender, EventArgs e)
         {
+            #region Öğrenci listeleme
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
-           
+            baglanti.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT emanetkitap.ogrenci_no,kitap.kitap_ad,emanetkitap.teslimedildi FROM emanetkitap INNER JOIN ogrenci ON emanetkitap.ogrenci_no = ogrenci.ogrenci_id INNER JOIN kitap ON emanetkitap.kitap_id = kitap.id",baglanti);
+            DataTable tablo = new DataTable();
+            da.Fill(tablo);
+            dataGridView1.DataSource = tablo;
+            baglanti.Close();
+            dataGridView1.Columns[0].HeaderText = "Öğrenci No";
+            dataGridView1.Columns[1].HeaderText = "Kitap İsmi";
+            dataGridView1.Columns[2].HeaderText = "Emanet Durumu";
+            #endregion
         }
-
         private void cikis_yap_Click(object sender, EventArgs e)
         {
            
@@ -47,6 +56,21 @@ namespace kutuphaneOtomasyon
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void listele_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             #region Öğrenci Silme İşlemi
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
@@ -67,14 +91,17 @@ namespace kutuphaneOtomasyon
             #endregion
         }
 
-        private void listele_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
+            baglanti.Open();
+            MySqlDataAdapter ktp = new MySqlDataAdapter("", baglanti);
+            DataTable ktptab = new DataTable();
+            ktp.Fill(ktptab);
+            dataGridView1.DataSource = ktptab;
+            baglanti.Close();
+            dataGridView1.Columns[0].HeaderText = "Kitap Adı";
+            dataGridView1.Columns[1].HeaderText = "Okunma Sayısı";
         }
     }
 }

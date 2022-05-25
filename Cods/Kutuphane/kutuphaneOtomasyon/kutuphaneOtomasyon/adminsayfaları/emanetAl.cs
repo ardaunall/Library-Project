@@ -49,6 +49,7 @@ namespace kutuphaneOtomasyon
 
         private void button2_Click(object sender, EventArgs e)
         {
+            #region emanet ver
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
             MySqlCommand komut = new MySqlCommand("insert into emanetkitap(ogrenci_no,kitap_id,emanet_tarih,teslimtarih) values (@ogrno,@ad,@emanet,@teslim)", baglanti);
@@ -66,6 +67,8 @@ namespace kutuphaneOtomasyon
                 MessageBox.Show("Emanet Kaydı Oluşturuldu");
             }
             baglanti.Close();
+            KisiListele();
+            #endregion
         }
 
         private void Emanet_Load(object sender, EventArgs e)
@@ -77,6 +80,7 @@ namespace kutuphaneOtomasyon
             dataGridView1.Columns[2].HeaderText = "Kitap İsmi";
             dataGridView1.Columns[3].HeaderText = "Emanet Tarihi";
             dataGridView1.Columns[4].HeaderText = "Teslim Tarihi";
+            dataGridView1.Columns[5].HeaderText = "Emanet Durum";
             #endregion
             #region Kitap
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
@@ -136,6 +140,11 @@ namespace kutuphaneOtomasyon
             MessageBox.Show("Emanet Başarı İle güncellendi");
             KisiListele();
             #endregion
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

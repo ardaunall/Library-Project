@@ -152,6 +152,7 @@ namespace kutuphaneOtomasyon
             }
             baglanti.Close();
             KisiListele();
+            
         }
         #endregion
         #region Boş

@@ -145,5 +145,49 @@ namespace kutuphaneOtomasyon
         {
 
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            #region Öğrenci Güncelleme
+            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
+            baglanti.Open();
+
+            MySqlCommand cmdekle = new MySqlCommand("update ogrenci set (ogrenci_id,ad,soyad,bolum_ad,email) = (@ogrenci_id,@ad,@soyad,@bolum_ad,@email)", baglanti);
+            cmdekle.Parameters.AddWithValue("@ogrenci_id", txt_ogrno.Text);
+            cmdekle.Parameters.AddWithValue("@ad", txt_ad.Text);
+            cmdekle.Parameters.AddWithValue("@soyad", txt_soyad.Text);
+            cmdekle.Parameters.AddWithValue("@bolum_ad", cmb_bolum.Text);
+            cmdekle.Parameters.AddWithValue("@email", txt_email.Text);
+
+
+            if (String.IsNullOrEmpty(txt_ogrno.Text) || String.IsNullOrEmpty(txt_ad.Text) || String.IsNullOrEmpty(txt_soyad.Text) || String.IsNullOrEmpty(cmb_bolum.Text) || String.IsNullOrEmpty(txt_email.Text))
+            {
+                MessageBox.Show("Boş Geçilemez");
+            }
+            else
+            {
+                cmdekle.ExecuteNonQuery();
+                MessageBox.Show("Günelleme Başarılı");
+            }
+
+            baglanti.Close();
+        }
+        #endregion
+
+        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            txt_ogrno.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txt_ad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txt_soyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txt_email.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            cmb_bolum.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }

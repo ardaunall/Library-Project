@@ -78,7 +78,7 @@
             // txt_id
             // 
             this.txt_id.Location = new System.Drawing.Point(201, 130);
-            this.txt_id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_id.Margin = new System.Windows.Forms.Padding(2);
             this.txt_id.Multiline = true;
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(128, 24);
@@ -132,7 +132,7 @@
             // txt_sifre
             // 
             this.txt_sifre.Location = new System.Drawing.Point(201, 229);
-            this.txt_sifre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_sifre.Margin = new System.Windows.Forms.Padding(2);
             this.txt_sifre.Multiline = true;
             this.txt_sifre.Name = "txt_sifre";
             this.txt_sifre.Size = new System.Drawing.Size(128, 24);
@@ -143,7 +143,7 @@
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(201, 297);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 27);
             this.button1.TabIndex = 16;
@@ -154,7 +154,7 @@
             // txt_kullaniciadi
             // 
             this.txt_kullaniciadi.Location = new System.Drawing.Point(201, 197);
-            this.txt_kullaniciadi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_kullaniciadi.Margin = new System.Windows.Forms.Padding(2);
             this.txt_kullaniciadi.Multiline = true;
             this.txt_kullaniciadi.Name = "txt_kullaniciadi";
             this.txt_kullaniciadi.Size = new System.Drawing.Size(128, 23);
@@ -163,7 +163,7 @@
             // txt_email
             // 
             this.txt_email.Location = new System.Drawing.Point(201, 164);
-            this.txt_email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_email.Margin = new System.Windows.Forms.Padding(2);
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(128, 23);
@@ -172,7 +172,7 @@
             // txt_soyad
             // 
             this.txt_soyad.Location = new System.Drawing.Point(201, 96);
-            this.txt_soyad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_soyad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_soyad.Multiline = true;
             this.txt_soyad.Name = "txt_soyad";
             this.txt_soyad.Size = new System.Drawing.Size(128, 24);
@@ -181,7 +181,7 @@
             // txt_ad
             // 
             this.txt_ad.Location = new System.Drawing.Point(201, 61);
-            this.txt_ad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ad.Multiline = true;
             this.txt_ad.Name = "txt_ad";
             this.txt_ad.Size = new System.Drawing.Size(128, 25);
@@ -254,10 +254,11 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(894, 502);
             this.panel1.TabIndex = 22;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -285,7 +286,7 @@
             this.panel2.Controls.Add(this.txt_email);
             this.panel2.Controls.Add(this.txt_kullaniciadi);
             this.panel2.Location = new System.Drawing.Point(246, 110);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(413, 357);
             this.panel2.TabIndex = 25;
@@ -294,7 +295,7 @@
             // 
             this.pictureBox9.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_department_40px;
             this.pictureBox9.Location = new System.Drawing.Point(177, 258);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(22, 24);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -305,7 +306,7 @@
             // 
             this.pictureBox8.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_password_40px;
             this.pictureBox8.Location = new System.Drawing.Point(177, 228);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(22, 24);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -316,7 +317,7 @@
             // 
             this.pictureBox7.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_identification_documents_48px1;
             this.pictureBox7.Location = new System.Drawing.Point(177, 194);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(22, 24);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -327,7 +328,7 @@
             // 
             this.pictureBox6.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_gmail_logo_64px;
             this.pictureBox6.Location = new System.Drawing.Point(177, 161);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(22, 24);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -338,7 +339,7 @@
             // 
             this.pictureBox4.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_token_card_code_48px;
             this.pictureBox4.Location = new System.Drawing.Point(177, 128);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(22, 24);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -349,7 +350,7 @@
             // 
             this.pictureBox3.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_name_48px;
             this.pictureBox3.Location = new System.Drawing.Point(177, 94);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(22, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -360,7 +361,7 @@
             // 
             this.pictureBox1.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_name_48px;
             this.pictureBox1.Location = new System.Drawing.Point(177, 61);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(22, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -372,7 +373,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(110)))));
             this.panel3.Controls.Add(this.label6);
             this.panel3.Location = new System.Drawing.Point(2, 2);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(409, 46);
             this.panel3.TabIndex = 29;
@@ -397,7 +398,7 @@
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Location = new System.Drawing.Point(2, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(891, 83);
             this.panel4.TabIndex = 28;
@@ -431,7 +432,7 @@
             // 
             this.pictureBox2.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_back_arrow_30px;
             this.pictureBox2.Location = new System.Drawing.Point(16, 9);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -449,7 +450,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "AdminKayit";
             this.Load += new System.EventHandler(this.AdminKayit_Load);
