@@ -148,5 +148,10 @@ namespace kutuphaneOtomasyon
             dataKategori.Columns[1].HeaderText = "Okunma Sayısı";
             #endregion
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

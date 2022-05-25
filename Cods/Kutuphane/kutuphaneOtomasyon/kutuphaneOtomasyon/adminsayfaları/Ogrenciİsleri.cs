@@ -19,18 +19,7 @@ namespace kutuphaneOtomasyon
         }
         private void Form2_Load(object sender, EventArgs e)
         {
-            #region Öğrenci listeleme
-            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
-            baglanti.Open();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT emanetkitap.ogrenci_no,kitap.kitap_ad,emanetkitap.teslimedildi FROM emanetkitap INNER JOIN ogrenci ON emanetkitap.ogrenci_no = ogrenci.ogrenci_id INNER JOIN kitap ON emanetkitap.kitap_id = kitap.id",baglanti);
-            DataTable tablo = new DataTable();
-            da.Fill(tablo);
-            dataGridView1.DataSource = tablo;
-            baglanti.Close();
-            dataGridView1.Columns[0].HeaderText = "Öğrenci No";
-            dataGridView1.Columns[1].HeaderText = "Kitap İsmi";
-            dataGridView1.Columns[2].HeaderText = "Emanet Durumu";
-            #endregion
+            
         }
         private void cikis_yap_Click(object sender, EventArgs e)
         {
@@ -93,15 +82,20 @@ namespace kutuphaneOtomasyon
 
         private void button2_Click(object sender, EventArgs e)
         {
+            #region Emanet Durumu
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
-            MySqlDataAdapter ktp = new MySqlDataAdapter("", baglanti);
-            DataTable ktptab = new DataTable();
-            ktp.Fill(ktptab);
-            dataGridView1.DataSource = ktptab;
+            MySqlDataAdapter ema = new MySqlDataAdapter("SELECT ogrenci.ogrenci_id,ogrenci.ad,ogrenci.soyad,ogrenci.bolum_ad,emanetkitap.teslimedildi FROM emanetkitap INNER JOIN ogrenci ON emanetkitap.ogrenci_no = ogrenci.ogrenci_id ORDER BY ogrenci.ogrenci_id ASC", baglanti);
+            DataTable ematab = new DataTable();
+            ema.Fill(ematab);
+            dataGridView1.DataSource = ematab;
             baglanti.Close();
-            dataGridView1.Columns[0].HeaderText = "Kitap Adı";
-            dataGridView1.Columns[1].HeaderText = "Okunma Sayısı";
+            dataGridView1.Columns[0].HeaderText = "Öğrenci No";
+            dataGridView1.Columns[1].HeaderText = "Ad";
+            dataGridView1.Columns[2].HeaderText = "Soyad";
+            dataGridView1.Columns[3].HeaderText = "Bölüm";
+            dataGridView1.Columns[4].HeaderText = "Emanet Durumu";
+            #endregion
         }
     }
 }

@@ -51,6 +51,10 @@ namespace kutuphaneOtomasyon
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(analiz));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.kate_say = new System.Windows.Forms.Label();
+            this.yazar_say = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.kitap_sayi = new System.Windows.Forms.Label();
             this.uye_sayi = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -72,10 +76,6 @@ namespace kutuphaneOtomasyon
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.kate_say = new System.Windows.Forms.Label();
-            this.yazar_say = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataOgrenci)).BeginInit();
@@ -110,6 +110,7 @@ namespace kutuphaneOtomasyon
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1015, 681);
             this.panel1.TabIndex = 22;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -125,6 +126,54 @@ namespace kutuphaneOtomasyon
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(944, 105);
             this.panel2.TabIndex = 48;
+            // 
+            // kate_say
+            // 
+            this.kate_say.AutoSize = true;
+            this.kate_say.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kate_say.ForeColor = System.Drawing.Color.White;
+            this.kate_say.Location = new System.Drawing.Point(880, 57);
+            this.kate_say.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.kate_say.Name = "kate_say";
+            this.kate_say.Size = new System.Drawing.Size(34, 25);
+            this.kate_say.TabIndex = 44;
+            this.kate_say.Text = "00";
+            // 
+            // yazar_say
+            // 
+            this.yazar_say.AutoSize = true;
+            this.yazar_say.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yazar_say.ForeColor = System.Drawing.Color.White;
+            this.yazar_say.Location = new System.Drawing.Point(869, 13);
+            this.yazar_say.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.yazar_say.Name = "yazar_say";
+            this.yazar_say.Size = new System.Drawing.Size(34, 25);
+            this.yazar_say.TabIndex = 43;
+            this.yazar_say.Text = "00";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(656, 57);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(220, 25);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "Toplam Kategori Sayısı:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(667, 13);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(198, 25);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "Toplam Yazar Sayısı:";
             // 
             // kitap_sayi
             // 
@@ -193,7 +242,7 @@ namespace kutuphaneOtomasyon
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -233,7 +282,7 @@ namespace kutuphaneOtomasyon
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -296,7 +345,7 @@ namespace kutuphaneOtomasyon
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -384,7 +433,7 @@ namespace kutuphaneOtomasyon
             dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -494,54 +543,6 @@ namespace kutuphaneOtomasyon
             this.label1.TabIndex = 23;
             this.label1.Text = "ULUDAĞ ÜNİVERSİTESİ KÜTÜPHANESİ";
             // 
-            // kate_say
-            // 
-            this.kate_say.AutoSize = true;
-            this.kate_say.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kate_say.ForeColor = System.Drawing.Color.White;
-            this.kate_say.Location = new System.Drawing.Point(880, 57);
-            this.kate_say.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.kate_say.Name = "kate_say";
-            this.kate_say.Size = new System.Drawing.Size(34, 25);
-            this.kate_say.TabIndex = 44;
-            this.kate_say.Text = "00";
-            // 
-            // yazar_say
-            // 
-            this.yazar_say.AutoSize = true;
-            this.yazar_say.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.yazar_say.ForeColor = System.Drawing.Color.White;
-            this.yazar_say.Location = new System.Drawing.Point(869, 13);
-            this.yazar_say.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.yazar_say.Name = "yazar_say";
-            this.yazar_say.Size = new System.Drawing.Size(34, 25);
-            this.yazar_say.TabIndex = 43;
-            this.yazar_say.Text = "00";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(656, 57);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(220, 25);
-            this.label9.TabIndex = 42;
-            this.label9.Text = "Toplam Kategori Sayısı:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(667, 13);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(198, 25);
-            this.label10.TabIndex = 41;
-            this.label10.Text = "Toplam Yazar Sayısı:";
-            // 
             // analiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,6 +551,7 @@ namespace kutuphaneOtomasyon
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "analiz";
             this.Load += new System.EventHandler(this.analiz_Load);
             this.panel1.ResumeLayout(false);
