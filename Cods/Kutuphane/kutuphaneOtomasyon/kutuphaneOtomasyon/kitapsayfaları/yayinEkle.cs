@@ -22,16 +22,25 @@ namespace kutuphaneOtomasyon
         {
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
-            MySqlCommand yayin = new MySqlCommand("insert into yayinevi (ad) values (@yayinev)", baglanti);
-            yayin.Parameters.AddWithValue("@yayinev", txt_yayin.Text);
-            if (String.IsNullOrEmpty(txt_yayin.Text))
+            MySqlCommand chk = new MySqlCommand("select ad from yayinevi where ad='" + txt_yayin.Text + "'", baglanti);
+            string yyn = (string)chk.ExecuteScalar();
+            if (yyn == txt_yayin.Text)
             {
-                MessageBox.Show("Boş Geçilemez");
+                MessageBox.Show("Yayın Evi Zaten Var");
             }
             else
             {
-                yayin.ExecuteNonQuery();
-                MessageBox.Show("Yayın Evi Kayıdı Başarılı");
+                MySqlCommand yayin = new MySqlCommand("insert into yayinevi (ad) values (@yayinev)", baglanti);
+                yayin.Parameters.AddWithValue("@yayinev", txt_yayin.Text);
+                if (String.IsNullOrEmpty(txt_yayin.Text))
+                {
+                    MessageBox.Show("Boş Geçilemez");
+                }
+                else
+                {
+                    yayin.ExecuteNonQuery();
+                    MessageBox.Show("Yayın Evi Kayıdı Başarılı");
+                }
             }
             baglanti.Close();
         }

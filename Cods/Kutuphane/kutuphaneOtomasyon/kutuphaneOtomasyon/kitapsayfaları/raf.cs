@@ -22,16 +22,25 @@ namespace kutuphaneOtomasyon
         {
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
-            MySqlCommand konum = new MySqlCommand("insert into konum (kategorikonum) values (@konum)", baglanti);
-            konum.Parameters.AddWithValue("@konum", txt_raf.Text);
-            if (String.IsNullOrEmpty(txt_raf.Text))
+            MySqlCommand chk = new MySqlCommand("select kategorikonum from konum where kategorikonum='"+txt_raf.Text+"'",baglanti);
+            string ktg = (string)chk.ExecuteScalar();
+            if (ktg == txt_raf.Text)
             {
-                MessageBox.Show("Boş Geçilemez");
+                MessageBox.Show("Raf Zaten Var");
             }
             else
             {
-                konum.ExecuteNonQuery();
-                MessageBox.Show("Raf Ekleme Başarılı");
+                MySqlCommand konum = new MySqlCommand("insert into konum (kategorikonum) values (@konum)", baglanti);
+                konum.Parameters.AddWithValue("@konum", txt_raf.Text);
+                if (String.IsNullOrEmpty(txt_raf.Text))
+                {
+                    MessageBox.Show("Boş Geçilemez");
+                }
+                else
+                {
+                    konum.ExecuteNonQuery();
+                    MessageBox.Show("Raf Ekleme Başarılı");
+                }
             }
             baglanti.Close();
         }

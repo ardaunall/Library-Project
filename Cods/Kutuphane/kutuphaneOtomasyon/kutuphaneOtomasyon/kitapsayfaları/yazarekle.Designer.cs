@@ -47,7 +47,7 @@ namespace kutuphaneOtomasyon
             this.panel1.Controls.Add(this.txt_yazar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(389, 138);
             this.panel1.TabIndex = 24;
@@ -56,7 +56,7 @@ namespace kutuphaneOtomasyon
             // 
             this.pictureBox1.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_compose_48px1;
             this.pictureBox1.Location = new System.Drawing.Point(202, 37);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(22, 23);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -68,7 +68,7 @@ namespace kutuphaneOtomasyon
             this.yzreklebtn.BackColor = System.Drawing.Color.CornflowerBlue;
             this.yzreklebtn.ForeColor = System.Drawing.Color.Black;
             this.yzreklebtn.Location = new System.Drawing.Point(278, 63);
-            this.yzreklebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.yzreklebtn.Margin = new System.Windows.Forms.Padding(2);
             this.yzreklebtn.Name = "yzreklebtn";
             this.yzreklebtn.Size = new System.Drawing.Size(86, 24);
             this.yzreklebtn.TabIndex = 0;
@@ -79,7 +79,7 @@ namespace kutuphaneOtomasyon
             // txt_yazar
             // 
             this.txt_yazar.Location = new System.Drawing.Point(226, 41);
-            this.txt_yazar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_yazar.Margin = new System.Windows.Forms.Padding(2);
             this.txt_yazar.Name = "txt_yazar";
             this.txt_yazar.Size = new System.Drawing.Size(138, 20);
             this.txt_yazar.TabIndex = 2;
@@ -106,7 +106,8 @@ namespace kutuphaneOtomasyon
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "yazarekle";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.yazarekle_FormClosing);
             this.Load += new System.EventHandler(this.yazarekle_Load);

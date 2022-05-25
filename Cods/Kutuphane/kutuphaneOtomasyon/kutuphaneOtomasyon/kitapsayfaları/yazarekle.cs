@@ -22,18 +22,25 @@ namespace kutuphaneOtomasyon
         {
             #region Yazar Ekleme
             baglanti.Open();
-            MySqlCommand yazar = new MySqlCommand("insert into yazar (ad) values (@ad)", baglanti);
-            yazar.Parameters.AddWithValue("@ad", txt_yazar.Text);
-
-            if (String.IsNullOrEmpty(txt_yazar.Text))
+            MySqlCommand chk = new MySqlCommand("select ad from yazar where ad='" + txt_yazar.Text + "'", baglanti);
+            string yzr = (string)chk.ExecuteScalar();
+            if (yzr == txt_yazar.Text)
             {
-                MessageBox.Show("Boş geçilemez");
+                MessageBox.Show("Yazar Zaten Var");
             }
             else
             {
-                yazar.ExecuteNonQuery();
-                MessageBox.Show("Yazar Ekleme İşlemi Başarılı");
-
+                MySqlCommand yazar = new MySqlCommand("insert into yazar (ad) values (@ad)", baglanti);
+                yazar.Parameters.AddWithValue("@ad", txt_yazar.Text);
+                if (String.IsNullOrEmpty(txt_yazar.Text))
+                {
+                    MessageBox.Show("Boş geçilemez");
+                }
+                else
+                {
+                    yazar.ExecuteNonQuery();
+                    MessageBox.Show("Yazar Ekleme İşlemi Başarılı");
+                }
             }
             baglanti.Close();
             #endregion 

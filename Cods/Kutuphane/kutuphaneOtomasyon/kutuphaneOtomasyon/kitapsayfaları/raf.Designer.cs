@@ -65,7 +65,7 @@ namespace kutuphaneOtomasyon
             this.panel1.Controls.Add(this.rafeklebtn);
             this.panel1.Controls.Add(this.txt_raf);
             this.panel1.Location = new System.Drawing.Point(2, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(389, 147);
             this.panel1.TabIndex = 26;
@@ -74,7 +74,7 @@ namespace kutuphaneOtomasyon
             // 
             this.pictureBox11.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_book_shelf_40px;
             this.pictureBox11.Location = new System.Drawing.Point(148, 21);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(22, 24);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -102,6 +102,7 @@ namespace kutuphaneOtomasyon
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "raf";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

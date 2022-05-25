@@ -65,7 +65,7 @@ namespace kutuphaneOtomasyon
             this.panel1.Controls.Add(this.yayinBtn);
             this.panel1.Controls.Add(this.txt_yayin);
             this.panel1.Location = new System.Drawing.Point(0, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(389, 147);
             this.panel1.TabIndex = 25;
@@ -74,7 +74,7 @@ namespace kutuphaneOtomasyon
             // 
             this.pictureBox4.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_edit_property_50px;
             this.pictureBox4.Location = new System.Drawing.Point(146, 21);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(22, 24);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -102,6 +102,7 @@ namespace kutuphaneOtomasyon
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "yayinEkle";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
