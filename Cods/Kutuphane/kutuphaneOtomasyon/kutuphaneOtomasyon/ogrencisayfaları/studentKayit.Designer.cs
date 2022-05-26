@@ -42,8 +42,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_ograra = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -61,7 +62,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -224,15 +224,15 @@
             this.label7.TabIndex = 20;
             this.label7.Text = "Öğrenci No:";
             // 
-            // textBox4
+            // txt_ograra
             // 
-            this.textBox4.Location = new System.Drawing.Point(306, 54);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(128, 24);
-            this.textBox4.TabIndex = 1;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txt_ograra.Location = new System.Drawing.Point(306, 54);
+            this.txt_ograra.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_ograra.Multiline = true;
+            this.txt_ograra.Name = "txt_ograra";
+            this.txt_ograra.Size = new System.Drawing.Size(128, 24);
+            this.txt_ograra.TabIndex = 1;
+            this.txt_ograra.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // panel1
             // 
@@ -248,13 +248,26 @@
             this.panel1.TabIndex = 23;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(821, 458);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(128, 24);
+            this.button2.TabIndex = 37;
+            this.button2.Text = "Güncelle";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_2);
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.dataGridView1);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.textBox4);
+            this.panel5.Controls.Add(this.txt_ograra);
             this.panel5.Location = new System.Drawing.Point(380, 119);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
@@ -460,19 +473,6 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_2);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(821, 458);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 24);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Güncelle";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_2);
-            // 
             // studentKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -525,7 +525,7 @@
         private System.Windows.Forms.ComboBox cmb_bolum;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_ograra;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;

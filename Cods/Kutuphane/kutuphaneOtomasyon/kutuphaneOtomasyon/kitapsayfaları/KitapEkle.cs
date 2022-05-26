@@ -229,6 +229,7 @@ namespace kutuphaneOtomasyon
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
+            txt_id.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txt_kitapad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             comboYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             comboKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -245,6 +246,40 @@ namespace kutuphaneOtomasyon
         private void button2_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            #region Kitap Güncelleme
+            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
+            baglanti.Open();
+
+            MySqlCommand cmdekle = new MySqlCommand("update kitap set id=@id,yazar_id=@yazarId, kategori_id=@kategoriId, yayinevi_id=@yayinEviId, konum_id=@konumId, dil=@dil, sayfasayisi=@sayfa, yayintarih=@yayin, ciltsayisi=@cilt, stok=@stok, cevirmen=@cevirmen, kitap_ad=@ad where kitap.id=@id", baglanti);
+            cmdekle.Parameters.AddWithValue("@id", txt_id.Text);
+            cmdekle.Parameters.AddWithValue("@yazarId", comboYazar.SelectedValue.ToString());
+            cmdekle.Parameters.AddWithValue("@kategoriId", comboKategori.SelectedValue.ToString());
+            cmdekle.Parameters.AddWithValue("@yayinEviId", comboYayin.SelectedValue.ToString());
+            cmdekle.Parameters.AddWithValue("@konumId", comboRaf.SelectedValue.ToString());
+            cmdekle.Parameters.AddWithValue("@dil", txt_dil.Text);
+            cmdekle.Parameters.AddWithValue("@sayfa", txt_sayfasayi.Text);
+            cmdekle.Parameters.AddWithValue("@yayin", txt_yayintarih.Text);
+            cmdekle.Parameters.AddWithValue("@cilt", txt_cilt.Text);
+            cmdekle.Parameters.AddWithValue("@stok", txt_stok.Text);
+            cmdekle.Parameters.AddWithValue("@cevirmen", txt_cevirmen.Text);
+            cmdekle.Parameters.AddWithValue("@ad", txt_kitapad.Text);
+
+            if (String.IsNullOrEmpty(txt_dil.Text) || String.IsNullOrEmpty(txt_sayfasayi.Text) || String.IsNullOrEmpty(txt_yayintarih.Text) || String.IsNullOrEmpty(txt_cilt.Text) || String.IsNullOrEmpty(txt_stok.Text) || String.IsNullOrEmpty(txt_cevirmen.Text) || String.IsNullOrEmpty(txt_kitapad.Text))
+            {
+                MessageBox.Show("Alanlar Boş Geçilemez");
+            }
+            else
+            {
+                cmdekle.ExecuteNonQuery();
+                MessageBox.Show("Kitap Güncelleme Başarılı");
+            }
+            baglanti.Close();
+            KisiListele();
+            #endregion
         }
     }
 }

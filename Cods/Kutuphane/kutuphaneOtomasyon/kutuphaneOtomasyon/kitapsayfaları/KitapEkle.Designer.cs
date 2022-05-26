@@ -61,6 +61,7 @@
             this.txt_kitapad = new System.Windows.Forms.TextBox();
             this.btn_sil = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
@@ -83,6 +84,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label23 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -392,6 +394,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
@@ -402,6 +405,18 @@
             this.panel1.Size = new System.Drawing.Size(1353, 545);
             this.panel1.TabIndex = 24;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button2.Location = new System.Drawing.Point(829, 475);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(128, 26);
+            this.button2.TabIndex = 54;
+            this.button2.Text = "Kitap Güncelle";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // panel5
             // 
@@ -459,6 +474,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txt_id);
             this.panel2.Controls.Add(this.pictureBox13);
             this.panel2.Controls.Add(this.pictureBox12);
             this.panel2.Controls.Add(this.pictureBox11);
@@ -712,6 +728,16 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
+            // txt_id
+            // 
+            this.txt_id.ForeColor = System.Drawing.Color.Transparent;
+            this.txt_id.Location = new System.Drawing.Point(149, 52);
+            this.txt_id.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(128, 20);
+            this.txt_id.TabIndex = 54;
+            this.txt_id.Visible = false;
+            // 
             // KitapEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -804,5 +830,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txt_id;
     }
 }
