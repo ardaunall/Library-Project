@@ -48,25 +48,34 @@ namespace kutuphaneOtomasyon
             #region Öğrenci Ekleme
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
-
-            MySqlCommand cmdekle = new MySqlCommand("insert into ogrenci (ogrenci_id,ad,soyad,bolum_ad,email) values (@ogrenci_id,@ad,@soyad,@bolum_ad,@email)", baglanti);
-            cmdekle.Parameters.AddWithValue("@ogrenci_id", txt_ogrno.Text);
-            cmdekle.Parameters.AddWithValue("@ad", txt_ad.Text);
-            cmdekle.Parameters.AddWithValue("@soyad", txt_soyad.Text);
-            cmdekle.Parameters.AddWithValue("@bolum_ad", cmb_bolum.Text);
-            cmdekle.Parameters.AddWithValue("@email", txt_email.Text);
-            
-
-            if (String.IsNullOrEmpty(txt_ogrno.Text) || String.IsNullOrEmpty(txt_ad.Text) || String.IsNullOrEmpty(txt_soyad.Text) || String.IsNullOrEmpty(cmb_bolum.Text) || String.IsNullOrEmpty(txt_email.Text))
+            MySqlCommand chkCommand = new MySqlCommand("select ogrenci_id from ogrenci where ogrenci_id", baglanti);
+            int oID = (int)chkCommand.ExecuteScalar();
+            baglanti.Close();
+            if (oID == int.Parse(txt_ogrno.Text))
             {
-                MessageBox.Show("Boş Geçilemez");           
+                MessageBox.Show("Öğrenci Zaten Var");
             }
             else
             {
-                cmdekle.ExecuteNonQuery();
-                MessageBox.Show("Kayıt Başarılı");
+                baglanti.Open();
+                MySqlCommand cmdekle = new MySqlCommand("insert into ogrenci (ogrenci_id,ad,soyad,bolum_ad,email) values (@ogrenci_id,@ad,@soyad,@bolum_ad,@email)", baglanti);
+                cmdekle.Parameters.AddWithValue("@ogrenci_id", txt_ogrno.Text);
+                cmdekle.Parameters.AddWithValue("@ad", txt_ad.Text);
+                cmdekle.Parameters.AddWithValue("@soyad", txt_soyad.Text);
+                cmdekle.Parameters.AddWithValue("@bolum_ad", cmb_bolum.Text);
+                cmdekle.Parameters.AddWithValue("@email", txt_email.Text);
+
+
+                if (String.IsNullOrEmpty(txt_ogrno.Text) || String.IsNullOrEmpty(txt_ad.Text) || String.IsNullOrEmpty(txt_soyad.Text) || String.IsNullOrEmpty(cmb_bolum.Text) || String.IsNullOrEmpty(txt_email.Text))
+                {
+                    MessageBox.Show("Boş Geçilemez");
+                }
+                else
+                {
+                    cmdekle.ExecuteNonQuery();
+                    MessageBox.Show("Kayıt Başarılı");
+                }
             }
-            
             baglanti.Close();
 
             #endregion

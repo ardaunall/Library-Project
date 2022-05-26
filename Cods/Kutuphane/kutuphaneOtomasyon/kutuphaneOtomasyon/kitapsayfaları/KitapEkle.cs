@@ -127,27 +127,38 @@ namespace kutuphaneOtomasyon
         private void button1_Click(object sender, EventArgs e)
         {
             MySqlConnection baglanti = getConnection();
-            MySqlCommand ekle = new MySqlCommand("insert into kitap (yazar_id,kategori_id,yayinevi_id,konum_id,dil,sayfasayisi,yayintarih,ciltsayisi,stok,cevirmen,kitap_ad) values (@yazarId,@kategoriId,@yayinEviId,@konumId,@dil,@sayfa,@yayin,@cilt,@stok,@cevirmen,@ad)", baglanti);
-            ekle.Parameters.AddWithValue("@yazarId", comboYazar.SelectedValue.ToString());
-            ekle.Parameters.AddWithValue("@kategoriId", comboKategori.SelectedValue.ToString());
-            ekle.Parameters.AddWithValue("@yayinEviId", comboYayin.SelectedValue.ToString());
-            ekle.Parameters.AddWithValue("@konumId", comboRaf.SelectedValue.ToString());
-            ekle.Parameters.AddWithValue("@dil", txt_dil.Text);
-            ekle.Parameters.AddWithValue("@sayfa", txt_sayfasayi.Text);
-            ekle.Parameters.AddWithValue("@yayin", txt_yayintarih.Text);
-            ekle.Parameters.AddWithValue("@cilt", txt_cilt.Text);
-            ekle.Parameters.AddWithValue("@stok", txt_stok.Text);
-            ekle.Parameters.AddWithValue("@cevirmen", txt_cevirmen.Text);
-            ekle.Parameters.AddWithValue("@ad", txt_kitapad.Text);
-
-            if (String.IsNullOrEmpty(txt_dil.Text) || String.IsNullOrEmpty(txt_sayfasayi.Text) || String.IsNullOrEmpty(txt_yayintarih.Text) || String.IsNullOrEmpty(txt_cilt.Text) || String.IsNullOrEmpty(txt_stok.Text) || String.IsNullOrEmpty(txt_cevirmen.Text) || String.IsNullOrEmpty(txt_kitapad.Text))
+            MySqlCommand chkCommand = new MySqlCommand("select id from kitap where id",baglanti);
+            int kID = (int)chkCommand.ExecuteScalar();
+            baglanti.Close();
+            if (kID == int.Parse(txt_id.Text))
             {
-                MessageBox.Show("Alanlar Boş Geçilemez"); 
+                MessageBox.Show("Kitap Zaten Var");
             }
             else
             {
-                ekle.ExecuteNonQuery();
-                MessageBox.Show("Kayıt Başarılı");
+                baglanti.Open();
+                MySqlCommand ekle = new MySqlCommand("insert into kitap (yazar_id,kategori_id,yayinevi_id,konum_id,dil,sayfasayisi,yayintarih,ciltsayisi,stok,cevirmen,kitap_ad) values (@yazarId,@kategoriId,@yayinEviId,@konumId,@dil,@sayfa,@yayin,@cilt,@stok,@cevirmen,@ad)", baglanti);
+                ekle.Parameters.AddWithValue("@yazarId", comboYazar.SelectedValue.ToString());
+                ekle.Parameters.AddWithValue("@kategoriId", comboKategori.SelectedValue.ToString());
+                ekle.Parameters.AddWithValue("@yayinEviId", comboYayin.SelectedValue.ToString());
+                ekle.Parameters.AddWithValue("@konumId", comboRaf.SelectedValue.ToString());
+                ekle.Parameters.AddWithValue("@dil", txt_dil.Text);
+                ekle.Parameters.AddWithValue("@sayfa", txt_sayfasayi.Text);
+                ekle.Parameters.AddWithValue("@yayin", txt_yayintarih.Text);
+                ekle.Parameters.AddWithValue("@cilt", txt_cilt.Text);
+                ekle.Parameters.AddWithValue("@stok", txt_stok.Text);
+                ekle.Parameters.AddWithValue("@cevirmen", txt_cevirmen.Text);
+                ekle.Parameters.AddWithValue("@ad", txt_kitapad.Text);
+
+                if (String.IsNullOrEmpty(txt_dil.Text) || String.IsNullOrEmpty(txt_sayfasayi.Text) || String.IsNullOrEmpty(txt_yayintarih.Text) || String.IsNullOrEmpty(txt_cilt.Text) || String.IsNullOrEmpty(txt_stok.Text) || String.IsNullOrEmpty(txt_cevirmen.Text) || String.IsNullOrEmpty(txt_kitapad.Text))
+                {
+                    MessageBox.Show("Alanlar Boş Geçilemez");
+                }
+                else
+                {
+                    ekle.ExecuteNonQuery();
+                    MessageBox.Show("Kayıt Başarılı");
+                }
             }
             baglanti.Close();
             KisiListele();
@@ -224,11 +235,6 @@ namespace kutuphaneOtomasyon
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
-        }
-
-        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
-        {
             txt_id.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txt_kitapad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             comboYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -241,6 +247,11 @@ namespace kutuphaneOtomasyon
             txt_cevirmen.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
             txt_cilt.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
             txt_stok.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
+        }
+
+        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
