@@ -225,10 +225,19 @@ namespace kutuphaneOtomasyon
             baglanti.Open();
             string sorgu = "DELETE FROM kitap WHERE id=@id";
             MySqlCommand komut = new MySqlCommand(sorgu,baglanti);
-            komut.Parameters.AddWithValue("@id",dataGridView1.CurrentRow.Cells[0].Value);
-            komut.ExecuteNonQuery();
+            
+            if (String.IsNullOrEmpty(txt_id.Text))
+            {
+                MessageBox.Show("Lütfen Kitap Seçiniz.");
+            }
+            else
+            {
+                komut.Parameters.AddWithValue("@id", dataGridView1.CurrentRow.Cells[0].Value);
+                komut.ExecuteNonQuery();
+                MessageBox.Show("Kitap Başarı İle Silindi");
+            }
+            
             baglanti.Close();
-            MessageBox.Show("Kitap Başarı İle Silinidi");
             KisiListele();
             #endregion
         }
@@ -291,6 +300,11 @@ namespace kutuphaneOtomasyon
             baglanti.Close();
             KisiListele();
             #endregion
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

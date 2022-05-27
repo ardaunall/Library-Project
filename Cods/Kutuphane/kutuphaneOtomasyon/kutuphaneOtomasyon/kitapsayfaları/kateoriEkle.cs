@@ -40,7 +40,7 @@ namespace kutuphaneOtomasyon
                 else
                 {
                     kategori.ExecuteNonQuery();
-                    MessageBox.Show("Kategori Kayıdı Başarılı");
+                    MessageBox.Show("Kategori Ekleme İşlemi Başarılı");
                 }
             }
             baglanti.Close();
