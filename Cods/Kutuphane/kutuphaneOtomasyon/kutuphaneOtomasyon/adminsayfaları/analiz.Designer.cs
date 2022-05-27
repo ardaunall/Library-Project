@@ -227,6 +227,10 @@ namespace kutuphaneOtomasyon
             // 
             // dataOgrenci
             // 
+            this.dataOgrenci.AllowUserToAddRows = false;
+            this.dataOgrenci.AllowUserToDeleteRows = false;
+            this.dataOgrenci.AllowUserToResizeColumns = false;
+            this.dataOgrenci.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dataOgrenci.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataOgrenci.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(90)))));
@@ -250,6 +254,7 @@ namespace kutuphaneOtomasyon
             this.dataOgrenci.GridColor = System.Drawing.Color.Black;
             this.dataOgrenci.Location = new System.Drawing.Point(14, 361);
             this.dataOgrenci.Name = "dataOgrenci";
+            this.dataOgrenci.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -267,6 +272,10 @@ namespace kutuphaneOtomasyon
             // 
             // dataKitap
             // 
+            this.dataKitap.AllowUserToAddRows = false;
+            this.dataKitap.AllowUserToDeleteRows = false;
+            this.dataKitap.AllowUserToResizeColumns = false;
+            this.dataKitap.AllowUserToResizeRows = false;
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
             this.dataKitap.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataKitap.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(90)))));
@@ -290,6 +299,7 @@ namespace kutuphaneOtomasyon
             this.dataKitap.GridColor = System.Drawing.Color.Black;
             this.dataKitap.Location = new System.Drawing.Point(14, 139);
             this.dataKitap.Name = "dataKitap";
+            this.dataKitap.ReadOnly = true;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -330,6 +340,10 @@ namespace kutuphaneOtomasyon
             // 
             // dataKategori
             // 
+            this.dataKategori.AllowUserToAddRows = false;
+            this.dataKategori.AllowUserToDeleteRows = false;
+            this.dataKategori.AllowUserToResizeColumns = false;
+            this.dataKategori.AllowUserToResizeRows = false;
             dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
             this.dataKategori.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataKategori.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(90)))));
@@ -353,6 +367,7 @@ namespace kutuphaneOtomasyon
             this.dataKategori.GridColor = System.Drawing.Color.Black;
             this.dataKategori.Location = new System.Drawing.Point(558, 361);
             this.dataKategori.Name = "dataKategori";
+            this.dataKategori.ReadOnly = true;
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -418,6 +433,10 @@ namespace kutuphaneOtomasyon
             // 
             // dataYazar
             // 
+            this.dataYazar.AllowUserToAddRows = false;
+            this.dataYazar.AllowUserToDeleteRows = false;
+            this.dataYazar.AllowUserToResizeColumns = false;
+            this.dataYazar.AllowUserToResizeRows = false;
             dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
             this.dataYazar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dataYazar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(90)))));
@@ -441,6 +460,7 @@ namespace kutuphaneOtomasyon
             this.dataYazar.GridColor = System.Drawing.Color.Black;
             this.dataYazar.Location = new System.Drawing.Point(554, 139);
             this.dataYazar.Name = "dataYazar";
+            this.dataYazar.ReadOnly = true;
             dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));

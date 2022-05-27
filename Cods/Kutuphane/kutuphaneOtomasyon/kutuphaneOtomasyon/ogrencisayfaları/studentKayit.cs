@@ -21,6 +21,7 @@ namespace kutuphaneOtomasyon
         }
         void kitapListele()
         {
+            #region liste data
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
             MySqlDataAdapter da = new MySqlDataAdapter("Select * From ogrenci", baglanti);
@@ -28,15 +29,18 @@ namespace kutuphaneOtomasyon
             da.Fill(tablo);
             dataGridView1.DataSource = tablo;
             baglanti.Close();
+            #endregion
         }
         private void Form5_Load(object sender, EventArgs e)
         {
+            #region Öğrenci listele
             kitapListele();
             dataGridView1.Columns[0].HeaderText = "Öğrenci No";
             dataGridView1.Columns[1].HeaderText = "Ad ";
             dataGridView1.Columns[2].HeaderText = "Soyad";
             dataGridView1.Columns[3].HeaderText = "Bölüm";
             dataGridView1.Columns[4].HeaderText = "E-Mail";
+            #endregion
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,25 +48,34 @@ namespace kutuphaneOtomasyon
             #region Öğrenci Ekleme
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
-
-            MySqlCommand cmdekle = new MySqlCommand("insert into ogrenci (ogrenci_id,ad,soyad,bolum_ad,email) values (@ogrenci_id,@ad,@soyad,@bolum_ad,@email)", baglanti);
-            cmdekle.Parameters.AddWithValue("@ogrenci_id", txt_ogrno.Text);
-            cmdekle.Parameters.AddWithValue("@ad", txt_ad.Text);
-            cmdekle.Parameters.AddWithValue("@soyad", txt_soyad.Text);
-            cmdekle.Parameters.AddWithValue("@bolum_ad", cmb_bolum.Text);
-            cmdekle.Parameters.AddWithValue("@email", txt_email.Text);
-            
-
-            if (String.IsNullOrEmpty(txt_ogrno.Text) || String.IsNullOrEmpty(txt_ad.Text) || String.IsNullOrEmpty(txt_soyad.Text) || String.IsNullOrEmpty(cmb_bolum.Text) || String.IsNullOrEmpty(txt_email.Text))
+            MySqlCommand chkCommand = new MySqlCommand("select ogrenci_id from ogrenci where ogrenci_id", baglanti);
+            int oID = (int)chkCommand.ExecuteScalar();
+            baglanti.Close();
+            if (oID == int.Parse(txt_ogrno.Text))
             {
-                MessageBox.Show("Boş Geçilemez");           
+                MessageBox.Show("Öğrenci Zaten Var");
             }
             else
             {
-                cmdekle.ExecuteNonQuery();
-                MessageBox.Show("Kayıt Başarılı");
+                baglanti.Open();
+                MySqlCommand cmdekle = new MySqlCommand("insert into ogrenci (ogrenci_id,ad,soyad,bolum_ad,email) values (@ogrenci_id,@ad,@soyad,@bolum_ad,@email)", baglanti);
+                cmdekle.Parameters.AddWithValue("@ogrenci_id", txt_ogrno.Text);
+                cmdekle.Parameters.AddWithValue("@ad", txt_ad.Text);
+                cmdekle.Parameters.AddWithValue("@soyad", txt_soyad.Text);
+                cmdekle.Parameters.AddWithValue("@bolum_ad", cmb_bolum.Text);
+                cmdekle.Parameters.AddWithValue("@email", txt_email.Text);
+
+
+                if (String.IsNullOrEmpty(txt_ogrno.Text) || String.IsNullOrEmpty(txt_ad.Text) || String.IsNullOrEmpty(txt_soyad.Text) || String.IsNullOrEmpty(cmb_bolum.Text) || String.IsNullOrEmpty(txt_email.Text))
+                {
+                    MessageBox.Show("Boş Geçilemez");
+                }
+                else
+                {
+                    cmdekle.ExecuteNonQuery();
+                    MessageBox.Show("Kayıt Başarılı");
+                }
             }
-            
             baglanti.Close();
 
             #endregion
@@ -103,23 +116,23 @@ namespace kutuphaneOtomasyon
         }
 
         #region Öğrenci Listeleme
-        public static void displayAndSearch(string query, DataGridView dgv)
+        public static void ogrenciAra(string query, DataGridView dgv)
         {
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
 
-            string sql = query;
-            MySqlCommand cmd = new MySqlCommand(sql,baglanti);
-            MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
-            DataTable tbl = new DataTable();
-            adp.Fill(tbl);
-            dgv.DataSource = tbl;
+            string sorgu = query;
+            MySqlCommand ogr = new MySqlCommand(sorgu,baglanti);
+            MySqlDataAdapter adp = new MySqlDataAdapter(ogr);
+            DataTable ogrtbl = new DataTable();
+            adp.Fill(ogrtbl);
+            dgv.DataSource = ogrtbl;
             baglanti.Close();
 
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            displayAndSearch("SELECT ogrenci_id'Öğrenci No',ad'Ad',soyad'Soyad',bolum_ad'Bölüm',email'E-Mail' FROM ogrenci WHERE ogrenci_id LIKE '%" + textBox4.Text + "%'", dataGridView1);
+            ogrenciAra("SELECT ogrenci_id'Öğrenci No',ad'Ad',soyad'Soyad',bolum_ad'Bölüm',email'E-Mail' FROM ogrenci WHERE ogrenci_id LIKE '%" + txt_ograra.Text + "%'", dataGridView1);
         }
 
         #endregion
@@ -148,31 +161,9 @@ namespace kutuphaneOtomasyon
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            #region Öğrenci Güncelleme
-            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
-            baglanti.Open();
-
-            MySqlCommand cmdekle = new MySqlCommand("update ogrenci set (ogrenci_id,ad,soyad,bolum_ad,email) = (@ogrenci_id,@ad,@soyad,@bolum_ad,@email)", baglanti);
-            cmdekle.Parameters.AddWithValue("@ogrenci_id", txt_ogrno.Text);
-            cmdekle.Parameters.AddWithValue("@ad", txt_ad.Text);
-            cmdekle.Parameters.AddWithValue("@soyad", txt_soyad.Text);
-            cmdekle.Parameters.AddWithValue("@bolum_ad", cmb_bolum.Text);
-            cmdekle.Parameters.AddWithValue("@email", txt_email.Text);
-
-
-            if (String.IsNullOrEmpty(txt_ogrno.Text) || String.IsNullOrEmpty(txt_ad.Text) || String.IsNullOrEmpty(txt_soyad.Text) || String.IsNullOrEmpty(cmb_bolum.Text) || String.IsNullOrEmpty(txt_email.Text))
-            {
-                MessageBox.Show("Boş Geçilemez");
-            }
-            else
-            {
-                cmdekle.ExecuteNonQuery();
-                MessageBox.Show("Günelleme Başarılı");
-            }
-
-            baglanti.Close();
+           
         }
-        #endregion
+
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
@@ -187,7 +178,28 @@ namespace kutuphaneOtomasyon
 
         private void button2_Click_2(object sender, EventArgs e)
         {
+            #region Öğrenci Güncelleme
+            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
+            baglanti.Open();
 
+            MySqlCommand cmdekle = new MySqlCommand("update ogrenci set ogrenci_id=@ogrenci_id, ad=@ad, soyad=@soyad, bolum_ad=@bolum_ad, email=@email WHERE  ogrenci.ogrenci_id = @ogrenci_id", baglanti);
+            cmdekle.Parameters.AddWithValue("@ogrenci_id", txt_ogrno.Text);
+            cmdekle.Parameters.AddWithValue("@ad", txt_ad.Text);
+            cmdekle.Parameters.AddWithValue("@soyad", txt_soyad.Text);
+            cmdekle.Parameters.AddWithValue("@bolum_ad", cmb_bolum.Text);
+            cmdekle.Parameters.AddWithValue("@email", txt_email.Text);
+
+            if (String.IsNullOrEmpty(txt_ogrno.Text) || String.IsNullOrEmpty(txt_ad.Text) || String.IsNullOrEmpty(txt_soyad.Text) || String.IsNullOrEmpty(cmb_bolum.Text) || String.IsNullOrEmpty(txt_email.Text))
+            {
+                MessageBox.Show("Boş Geçilemez");
+            }
+            else
+            {
+                cmdekle.ExecuteNonQuery();
+                MessageBox.Show("Günelleme Başarılı");
+            }
+            baglanti.Close();
+            #endregion
         }
     }
 }

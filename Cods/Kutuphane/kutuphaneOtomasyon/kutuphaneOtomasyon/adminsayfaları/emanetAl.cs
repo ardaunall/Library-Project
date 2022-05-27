@@ -118,12 +118,7 @@ namespace kutuphaneOtomasyon
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            comboOgr.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            comboKitap.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            dateTimePicker1.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            dateTimePicker2.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            
 
         }
 
@@ -143,6 +138,16 @@ namespace kutuphaneOtomasyon
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            comboOgr.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            comboKitap.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            dateTimePicker1.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            dateTimePicker2.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

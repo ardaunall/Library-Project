@@ -32,31 +32,36 @@ namespace kutuphaneOtomasyon
             #region Personel Ekleme
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
-
-            MySqlCommand cmdekle = new MySqlCommand("insert into admin (id,ad,soyad,email,kullaniciadi,sifre,departman) values (@id,@ad,@soyad,@email,@kullaniciadi,@sifre,@departman)", baglanti);
-            cmdekle.Parameters.AddWithValue("@id", txt_id.Text);
-            cmdekle.Parameters.AddWithValue("@ad", txt_ad.Text);
-            cmdekle.Parameters.AddWithValue("@soyad", txt_soyad.Text);
-            cmdekle.Parameters.AddWithValue("@email", txt_email.Text);
-            cmdekle.Parameters.AddWithValue("@kullaniciadi", txt_kullaniciadi.Text);
-            cmdekle.Parameters.AddWithValue("@sifre", txt_sifre.Text);
-            cmdekle.Parameters.AddWithValue("@departman", cmb_departman.Text);
-            
-            if (String.IsNullOrEmpty(txt_id.Text) || String.IsNullOrEmpty(txt_ad.Text) || String.IsNullOrEmpty(txt_soyad.Text) || String.IsNullOrEmpty(txt_email.Text) || String.IsNullOrEmpty(txt_kullaniciadi.Text) || String.IsNullOrEmpty(txt_sifre.Text) || String.IsNullOrEmpty(cmb_departman.Text))
+            MySqlCommand chkCommand = new MySqlCommand("select id from admin where id", baglanti);
+            int aID = (int)chkCommand.ExecuteScalar();
+            baglanti.Close();
+            if (aID == int.Parse(txt_id.Text))
             {
-                MessageBox.Show("Boş Geçilemez");
-               
+                MessageBox.Show("Personel Zaten Var");
             }
             else
             {
-                cmdekle.ExecuteNonQuery();
-                MessageBox.Show("Kayıt Başarılı");
+                baglanti.Open();
+                MySqlCommand cmdekle = new MySqlCommand("insert into admin (id,ad,soyad,email,kullaniciadi,sifre,departman) values (@id,@ad,@soyad,@email,@kullaniciadi,@sifre,@departman)", baglanti);
+                cmdekle.Parameters.AddWithValue("@id", txt_id.Text);
+                cmdekle.Parameters.AddWithValue("@ad", txt_ad.Text);
+                cmdekle.Parameters.AddWithValue("@soyad", txt_soyad.Text);
+                cmdekle.Parameters.AddWithValue("@email", txt_email.Text);
+                cmdekle.Parameters.AddWithValue("@kullaniciadi", txt_kullaniciadi.Text);
+                cmdekle.Parameters.AddWithValue("@sifre", txt_sifre.Text);
+                cmdekle.Parameters.AddWithValue("@departman", cmb_departman.Text);
 
-                GirisYap accc = new GirisYap();
-                this.Hide();
-                accc.Show();
+                if (String.IsNullOrEmpty(txt_id.Text) || String.IsNullOrEmpty(txt_ad.Text) || String.IsNullOrEmpty(txt_soyad.Text) || String.IsNullOrEmpty(txt_email.Text) || String.IsNullOrEmpty(txt_kullaniciadi.Text) || String.IsNullOrEmpty(txt_sifre.Text) || String.IsNullOrEmpty(cmb_departman.Text))
+                {
+                    MessageBox.Show("Boş Geçilemez");
+
+                }
+                else
+                {
+                    cmdekle.ExecuteNonQuery();
+                    MessageBox.Show("Kayıt Başarılı");
+                }
             }
-            
             baglanti.Close();
 
             #endregion
