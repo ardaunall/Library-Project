@@ -85,17 +85,31 @@ namespace kutuphaneOtomasyon
             #region Emanet Durumu
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
-            MySqlDataAdapter ema = new MySqlDataAdapter("SELECT ogrenci.ogrenci_id,ogrenci.ad,ogrenci.soyad,ogrenci.bolum_ad,emanetkitap.teslimedildi FROM emanetkitap INNER JOIN ogrenci ON emanetkitap.ogrenci_no = ogrenci.ogrenci_id ORDER BY ogrenci.ogrenci_id ASC", baglanti);
+            MySqlDataAdapter ema = new MySqlDataAdapter("SELECT emanetkitap.emanet_id,ogrenci.ogrenci_id,ogrenci.ad,ogrenci.soyad,ogrenci.bolum_ad,emanetkitap.teslimedildi FROM emanetkitap INNER JOIN ogrenci ON emanetkitap.ogrenci_no = ogrenci.ogrenci_id ORDER BY ogrenci.ogrenci_id ASC", baglanti);
             DataTable ematab = new DataTable();
             ema.Fill(ematab);
             dataGridView1.DataSource = ematab;
             baglanti.Close();
-            dataGridView1.Columns[0].HeaderText = "Öğrenci No";
-            dataGridView1.Columns[1].HeaderText = "Ad";
-            dataGridView1.Columns[2].HeaderText = "Soyad";
-            dataGridView1.Columns[3].HeaderText = "Bölüm";
-            dataGridView1.Columns[4].HeaderText = "Emanet Durumu";
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Öğrenci No";
+            dataGridView1.Columns[2].HeaderText = "Ad";
+            dataGridView1.Columns[3].HeaderText = "Soyad";
+            dataGridView1.Columns[4].HeaderText = "Bölüm";
+            dataGridView1.Columns[5].HeaderText = "Emanet Durumu";
             #endregion
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
+            baglanti.Open();
+            string sorgu = "DELETE FROM emanetkitap where emanet_id=@id";
+            MySqlCommand komut = new MySqlCommand(sorgu, baglanti);
+            komut.Parameters.AddWithValue("@id", dataGridView1.CurrentRow.Cells[0].Value);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Emanet Başarı İle Silindi");
+            
         }
     }
 }

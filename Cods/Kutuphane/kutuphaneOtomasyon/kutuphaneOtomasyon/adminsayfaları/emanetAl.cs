@@ -124,7 +124,7 @@ namespace kutuphaneOtomasyon
 
         private void button1_Click(object sender, EventArgs e)
         {
-            #region Emanet Silme
+            #region Emanet Alma
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
             string sorgu = "UPDATE emanetkitap SET teslimedildi= \"Teslim Edildi\" where emanet_id=@id";
