@@ -127,6 +127,10 @@ namespace kutuphaneOtomasyon
         private void button1_Click(object sender, EventArgs e)
         {
             MySqlConnection baglanti = getConnection();
+<<<<<<< HEAD
+=======
+                baglanti.Open();
+>>>>>>> b87a95203dfa18e6b415a76f1458a52cbfda909c
                 MySqlCommand ekle = new MySqlCommand("insert into kitap (yazar_id,kategori_id,yayinevi_id,konum_id,dil,sayfasayisi,yayintarih,ciltsayisi,stok,cevirmen,kitap_ad) values (@yazarId,@kategoriId,@yayinEviId,@konumId,@dil,@sayfa,@yayin,@cilt,@stok,@cevirmen,@ad)", baglanti);
                 ekle.Parameters.AddWithValue("@yazarId", comboYazar.SelectedValue.ToString());
                 ekle.Parameters.AddWithValue("@kategoriId", comboKategori.SelectedValue.ToString());
@@ -149,6 +153,10 @@ namespace kutuphaneOtomasyon
                     ekle.ExecuteNonQuery();
                     MessageBox.Show("Kayıt Başarılı");
                 }
+<<<<<<< HEAD
+=======
+            
+>>>>>>> b87a95203dfa18e6b415a76f1458a52cbfda909c
             baglanti.Close();
             KisiListele();
             
@@ -214,10 +222,19 @@ namespace kutuphaneOtomasyon
             baglanti.Open();
             string sorgu = "DELETE FROM kitap WHERE id=@id";
             MySqlCommand komut = new MySqlCommand(sorgu,baglanti);
-            komut.Parameters.AddWithValue("@id",dataGridView1.CurrentRow.Cells[0].Value);
-            komut.ExecuteNonQuery();
+            
+            if (String.IsNullOrEmpty(txt_id.Text))
+            {
+                MessageBox.Show("Lütfen Kitap Seçiniz.");
+            }
+            else
+            {
+                komut.Parameters.AddWithValue("@id", dataGridView1.CurrentRow.Cells[0].Value);
+                komut.ExecuteNonQuery();
+                MessageBox.Show("Kitap Başarı İle Silindi");
+            }
+            
             baglanti.Close();
-            MessageBox.Show("Kitap Başarı İle Silinidi");
             KisiListele();
             #endregion
         }
@@ -280,6 +297,11 @@ namespace kutuphaneOtomasyon
             baglanti.Close();
             KisiListele();
             #endregion
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

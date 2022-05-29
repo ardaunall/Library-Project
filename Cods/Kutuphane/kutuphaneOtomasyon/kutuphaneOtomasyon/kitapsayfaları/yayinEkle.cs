@@ -39,7 +39,7 @@ namespace kutuphaneOtomasyon
                 else
                 {
                     yayin.ExecuteNonQuery();
-                    MessageBox.Show("Yayın Evi Kayıdı Başarılı");
+                    MessageBox.Show("Yayın Evi Ekleme İşlemi Başarılı");
                 }
             }
             baglanti.Close();
