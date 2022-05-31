@@ -124,7 +124,7 @@ namespace kutuphaneOtomasyon
             int kontrolID = Convert.ToInt32(dataGridView3.CurrentRow.Cells[0].Value);
             if (textBox7.Text == "" ||textBox2.Text == "" ||  textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "")
             {
-                MessageBox.Show("Silinecek Öğrenciyi Seçiniz");
+                MessageBox.Show("Silinecek Öğrenciyi Seçiniz.");
             }
             else
             {
@@ -135,7 +135,7 @@ namespace kutuphaneOtomasyon
                     sil.Parameters.AddWithValue("@ogrID", dataGridView3.CurrentRow.Cells[0].Value.ToString());
                     sil.ExecuteNonQuery();
                     baglanti.Close();
-                    MessageBox.Show("Öğrenci Başarı İle Silindi");
+                    MessageBox.Show("Öğrenci Başarı İle Silindi.");
 
                     foreach (Control item in Controls)
                     {
@@ -147,7 +147,7 @@ namespace kutuphaneOtomasyon
                 }
                 else
                 {
-                    MessageBox.Show("Öğrenci Emanet Listesinde Bulunduğu İçin Silinemez");
+                    MessageBox.Show("Öğrenci Emanet Listesinde Bulunduğu İçin Silinemez.");
                 }
             }
             ogrListe();
@@ -169,7 +169,7 @@ namespace kutuphaneOtomasyon
             komut.Parameters.AddWithValue("@id", dataGridView1.CurrentRow.Cells[0].Value);
             komut.ExecuteNonQuery();
             baglanti.Close();
-            MessageBox.Show("Emanet Başarı İle Silindi");
+            MessageBox.Show("Emanet Başarı İle Silindi.");
             ktpListe();
             #endregion
         }

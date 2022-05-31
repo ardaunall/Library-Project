@@ -60,12 +60,12 @@ namespace kutuphaneOtomasyon
 
                 if (String.IsNullOrEmpty(txt_ogrno.Text) || String.IsNullOrEmpty(txt_ad.Text) || String.IsNullOrEmpty(txt_soyad.Text) || String.IsNullOrEmpty(cmb_bolum.Text) || String.IsNullOrEmpty(txt_email.Text))
                 {
-                    MessageBox.Show("Boş Geçilemez");
+                    MessageBox.Show("Boş Geçilemez.");
                 }
                 else
                 {
                     cmdekle.ExecuteNonQuery();
-                    MessageBox.Show("Kayıt Başarılı");
+                    MessageBox.Show("Kayıt Başarılı.");
                 }
             ogrenciListele();
             baglanti.Close();
@@ -177,7 +177,7 @@ namespace kutuphaneOtomasyon
             int kontrolID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             if (txt_ogrno.Text == "" || textBox1.Text == "" || txt_ad.Text == "" || txt_soyad.Text == "" || txt_email.Text == "" || cmb_bolum.Text == "")
             {
-                MessageBox.Show("Güncellenecek Öğrenciyi Seçiniz");
+                MessageBox.Show("Güncellenecek Öğrenciyi Seçiniz.");
             }
             else
             {
@@ -193,6 +193,7 @@ namespace kutuphaneOtomasyon
                     cmdekle.Parameters.AddWithValue("@email", txt_email.Text);
                     cmdekle.ExecuteNonQuery();
                     baglanti.Close();
+                    MessageBox.Show("Güncelleme Başarılı.");
                     ogrenciListele();
                     foreach (Control item in Controls)
                     {

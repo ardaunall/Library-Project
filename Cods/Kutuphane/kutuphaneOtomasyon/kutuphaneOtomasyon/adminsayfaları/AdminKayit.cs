@@ -37,7 +37,7 @@ namespace kutuphaneOtomasyon
             baglanti.Close();
             if (aID == int.Parse(txt_id.Text))
             {
-                MessageBox.Show("Personel Zaten Var");
+                MessageBox.Show("Personel Zaten Var.");
             }
             else
             {
@@ -53,13 +53,13 @@ namespace kutuphaneOtomasyon
 
                 if (String.IsNullOrEmpty(txt_id.Text) || String.IsNullOrEmpty(txt_ad.Text) || String.IsNullOrEmpty(txt_soyad.Text) || String.IsNullOrEmpty(txt_email.Text) || String.IsNullOrEmpty(txt_kullaniciadi.Text) || String.IsNullOrEmpty(txt_sifre.Text) || String.IsNullOrEmpty(cmb_departman.Text))
                 {
-                    MessageBox.Show("Boş Geçilemez");
+                    MessageBox.Show("Boş Geçilemez.");
 
                 }
                 else
                 {
                     cmdekle.ExecuteNonQuery();
-                    MessageBox.Show("Kayıt Başarılı");
+                    MessageBox.Show("Kayıt Başarılı.");
                 }
             }
             baglanti.Close();

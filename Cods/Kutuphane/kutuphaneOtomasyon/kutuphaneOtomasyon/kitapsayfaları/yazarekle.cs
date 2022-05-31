@@ -26,7 +26,7 @@ namespace kutuphaneOtomasyon
             string yzr = (string)chk.ExecuteScalar();
             if (yzr == txt_yazar.Text)
             {
-                MessageBox.Show("Yazar Zaten Var");
+                MessageBox.Show("Yazar Zaten Var.");
             }
             else
             {
@@ -34,12 +34,12 @@ namespace kutuphaneOtomasyon
                 yazar.Parameters.AddWithValue("@ad", txt_yazar.Text);
                 if (String.IsNullOrEmpty(txt_yazar.Text))
                 {
-                    MessageBox.Show("Boş geçilemez");
+                    MessageBox.Show("Boş Geçilemez.");
                 }
                 else
                 {
                     yazar.ExecuteNonQuery();
-                    MessageBox.Show("Yazar Ekleme İşlemi Başarılı");
+                    MessageBox.Show("Yazar Ekleme İşlemi Başarılı.");
                 }
             }
             baglanti.Close();

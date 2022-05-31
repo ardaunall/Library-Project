@@ -26,7 +26,7 @@ namespace kutuphaneOtomasyon
             string ktg = (string)chk.ExecuteScalar();
             if (ktg == txt_raf.Text)
             {
-                MessageBox.Show("Raf Zaten Var");
+                MessageBox.Show("Raf Zaten Var.");
             }
             else
             {
@@ -34,12 +34,12 @@ namespace kutuphaneOtomasyon
                 konum.Parameters.AddWithValue("@konum", txt_raf.Text);
                 if (String.IsNullOrEmpty(txt_raf.Text))
                 {
-                    MessageBox.Show("Boş Geçilemez");
+                    MessageBox.Show("Boş Geçilemez.");
                 }
                 else
                 {
                     konum.ExecuteNonQuery();
-                    MessageBox.Show("Raf Ekleme Başarılı");
+                    MessageBox.Show("Raf Ekleme Başarılı.");
                 }
             }
             baglanti.Close();

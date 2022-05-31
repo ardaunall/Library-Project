@@ -26,7 +26,7 @@ namespace kutuphaneOtomasyon
             string yyn = (string)chk.ExecuteScalar();
             if (yyn == txt_yayin.Text)
             {
-                MessageBox.Show("Yayın Evi Zaten Var");
+                MessageBox.Show("Yayınevi Zaten Var.");
             }
             else
             {
@@ -34,12 +34,12 @@ namespace kutuphaneOtomasyon
                 yayin.Parameters.AddWithValue("@yayinev", txt_yayin.Text);
                 if (String.IsNullOrEmpty(txt_yayin.Text))
                 {
-                    MessageBox.Show("Boş Geçilemez");
+                    MessageBox.Show("Boş Geçilemez.");
                 }
                 else
                 {
                     yayin.ExecuteNonQuery();
-                    MessageBox.Show("Yayın Evi Ekleme İşlemi Başarılı");
+                    MessageBox.Show("Yayınevi Ekleme İşlemi Başarılı.");
                 }
             }
             baglanti.Close();

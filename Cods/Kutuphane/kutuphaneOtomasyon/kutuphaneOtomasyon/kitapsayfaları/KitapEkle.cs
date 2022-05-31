@@ -143,12 +143,12 @@ namespace kutuphaneOtomasyon
 
                 if (String.IsNullOrEmpty(txt_dil.Text) || String.IsNullOrEmpty(txt_sayfasayi.Text) || String.IsNullOrEmpty(txt_yayintarih.Text) || String.IsNullOrEmpty(txt_cilt.Text) || String.IsNullOrEmpty(txt_stok.Text) || String.IsNullOrEmpty(txt_cevirmen.Text) || String.IsNullOrEmpty(txt_kitapad.Text))
                 {
-                    MessageBox.Show("Alanlar Boş Geçilemez");
+                    MessageBox.Show("Alanlar Boş Geçilemez.");
                 }
                 else
                 {
                     ekle.ExecuteNonQuery();
-                    MessageBox.Show("Kayıt Başarılı");
+                    MessageBox.Show("Kayıt Başarılı.");
                 }
             baglanti.Close();
             KitapListele();
@@ -227,7 +227,7 @@ namespace kutuphaneOtomasyon
             int kontrolID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             if (txt_id.Text == "" || txt_kitapad.Text == "" || comboYazar.Text == "" || comboYayin.Text == "" || comboKategori.Text == "" || comboRaf.Text == "" || txt_dil.Text == "" || txt_sayfasayi.Text == "" || txt_yayintarih.Text == "" || txt_cevirmen.Text == "" || txt_stok.Text == "")
             {
-                MessageBox.Show("Silinecek Kitabı Seçiniz");
+                MessageBox.Show("Silinecek Kitabı Seçiniz.");
             }
             else
             {
@@ -238,7 +238,7 @@ namespace kutuphaneOtomasyon
                     sil.Parameters.AddWithValue("@kitapID", dataGridView1.CurrentRow.Cells[0].Value.ToString());
                     sil.ExecuteNonQuery();
                     baglanti.Close();
-                    MessageBox.Show("Kitap Başarı İle Silindi");
+                    MessageBox.Show("Kitap Başarı İle Silindi.");
 
                     KitapListele();
                     foreach (Control item in Controls)
@@ -310,12 +310,12 @@ namespace kutuphaneOtomasyon
 
             if (String.IsNullOrEmpty(txt_dil.Text) || String.IsNullOrEmpty(txt_sayfasayi.Text) || String.IsNullOrEmpty(txt_yayintarih.Text) || String.IsNullOrEmpty(txt_cilt.Text) || String.IsNullOrEmpty(txt_stok.Text) || String.IsNullOrEmpty(txt_cevirmen.Text) || String.IsNullOrEmpty(txt_kitapad.Text))
             {
-                MessageBox.Show("Alanlar Boş Geçilemez");
+                MessageBox.Show("Alanlar Boş Geçilemez.");
             }
             else
             {
                 cmdekle.ExecuteNonQuery();
-                MessageBox.Show("Kitap Güncelleme Başarılı");
+                MessageBox.Show("Kitap Güncelleme Başarılı.");
             }
             baglanti.Close();
             KitapListele();

@@ -27,7 +27,7 @@ namespace kutuphaneOtomasyon
             string ktg = (string)chk.ExecuteScalar();
             if (ktg == txt_kate.Text)
             {
-                MessageBox.Show("Kategori Zaten Var");
+                MessageBox.Show("Kategori Zaten Var.");
             }
             else
             {
@@ -35,12 +35,12 @@ namespace kutuphaneOtomasyon
                 kategori.Parameters.AddWithValue("@tur", txt_kate.Text);
                 if (String.IsNullOrEmpty(txt_kate.Text))
                 {
-                    MessageBox.Show("Boş Geçilemez");
+                    MessageBox.Show("Boş Geçilemez.");
                 }
                 else
                 {
                     kategori.ExecuteNonQuery();
-                    MessageBox.Show("Kategori Ekleme İşlemi Başarılı");
+                    MessageBox.Show("Kategori Ekleme İşlemi Başarılı.");
                 }
             }
             baglanti.Close();

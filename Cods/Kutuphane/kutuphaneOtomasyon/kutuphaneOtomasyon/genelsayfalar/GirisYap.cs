@@ -118,11 +118,11 @@ namespace kutuphaneOtomasyon
 
             if (textBox1.Text == "" || textBox2.Text == "")
             {
-                MessageBox.Show("Kullanıcı adı veya şifre boş bırakılamaz");
+                MessageBox.Show("Kullanıcı Adı veya Şifre Boş Bırakılamaz.");
             }
             else if (kontrol == false)
             {
-                MessageBox.Show("Geçersiz Kullanıcı Girişi");
+                MessageBox.Show("Geçersiz Kullanıcı Girişi.");
             }
             baglanti.Close();
             #endregion

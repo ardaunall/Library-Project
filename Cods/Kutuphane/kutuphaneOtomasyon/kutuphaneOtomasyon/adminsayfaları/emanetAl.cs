@@ -60,12 +60,12 @@ namespace kutuphaneOtomasyon
             komut.Parameters.AddWithValue("@teslim", dateTimePicker2.Text);
             if (String.IsNullOrEmpty(comboOgr.Text) || String.IsNullOrEmpty(comboKitap.Text))
             {
-                MessageBox.Show("Boş Geçilemez");
+                MessageBox.Show("Boş Geçilemez.");
             }
             else
             {
                 komut.ExecuteNonQuery();
-                MessageBox.Show("Emanet Kaydı Oluşturuldu");
+                MessageBox.Show("Emanet Kaydı Oluşturuldu.");
             }
             baglanti.Close();
             EmaListele();
@@ -133,7 +133,7 @@ namespace kutuphaneOtomasyon
             komut.Parameters.AddWithValue("@id", dataGridView1.CurrentRow.Cells[0].Value);
             komut.ExecuteNonQuery();
             baglanti.Close();
-            MessageBox.Show("Emanet Başarı İle güncellendi");
+            MessageBox.Show("Emanet Başarı İle güncellendi.");
             EmaListele();
             #endregion
         }
@@ -162,7 +162,7 @@ namespace kutuphaneOtomasyon
             komut.Parameters.AddWithValue("@id", dataGridView1.CurrentRow.Cells[0].Value);
             komut.ExecuteNonQuery();
             baglanti.Close();
-            MessageBox.Show("Emanet Başarı İle Silindi");
+            MessageBox.Show("Emanet Başarı İle Silindi.");
             EmaListele();
             
         }
