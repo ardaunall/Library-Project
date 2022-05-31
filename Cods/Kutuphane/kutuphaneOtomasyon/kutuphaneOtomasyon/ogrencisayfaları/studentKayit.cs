@@ -201,5 +201,10 @@ namespace kutuphaneOtomasyon
             baglanti.Close();
             #endregion
         }
+
+        private void cmb_bolum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

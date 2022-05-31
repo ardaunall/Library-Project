@@ -164,7 +164,7 @@
             this.comboKitap.FormattingEnabled = true;
             this.comboKitap.Location = new System.Drawing.Point(448, 104);
             this.comboKitap.Name = "comboKitap";
-            this.comboKitap.Size = new System.Drawing.Size(128, 21);
+            this.comboKitap.Size = new System.Drawing.Size(161, 21);
             this.comboKitap.TabIndex = 48;
             // 
             // comboOgr
@@ -172,13 +172,13 @@
             this.comboOgr.FormattingEnabled = true;
             this.comboOgr.Location = new System.Drawing.Point(448, 67);
             this.comboOgr.Name = "comboOgr";
-            this.comboOgr.Size = new System.Drawing.Size(128, 21);
+            this.comboOgr.Size = new System.Drawing.Size(161, 21);
             this.comboOgr.TabIndex = 47;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.Location = new System.Drawing.Point(449, 207);
+            this.button1.Location = new System.Drawing.Point(482, 212);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 27);
@@ -192,7 +192,7 @@
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(448, 177);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(128, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(161, 20);
             this.dateTimePicker2.TabIndex = 46;
             // 
             // dateTimePicker1
@@ -200,7 +200,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(448, 141);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(128, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(161, 20);
             this.dateTimePicker1.TabIndex = 45;
             // 
             // pictureBox3
@@ -274,7 +274,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.Location = new System.Drawing.Point(318, 207);
+            this.button2.Location = new System.Drawing.Point(351, 212);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 27);

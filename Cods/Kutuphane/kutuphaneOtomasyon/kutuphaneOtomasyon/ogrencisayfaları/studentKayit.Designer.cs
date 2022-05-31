@@ -85,11 +85,20 @@
             this.cmb_bolum.Items.AddRange(new object[] {
             "Yönetim Bilişim Sistemleri",
             "İşletme",
-            "Uluslararası Ticaret ve İşletmecilik"});
+            "Uluslararası Ticaret ve İşletmecilik",
+            "Çocuk Bakımı ve Gençlik Hizmetleri Bölümü",
+            "Dış Ticaret Bölümü",
+            "Elektrik ve Enerji Bölümü",
+            "İnşaat Bölümü",
+            "Makine ve Metal Teknolojileri Bölümü",
+            "Malzeme ve Malzeme İşleme Teknolojileri Bölümü",
+            "Muhasebe ve Vergi Bölümü",
+            "Pazarlama ve Reklamcılık Bölümü"});
             this.cmb_bolum.Location = new System.Drawing.Point(148, 190);
             this.cmb_bolum.Name = "cmb_bolum";
             this.cmb_bolum.Size = new System.Drawing.Size(128, 21);
             this.cmb_bolum.TabIndex = 19;
+            this.cmb_bolum.SelectedIndexChanged += new System.EventHandler(this.cmb_bolum_SelectedIndexChanged);
             // 
             // txt_ogrno
             // 
