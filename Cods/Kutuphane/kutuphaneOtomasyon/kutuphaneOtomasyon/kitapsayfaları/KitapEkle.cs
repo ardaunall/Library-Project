@@ -13,7 +13,7 @@ namespace kutuphaneOtomasyon
 {
     public partial class KitapEkle : Form
     {
-        void KisiListele()
+        void KitapListele()
         {
            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
            baglanti.Open();
@@ -60,7 +60,7 @@ namespace kutuphaneOtomasyon
         private void KitapEkle_Load(object sender, EventArgs e)
         {
             #region tablo listeleme
-            KisiListele();
+            KitapListele();
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Kitap Adı";
             dataGridView1.Columns[2].HeaderText = "Yazar";
@@ -151,7 +151,7 @@ namespace kutuphaneOtomasyon
                     MessageBox.Show("Kayıt Başarılı");
                 }
             baglanti.Close();
-            KisiListele();
+            KitapListele();
             
         }
         #endregion
@@ -208,44 +208,74 @@ namespace kutuphaneOtomasyon
         }
         #endregion
 
+        public int Kontrol(string Sorgu)
+        {
+            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
+            int control;
+            baglanti.Open();
+            MySqlCommand cmd = new MySqlCommand(Sorgu,baglanti);
+            control = Convert.ToInt32(cmd.ExecuteScalar());
+            baglanti.Close();
+            return control;
+        }
         private void btn_sil_Click(object sender, EventArgs e)
         {
             #region Kitap Silme
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
-            baglanti.Open();
-            string sorgu = "DELETE FROM kitap WHERE id=@id";
-            MySqlCommand komut = new MySqlCommand(sorgu,baglanti);
             
-            if (String.IsNullOrEmpty(txt_id.Text))
+
+            int kontrolID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            if (txt_id.Text == "" || txt_kitapad.Text == "" || comboYazar.Text == "" || comboYayin.Text == "" || comboKategori.Text == "" || comboRaf.Text == "" || txt_dil.Text == "" || txt_sayfasayi.Text == "" || txt_yayintarih.Text == "" || txt_cevirmen.Text == "" || txt_stok.Text == "")
             {
-                MessageBox.Show("Lütfen Kitap Seçiniz.");
+                MessageBox.Show("Silinecek Kitabı Seçiniz");
             }
             else
             {
-                komut.Parameters.AddWithValue("@id", dataGridView1.CurrentRow.Cells[0].Value);
-                komut.ExecuteNonQuery();
-                MessageBox.Show("Kitap Başarı İle Silindi");
+                if (Kontrol("SELECT COUNT('') FROM emanetkitap WHERE kitap_id = '"+ kontrolID +"'") == 0)
+                {
+                    baglanti.Open();
+                    MySqlCommand sil = new MySqlCommand("DELETE FROM kitap where id=@kitapID",baglanti);
+                    sil.Parameters.AddWithValue("@kitapID", dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                    sil.ExecuteNonQuery();
+                    baglanti.Close();
+                    MessageBox.Show("Kitap Başarı İle Silindi");
+
+                    KitapListele();
+                    foreach (Control item in Controls)
+                    {
+                        if (item is TextBox & item is MaskedTextBox & item is ComboBox)
+                        {
+                            item.Text = null;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Kitap Emanet Listesinde Bulunduğu İçin Silinemez");
+                }
             }
-            
             baglanti.Close();
-            KisiListele();
+            KitapListele();
             #endregion
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txt_id.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txt_kitapad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            comboYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            comboKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            comboYayin.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            comboRaf.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txt_dil.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            txt_sayfasayi.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-            txt_yayintarih.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-            txt_cevirmen.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
-            txt_cilt.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
-            txt_stok.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
+            if (e.RowIndex >= 0)
+            {
+                txt_id.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txt_kitapad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                comboYazar.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                comboKategori.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                comboYayin.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                comboRaf.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txt_dil.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txt_sayfasayi.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txt_yayintarih.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+                txt_cevirmen.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+                txt_cilt.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+                txt_stok.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
+            }
         }
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -288,7 +318,7 @@ namespace kutuphaneOtomasyon
                 MessageBox.Show("Kitap Güncelleme Başarılı");
             }
             baglanti.Close();
-            KisiListele();
+            KitapListele();
             #endregion
         }
 
@@ -296,5 +326,24 @@ namespace kutuphaneOtomasyon
         {
 
         }
+        #region Kitap Arama
+        public static void kitapAra(string query, DataGridView dgv)
+        {
+            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
+            string sorgu = query;
+            baglanti.Open();
+            MySqlCommand ogr = new MySqlCommand(sorgu, baglanti);
+            MySqlDataAdapter adp = new MySqlDataAdapter(ogr);
+            DataTable ogrtbl = new DataTable();
+            adp.Fill(ogrtbl);
+            dgv.DataSource = ogrtbl;
+            baglanti.Close();
+
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            kitapAra("SELECT kitap.id,kitap.kitap_ad,yazar.ad,kategori.kategoritur,yayinevi.ad,konum.kategorikonum,kitap.dil,kitap.sayfasayisi,kitap.yayintarih,kitap.cevirmen,kitap.ciltsayisi,kitap.stok FROM kitap INNER JOIN yazar ON kitap.yazar_id = yazar.id INNER JOIN kategori ON kitap.kategori_id = kategori.id INNER JOIN yayinevi ON kitap.yayinevi_id = yayinevi.id INNER JOIN konum ON kitap.konum_id = konum.id WHERE kitap_ad LIKE '%" + textBox1.Text + "%'", dataGridView1);
+        }
+        #endregion
     }
 }

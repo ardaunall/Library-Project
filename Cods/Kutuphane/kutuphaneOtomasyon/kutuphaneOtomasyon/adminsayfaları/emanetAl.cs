@@ -17,8 +17,9 @@ namespace kutuphaneOtomasyon
         {
             InitializeComponent();
         }
+
         MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
-        void KisiListele()
+        void EmaListele()
         {
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
@@ -67,14 +68,14 @@ namespace kutuphaneOtomasyon
                 MessageBox.Show("Emanet Kaydı Oluşturuldu");
             }
             baglanti.Close();
-            KisiListele();
+            EmaListele();
             #endregion
         }
 
         private void Emanet_Load(object sender, EventArgs e)
         {
             #region Emanet Listele
-            KisiListele();
+            EmaListele();
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Öğrenci No";
             dataGridView1.Columns[2].HeaderText = "Kitap İsmi";
@@ -95,7 +96,7 @@ namespace kutuphaneOtomasyon
             comboKitap.DisplayMember = "kitap_ad";
             comboKitap.ValueMember = "id";
             #endregion
-            KisiListele();
+            EmaListele();
             #region Öğrenci 
             baglanti.Open();
             MySqlCommand com = new MySqlCommand("SELECT * FROM ogrenci ORDER BY ad,soyad ASC", baglanti);
@@ -108,7 +109,7 @@ namespace kutuphaneOtomasyon
             comboOgr.DisplayMember = "ad,soyad";
             comboOgr.ValueMember = "ogrenci_id";
             #endregion
-            KisiListele();
+            EmaListele();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -133,7 +134,7 @@ namespace kutuphaneOtomasyon
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Emanet Başarı İle güncellendi");
-            KisiListele();
+            EmaListele();
             #endregion
         }
 
@@ -150,6 +151,30 @@ namespace kutuphaneOtomasyon
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
+            baglanti.Open();
+            string sorgu = "DELETE FROM emanetkitap where emanet_id=@id";
+            MySqlCommand komut = new MySqlCommand(sorgu, baglanti);
+            komut.Parameters.AddWithValue("@id", dataGridView1.CurrentRow.Cells[0].Value);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Emanet Başarı İle Silindi");
+            EmaListele();
+            
+        }
+
+        private void Emanet_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+        }
+
+        private void Emanet_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
     }
 }

@@ -30,10 +30,21 @@ namespace kutuphaneOtomasyon
             dataGridView1.DataSource = tablo;
             baglanti.Close();
         }
-        
-        private void textBox1_TextChanged(object sender, EventArgs e)
+
+        public static void kitapAra(string query, DataGridView dgv)
         {
+            MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
+
+            string sorgu = query;
+            MySqlCommand ogr = new MySqlCommand(sorgu, baglanti);
+            MySqlDataAdapter adp = new MySqlDataAdapter(ogr);
+            DataTable ogrtbl = new DataTable();
+            adp.Fill(ogrtbl);
+            dgv.DataSource = ogrtbl;
+            baglanti.Close();
+
         }
+
         private void cikis_Click(object sender, EventArgs e)
         {
             
@@ -155,6 +166,11 @@ namespace kutuphaneOtomasyon
             this.Close();
             analiz ac = new analiz();
             ac.Show();
+        }
+
+        private void txt_kitapad_TextChanged(object sender, EventArgs e)
+        {
+            kitapAra("SELECT kitap.kitap_ad,yazar.ad,kategori.kategoritur,yayinevi.ad,konum.kategorikonum,kitap.dil,kitap.sayfasayisi,kitap.yayintarih,kitap.cevirmen,kitap.ciltsayisi,kitap.stok FROM kitap INNER JOIN yazar ON kitap.yazar_id = yazar.id INNER JOIN kategori ON kitap.kategori_id = kategori.id INNER JOIN yayinevi ON kitap.yayinevi_id = yayinevi.id INNER JOIN konum ON kitap.konum_id = konum.id WHERE kitap_ad LIKE '%" + txt_kitapad.Text + "%'", dataGridView1);
         }
     }
 }

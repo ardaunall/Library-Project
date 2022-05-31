@@ -29,8 +29,7 @@ namespace kutuphaneOtomasyon
 
         }
 
-        
-
+      
         private void label7_Click(object sender, EventArgs e)
         {
             
@@ -86,10 +85,13 @@ namespace kutuphaneOtomasyon
             ogrenci_sayisi();
             yazar_sayisi();
             kategor_say();
+            enCokKitap();
+            enCokOgr();
+            enCokYazar();
+            enCokKatg();
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void enCokKitap()
         {
-            #region En çok okunan kitap
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
             MySqlDataAdapter ktp = new MySqlDataAdapter("SELECT kitap.kitap_ad ,COUNT(kitap.kitap_ad) FROM emanetkitap INNER JOIN kitap ON emanetkitap.kitap_id = kitap.id GROUP BY emanetkitap.kitap_id ORDER BY COUNT(kitap.kitap_ad) DESC LIMIT 20", baglanti);
@@ -99,11 +101,9 @@ namespace kutuphaneOtomasyon
             baglanti.Close();
             dataKitap.Columns[0].HeaderText = "Kitap Adı";
             dataKitap.Columns[1].HeaderText = "Okunma Sayısı";
-            #endregion
         }
-        private void button4_Click(object sender, EventArgs e)
+        private void enCokOgr()
         {
-            #region En çok kitap okuyan öğrenci
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
             MySqlDataAdapter ogr = new MySqlDataAdapter("SELECT ogrenci.ogrenci_id,ogrenci.ad,ogrenci.soyad,ogrenci.bolum_ad, COUNT(ogrenci.ogrenci_id) FROM emanetkitap INNER JOIN ogrenci ON emanetkitap.ogrenci_no = ogrenci.ogrenci_id GROUP BY emanetkitap.ogrenci_no LIMIT 20", baglanti);
@@ -116,12 +116,9 @@ namespace kutuphaneOtomasyon
             dataOgrenci.Columns[2].HeaderText = "Soyad";
             dataOgrenci.Columns[3].HeaderText = "Bölüm";
             dataOgrenci.Columns[4].HeaderText = "Okuduğu Kitap Sayısı";
-            #endregion
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void enCokYazar()
         {
-            #region En çok okunan yazar
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
             MySqlDataAdapter yzr = new MySqlDataAdapter("SELECT yazar.ad ,COUNT(yazar.ad) FROM emanetkitap INNER JOIN kitap ON emanetkitap.kitap_id = kitap.id INNER JOIN yazar ON kitap.yazar_id = yazar.id GROUP BY emanetkitap.kitap_id ORDER BY COUNT(yazar.ad) DESC LIMIT 20", baglanti);
@@ -131,12 +128,9 @@ namespace kutuphaneOtomasyon
             baglanti.Close();
             dataYazar.Columns[0].HeaderText = "Yazar Adı";
             dataYazar.Columns[1].HeaderText = "Okunma Sayısı";
-            #endregion
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void enCokKatg()
         {
-            #region En çok okunan kategori
             MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
             baglanti.Open();
             MySqlDataAdapter ktg = new MySqlDataAdapter("SELECT kategori.kategoritur ,COUNT(kategori.kategoritur) FROM emanetkitap INNER JOIN kitap ON emanetkitap.kitap_id = kitap.id INNER JOIN kategori ON kitap.kategori_id = kategori.id GROUP BY emanetkitap.kitap_id ORDER BY COUNT(kategori.kategoritur) DESC LIMIT 20", baglanti);
@@ -146,9 +140,7 @@ namespace kutuphaneOtomasyon
             baglanti.Close();
             dataKategori.Columns[0].HeaderText = "Kategori Adı";
             dataKategori.Columns[1].HeaderText = "Okunma Sayısı";
-            #endregion
         }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

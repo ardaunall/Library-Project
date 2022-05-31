@@ -100,7 +100,7 @@ namespace kutuphaneOtomasyon
                     break;
                 }
 
-                if (oku["kullaniciadi"].ToString() == textBox1.Text && oku["sifre"].ToString() == textBox2.Text && oku["departman"].ToString() == "Öğrenci İşleri")
+                if (oku["kullaniciadi"].ToString() == textBox1.Text && oku["sifre"].ToString() == textBox2.Text && oku["departman"].ToString() == "Ögrenci Isleri")
                 {
                     kontrol = true;
                     ad = oku.GetValue(1).ToString();
