@@ -69,8 +69,13 @@ namespace kutuphaneOtomasyon
 
         private void txt_ograra_TextChanged(object sender, EventArgs e)
         {
-            ogrenciAra("SELECT ogrenci_id,ad,soyad,bolum_ad,email FROM ogrenci WHERE ogrenci_id LIKE '%" + txt_ograra.Text + "%'", dataGridView1);
+            ogrenciAra("SELECT o.ogrenci_id, o.ad, o.soyad, k.kitap_ad, e.teslimtarih FROM emanetkitap e, ogrenci o, kitap k WHERE e.ogrenci_no = o.ogrenci_id AND k.id = e.kitap_id AND e.teslimtarih<CURRENT_DATE and e.teslimedildi = 'Teslim Edilmedi' LIKE '%" + txt_ograra.Text + "%'", dataGridView1);
         }
         #endregion
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

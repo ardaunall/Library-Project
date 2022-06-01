@@ -30,7 +30,7 @@ namespace kutuphaneOtomasyon
             dataGridView3.Columns[1].HeaderText = "Ad";
             dataGridView3.Columns[2].HeaderText = "Soyad";
             dataGridView3.Columns[3].HeaderText = "Bölüm";
-            dataGridView3.Columns[4].HeaderText = "Emanet Durumu";
+            dataGridView3.Columns[4].HeaderText = "E-Mail";
         }
         private void ktpListe()
         {

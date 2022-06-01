@@ -37,6 +37,9 @@ namespace kutuphaneOtomasyon
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(geciklenler));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_ograra = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -45,17 +48,14 @@ namespace kutuphaneOtomasyon
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txt_ograra = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,6 +81,39 @@ namespace kutuphaneOtomasyon
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(540, 411);
             this.panel2.TabIndex = 31;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_identification_documents_48px1;
+            this.pictureBox3.Location = new System.Drawing.Point(256, 56);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(22, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 39;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(142, 55);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(117, 25);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "Öğrenci No:";
+            // 
+            // txt_ograra
+            // 
+            this.txt_ograra.Location = new System.Drawing.Point(281, 56);
+            this.txt_ograra.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_ograra.Multiline = true;
+            this.txt_ograra.Name = "txt_ograra";
+            this.txt_ograra.Size = new System.Drawing.Size(128, 24);
+            this.txt_ograra.TabIndex = 37;
+            this.txt_ograra.TextChanged += new System.EventHandler(this.txt_ograra_TextChanged);
             // 
             // dataGridView1
             // 
@@ -140,12 +173,13 @@ namespace kutuphaneOtomasyon
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(167, 11);
+            this.label8.Location = new System.Drawing.Point(151, 11);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(220, 25);
+            this.label8.Size = new System.Drawing.Size(265, 25);
             this.label8.TabIndex = 30;
-            this.label8.Text = "Geciken Kitaplar Listesi ";
+            this.label8.Text = "İade Edilecek Kitaplar Listesi ";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // panel4
             // 
@@ -210,39 +244,6 @@ namespace kutuphaneOtomasyon
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_identification_documents_48px1;
-            this.pictureBox3.Location = new System.Drawing.Point(256, 56);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(22, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 39;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(142, 55);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 25);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "Öğrenci No:";
-            // 
-            // txt_ograra
-            // 
-            this.txt_ograra.Location = new System.Drawing.Point(281, 56);
-            this.txt_ograra.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_ograra.Multiline = true;
-            this.txt_ograra.Name = "txt_ograra";
-            this.txt_ograra.Size = new System.Drawing.Size(128, 24);
-            this.txt_ograra.TabIndex = 37;
-            this.txt_ograra.TextChanged += new System.EventHandler(this.txt_ograra_TextChanged);
-            // 
             // geciklenler
             // 
             this.AllowDrop = true;
@@ -258,6 +259,7 @@ namespace kutuphaneOtomasyon
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -265,7 +267,6 @@ namespace kutuphaneOtomasyon
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
