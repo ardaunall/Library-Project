@@ -95,6 +95,7 @@ namespace kutuphaneOtomasyon
             // 
             // yayinEkle
             // 
+            this.AcceptButton = this.yayinBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -104,6 +105,7 @@ namespace kutuphaneOtomasyon
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "yayinEkle";
+            this.Load += new System.EventHandler(this.yayinEkle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

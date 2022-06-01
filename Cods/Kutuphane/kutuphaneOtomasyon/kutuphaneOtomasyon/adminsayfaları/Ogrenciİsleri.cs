@@ -214,6 +214,7 @@ namespace kutuphaneOtomasyon
         private void txt_ogr_TextChanged(object sender, EventArgs e)
         {
             ogrenciAra("SELECT ogrenci_id,ad,soyad,bolum_ad,email FROM ogrenci WHERE ogrenci_id LIKE '%" + txt_ogr.Text + "%'", dataGridView3);
+            ogrenciAra("SELECT ogrenci_id,ad,soyad,bolum_ad,email FROM ogrenci WHERE ogrenci_id LIKE '%" + txt_ogr.Text + "%'", dataGridView1);
         }
     }
 }

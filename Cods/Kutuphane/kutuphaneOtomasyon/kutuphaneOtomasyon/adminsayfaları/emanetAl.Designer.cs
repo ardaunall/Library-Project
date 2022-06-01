@@ -36,6 +36,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.comboKitap = new System.Windows.Forms.ComboBox();
             this.comboOgr = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -161,6 +161,18 @@
             this.panel2.TabIndex = 30;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button3.Location = new System.Drawing.Point(464, 211);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(102, 27);
+            this.button3.TabIndex = 49;
+            this.button3.Text = "Emanet Kaydını Sil";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // comboKitap
             // 
             this.comboKitap.FormattingEnabled = true;
@@ -176,14 +188,15 @@
             this.comboOgr.Name = "comboOgr";
             this.comboOgr.Size = new System.Drawing.Size(161, 21);
             this.comboOgr.TabIndex = 47;
+            this.comboOgr.SelectedIndexChanged += new System.EventHandler(this.comboOgr_SelectedIndexChanged);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.Location = new System.Drawing.Point(439, 210);
+            this.button1.Location = new System.Drawing.Point(358, 211);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 27);
+            this.button1.Size = new System.Drawing.Size(102, 27);
             this.button1.TabIndex = 31;
             this.button1.Text = "Kitabı İade Al";
             this.button1.UseVisualStyleBackColor = false;
@@ -276,10 +289,10 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.Location = new System.Drawing.Point(308, 210);
+            this.button2.Location = new System.Drawing.Point(252, 211);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 27);
+            this.button2.Size = new System.Drawing.Size(102, 27);
             this.button2.TabIndex = 34;
             this.button2.Text = "Emanet Ver";
             this.button2.UseVisualStyleBackColor = false;
@@ -393,18 +406,6 @@
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(308, 251);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(258, 27);
-            this.button3.TabIndex = 49;
-            this.button3.Text = "Emanet Kaydını Sil";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Emanet
             // 

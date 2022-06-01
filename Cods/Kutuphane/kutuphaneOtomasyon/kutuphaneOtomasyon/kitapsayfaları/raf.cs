@@ -44,5 +44,10 @@ namespace kutuphaneOtomasyon
             }
             baglanti.Close();
         }
+
+        private void raf_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

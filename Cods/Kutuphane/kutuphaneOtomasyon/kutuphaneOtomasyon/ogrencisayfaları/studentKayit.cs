@@ -241,5 +241,15 @@ namespace kutuphaneOtomasyon
                 cmb_bolum.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             }
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -73,7 +73,7 @@ namespace kutuphaneOtomasyon
             // pictureBox7
             // 
             this.pictureBox7.Image = global::kutuphaneOtomasyon.Properties.Resources.icons8_opened_folder_40px;
-            this.pictureBox7.Location = new System.Drawing.Point(135, 23);
+            this.pictureBox7.Location = new System.Drawing.Point(131, 22);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(22, 24);
@@ -95,6 +95,7 @@ namespace kutuphaneOtomasyon
             // 
             // kategoriEkle
             // 
+            this.AcceptButton = this.ktgBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;

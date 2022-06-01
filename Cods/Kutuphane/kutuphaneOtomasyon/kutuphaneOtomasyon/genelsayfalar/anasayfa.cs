@@ -172,5 +172,27 @@ namespace kutuphaneOtomasyon
         {
             kitapAra("SELECT kitap.kitap_ad,yazar.ad,kategori.kategoritur,yayinevi.ad,konum.kategorikonum,kitap.dil,kitap.sayfasayisi,kitap.yayintarih,kitap.cevirmen,kitap.ciltsayisi,kitap.stok FROM kitap INNER JOIN yazar ON kitap.yazar_id = yazar.id INNER JOIN kategori ON kitap.kategori_id = kategori.id INNER JOIN yayinevi ON kitap.yayinevi_id = yayinevi.id INNER JOIN konum ON kitap.konum_id = konum.id WHERE kitap_ad LIKE '%" + txt_kitapad.Text + "%'", dataGridView1);
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            kitapAra("SELECT kitap.kitap_ad,yazar.ad,kategori.kategoritur,yayinevi.ad,konum.kategorikonum,kitap.dil,kitap.sayfasayisi,kitap.yayintarih,kitap.cevirmen,kitap.ciltsayisi,kitap.stok FROM kitap INNER JOIN yazar ON kitap.yazar_id = yazar.id INNER JOIN kategori ON kitap.kategori_id = kategori.id INNER JOIN yayinevi ON kitap.yayinevi_id = yayinevi.id INNER JOIN konum ON kitap.konum_id = konum.id WHERE yazar.ad LIKE '%" + txt_yazar.Text + "%'", dataGridView1);
+        }
+
+        private void txt_yayin_TextChanged(object sender, EventArgs e)
+        {
+            kitapAra("SELECT kitap.kitap_ad,yazar.ad,kategori.kategoritur,yayinevi.ad,konum.kategorikonum,kitap.dil,kitap.sayfasayisi,kitap.yayintarih,kitap.cevirmen,kitap.ciltsayisi,kitap.stok FROM kitap INNER JOIN yazar ON kitap.yazar_id = yazar.id INNER JOIN kategori ON kitap.kategori_id = kategori.id INNER JOIN yayinevi ON kitap.yayinevi_id = yayinevi.id INNER JOIN konum ON kitap.konum_id = konum.id WHERE yayinevi.ad LIKE '%" + txt_yayin.Text + "%'", dataGridView1);
+        }
+
+        private void txt_kateg_TextChanged(object sender, EventArgs e)
+        {
+            kitapAra("SELECT kitap.kitap_ad,yazar.ad,kategori.kategoritur,yayinevi.ad,konum.kategorikonum,kitap.dil,kitap.sayfasayisi,kitap.yayintarih,kitap.cevirmen,kitap.ciltsayisi,kitap.stok FROM kitap INNER JOIN yazar ON kitap.yazar_id = yazar.id INNER JOIN kategori ON kitap.kategori_id = kategori.id INNER JOIN yayinevi ON kitap.yayinevi_id = yayinevi.id INNER JOIN konum ON kitap.konum_id = konum.id WHERE kategori.kategoritur LIKE '%" + txt_kateg.Text + "%'", dataGridView1);
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            geciklenler ac = new geciklenler();
+            ac.Show();
+        }
     }
 }

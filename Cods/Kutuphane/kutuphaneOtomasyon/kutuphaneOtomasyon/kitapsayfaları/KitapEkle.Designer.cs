@@ -303,6 +303,7 @@
             this.comboYazar.Name = "comboYazar";
             this.comboYazar.Size = new System.Drawing.Size(128, 21);
             this.comboYazar.TabIndex = 27;
+            this.comboYazar.SelectedIndexChanged += new System.EventHandler(this.comboYazar_SelectedIndexChanged);
             // 
             // label12
             // 

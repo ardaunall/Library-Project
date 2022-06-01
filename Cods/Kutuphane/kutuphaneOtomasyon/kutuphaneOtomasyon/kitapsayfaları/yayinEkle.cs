@@ -44,5 +44,10 @@ namespace kutuphaneOtomasyon
             }
             baglanti.Close();
         }
+
+        private void yayinEkle_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

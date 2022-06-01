@@ -17,7 +17,10 @@ namespace kutuphaneOtomasyon
         {
             InitializeComponent();
         }
-
+        /*
+          GECİKEN EMANET LİSTESİ SORGUSU
+        SELECT o.ogrenci_id, o.ad, o.soyad, k.kitap_ad, e.teslimtarih FROM emanetkitap e, ogrenci o, kitap k WHERE e.ogrenci_no = o.ogrenci_id AND k.id = e.kitap_id AND e.teslimtarih<CURRENT_DATE and e.teslimedildi = 'Teslim Edilmedi'
+         */
         MySqlConnection baglanti = new MySqlConnection("SERVER=172.21.54.3;DATABASE=ARES;UID=ARES;PWD=Ares895900.");
         void EmaListele()
         {
@@ -95,11 +98,14 @@ namespace kutuphaneOtomasyon
             comboKitap.DataSource = dsCategories1.Tables[0];
             comboKitap.DisplayMember = "kitap_ad";
             comboKitap.ValueMember = "id";
+            comboKitap.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboKitap.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboKitap.SelectedIndex = -1;
             #endregion
             EmaListele();
             #region Öğrenci 
             baglanti.Open();
-            MySqlCommand com = new MySqlCommand("SELECT * FROM ogrenci ORDER BY ad,soyad ASC", baglanti);
+            MySqlCommand com = new MySqlCommand("SELECT * FROM ogrenci ORDER BY ad,soyad DESC", baglanti);
             MySqlDataAdapter daCategories2 = new MySqlDataAdapter(com);
             DataSet dsCategories2 = new DataSet();
             daCategories2.Fill(dsCategories2);
@@ -108,6 +114,9 @@ namespace kutuphaneOtomasyon
             comboOgr.DataSource = dsCategories2.Tables[0];
             comboOgr.DisplayMember = "ad,soyad";
             comboOgr.ValueMember = "ogrenci_id";
+            comboOgr.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboOgr.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboOgr.SelectedIndex = -1;
             #endregion
             EmaListele();
         }
@@ -175,6 +184,11 @@ namespace kutuphaneOtomasyon
         private void Emanet_FormClosed(object sender, FormClosedEventArgs e)
         {
             
+        }
+
+        private void comboOgr_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

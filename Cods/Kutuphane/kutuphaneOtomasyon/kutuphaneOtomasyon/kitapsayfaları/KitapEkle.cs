@@ -86,6 +86,9 @@ namespace kutuphaneOtomasyon
             comboYazar.DataSource = dsCategories.Tables[0];
             comboYazar.DisplayMember = "ad";
             comboYazar.ValueMember = "id";
+            comboYazar.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboYazar.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboYazar.SelectedIndex = -1;
             #endregion
             #region Kategori
             baglanti.Open();
@@ -98,6 +101,9 @@ namespace kutuphaneOtomasyon
             comboKategori.DataSource = dsCategories2.Tables[0];
             comboKategori.DisplayMember = "kategoritur";
             comboKategori.ValueMember = "id";
+            comboKategori.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboKategori.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboKategori.SelectedIndex = -1;
             #endregion
             #region Yayın evi
             baglanti.Open();
@@ -110,6 +116,9 @@ namespace kutuphaneOtomasyon
             comboYayin.DataSource = dsCategories3.Tables[0];
             comboYayin.DisplayMember = "ad";
             comboYayin.ValueMember = "id";
+            comboYayin.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboYayin.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboYayin.SelectedIndex = -1;
             #endregion
             #region Konum
             baglanti.Open();
@@ -122,6 +131,9 @@ namespace kutuphaneOtomasyon
             comboRaf.DataSource = dsCategories4.Tables[0];
             comboRaf.DisplayMember = "kategorikonum";
             comboRaf.ValueMember = "id";
+            comboRaf.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboRaf.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboRaf.SelectedIndex = -1;
             #endregion
         }
         private void button1_Click(object sender, EventArgs e)
@@ -345,5 +357,10 @@ namespace kutuphaneOtomasyon
             kitapAra("SELECT kitap.id,kitap.kitap_ad,yazar.ad,kategori.kategoritur,yayinevi.ad,konum.kategorikonum,kitap.dil,kitap.sayfasayisi,kitap.yayintarih,kitap.cevirmen,kitap.ciltsayisi,kitap.stok FROM kitap INNER JOIN yazar ON kitap.yazar_id = yazar.id INNER JOIN kategori ON kitap.kategori_id = kategori.id INNER JOIN yayinevi ON kitap.yayinevi_id = yayinevi.id INNER JOIN konum ON kitap.konum_id = konum.id WHERE kitap_ad LIKE '%" + textBox1.Text + "%'", dataGridView1);
         }
         #endregion
+
+        private void comboYazar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

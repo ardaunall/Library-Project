@@ -256,7 +256,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(894, 502);
+            this.panel1.Size = new System.Drawing.Size(894, 503);
             this.panel1.TabIndex = 22;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -285,7 +285,7 @@
             this.panel2.Controls.Add(this.txt_soyad);
             this.panel2.Controls.Add(this.txt_email);
             this.panel2.Controls.Add(this.txt_kullaniciadi);
-            this.panel2.Location = new System.Drawing.Point(246, 110);
+            this.panel2.Location = new System.Drawing.Point(249, 110);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(413, 357);
@@ -442,6 +442,7 @@
             // 
             // AdminKayit
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -451,7 +452,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "AdminKayit";
             this.Load += new System.EventHandler(this.AdminKayit_Load);
             this.panel1.ResumeLayout(false);

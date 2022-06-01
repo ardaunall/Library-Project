@@ -62,6 +62,12 @@
     <Compile Include="adminsayfaları\analiz.Designer.cs">
       <DependentUpon>analiz.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminsayfaları\geciklenler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminsayfaları\geciklenler.Designer.cs">
+      <DependentUpon>geciklenler.cs</DependentUpon>
+    </Compile>
     <Compile Include="genelsayfalar\anasayfa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminsayfaları\analiz.resx">
       <DependentUpon>analiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminsayfaları\geciklenler.resx">
+      <DependentUpon>geciklenler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="genelsayfalar\anasayfa.resx">
       <DependentUpon>anasayfa.cs</DependentUpon>
