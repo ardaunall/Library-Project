@@ -38,8 +38,7 @@ Uygulamayı ilk olarak düzgün başlattığımızdan emin olmak için Uludağ �
 Uludağ Üniversitesi ağına bağlandıktan sonra uygulamayı çalıştırınız. İlk olarak **Giriş Yap** sayfası sizi karşılayacak. 
 
 
-Ekran Görüntüleri/Ana Sayfa.png
-
+![Giriş Yap](https://github.com/ardaunall/Library-Project/blob/main/Ekran%20Görüntüleri/Giriş%20yap.png)
 
 Kaydı olan kullanıcının sisteme girebilmesi için **Kullanıcı Adı** ve  **Şifre** alanları bulunmaktadır. Kullanıcıya kolaylık ve güvenlik sağlaması için **Beni Hatırla** ve **Şifreyi Göster** seçenekleri bulunmaktadır. Gerekli kullanıcı bilgileri girildikten sonra sisteme girmek için **Giriş Yap** butonu bulunmaktadır. Sisteme yeni giriş yapılacağı için **Kayıt Ol** butonu ile personel için kayıt ol sayfasını giriş yapınız. 
 
