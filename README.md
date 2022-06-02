@@ -22,6 +22,15 @@ Personel veya öğrenci kaydı oluşturulduğu zaman mail adreslerine onay maili
 
 Personel ve öğrenci numaraları doğru olduğunu doğrulayabilecek veri tabanı sistemi eklenebilir. 
 
+**Uygulamanın Kullanım Diagramları**
+
+UML DİAGRAM
+
+![UML DİAGRAM](https://github.com/ardaunall/Library-Project/blob/main/Ekran%20Görüntüleri/UML%20Diagrams.png)
+
+USE CASE 
+
+![USE-CASE](https://github.com/ardaunall/Library-Project/blob/main/Ekran%20Görüntüleri/Use-Case.png)
 
 
 **Uygulamanın Kullanım Kılavuzu**
