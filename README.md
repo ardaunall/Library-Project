@@ -45,12 +45,11 @@ Kaydı olan kullanıcının sisteme girebilmesi için **Kullanıcı Adı** ve  *
 
 **Kütüphane Görevlisi İçin Kullanımı**
 
-Ekran Görüntüleri/Personel Kayıt.png
-
+![Personel Kayıt](https://github.com/ardaunall/Library-Project/blob/main/Ekran%20Görüntüleri/Personel%20Kayıt.png)
 
 Personele ait bilgileri giriniz ve **Kaydet** butonu ile kayıt işlemini gerçekleştiriniz. Kayıt işlemi başarı ile tamamlandıktan sonra **Geri Dön** butonu yardımıyla giriş yap sayfasına dönün. Kullanıcı bilgilerinizi girin ve giriş yap butonu ile ana sayfaya girin. 
 
-Ekran Görüntüleri/Ana Sayfa.png
+![Ana Sayfa](https://github.com/ardaunall/Library-Project/blob/main/Ekran%20Görüntüleri/Ana%20Sayfa.png)
 
 Ana sayfada öğrenci, kitaplar, emanetler, iade edilmeyi bekleyen kitaplar, kütüphane istatistikleri ve çıkış yap butonları karşılamaktadır. Karşınıza çıkan tablo kitapların bilgilerinin bulunduğu kitap listesidir. Tablonun üstünde kitap adına göre, yazara göre kategoriye göre ve yayın evine göre arama yapabilmeniz için alanlar bulunmaktadır. Bu alanlara aramak istediğiniz değeri girdiğiniz de eş zamanlı olarak listelenecektir. 
 
@@ -58,7 +57,7 @@ Ana sayfada öğrenci, kitaplar, emanetler, iade edilmeyi bekleyen kitaplar, kü
 Öğrenci ile ilgili işlemleri yapabilmek için **Öğrenciler** yazısına tıklayın. 
 
 
-Ekran Görüntüleri/Öğrenci İşlemleri.png
+![Öğrenci İşlemleri](https://github.com/ardaunall/Library-Project/blob/main/Ekran%20Görüntüleri/Öğrenci%20İşlemleri.png)
 
 
 Öğrenciler sayfasına geldiğinizde öğrencilerin bilgilerini girebileceğiniz öğrenci numarası, isim, soy isim, bölüm ve e-mail alanları bulunmaktadır. Bu alanları öğrencinin bilgileri ile doldurduktan sonra sağ tarafta görünen tabloya eş zamanlı olarak listelenecektir. Herhangi bir öğrenciyi kontrol etmek ya da bilgilerini güncellemek için öğrenci numarasını yazar arayabilirsiniz. Bilgileri güncellenmek istenen öğrenciyi tablodan seçtikten sonra istenilen bilgileri güncelleyin ve **Güncelle** butonuna basın. Gerekli işlemler tamamlandıktan sonra **Geri Dön** butonun yardımıyla ana sayfaya dönün. 
@@ -66,7 +65,7 @@ Ekran Görüntüleri/Öğrenci İşlemleri.png
 
 Kitap işlemleri için **Kitaplar** yazısına tıklayın. 
 
-Ekran Görüntüleri/Kitap İşlemleri.png
+![Kitap İşlemleri](https://github.com/ardaunall/Library-Project/blob/main/Ekran%20Görüntüleri/Kitap%20İşlemleri.png)
 
 
 Sol tarafta kitap bilgilerini ekleyeceğiniz alanlar karşılamaktadır. Sağ tarafta kitap bilgilerinin bulunduğu tablo bulunmaktadır. Kitap eklendiğinde, güncellendiğinde veya çıkartıldığında eş zamanlı olarak tabloda listelenecektir. Kitap adına göre arama yapılabilmesi için tablonun üstünde bulunan alana kitabın adını yazarak arayabilirsiniz. Tablonun altında bulunan **Kitap Güncelle** ve **Kitap Çıkar** butonları bulunmaktadır. Bu işlemleri yapmak için tablodan işlemin yapılacağı kitap seçilmelidir. Kitap işlemleri tamamlandıktan sonra **Geri Dön** butonu yardımıyla ana sayfaya dönün. 
@@ -75,7 +74,7 @@ Sol tarafta kitap bilgilerini ekleyeceğiniz alanlar karşılamaktadır. Sağ ta
 
 Emanet işlemleri için **Emanetler** yazısına tıklayın. 
 
-Ekran Görüntüleri/Emanet İşemleri.png
+![Emanet İşlemleri](https://github.com/ardaunall/Library-Project/blob/main/Ekran%20Görüntüleri/Emanet%20İşlemleri.png)
 
 Emanet sayfasında emanet bilgilerini doldurmak için alanlar bulunmaktadır. Öğrenci numarası alanın ister seçebilir ister yazabilirsiniz. Kitap adının ister seçebilir ister yazabilirsiniz. Öğrenci numarası ve kitap adı bilgileri girildikten sonra **Emanet Tarihi** ve **Teslim Tarihini** takvim resmine basarak seçebilirsiniz. Bütün bilgiler girildikten sonra **Emanet Ver** butonuna tıklayarak emanet işlemini tamamlayabilirsiniz. 
 
@@ -84,14 +83,14 @@ Emanet sayfasında emanet bilgilerini doldurmak için alanlar bulunmaktadır. Ö
 
 Emanet edilmeyenleri görmek için **İade Listesi** yazısına tıklayın. 
 
-Ekran Görüntüleri/İade Edilecekler Listesi.png
+![İade Edilecekler Listesi](https://github.com/ardaunall/Library-Project/blob/main/Ekran%20Görüntüleri/İade%20Edilecekler%20Listesi.png)
 
 Karşınıza çıkan tabloda kitap iadesini henüz gerçekleştirmemiş öğrenci bilgileri, kitap adı ve teslim tarihi bulunmaktadır. Tablonun üstünde bulunan alanda öğrenci numarasına göre arama yapabilirsiniz. **Geri Dön** butonu yardımıyla ana sayfaya dönün. 
 
 Kütüphane istatistikleri için **İstatistik** yazısına tıklayın. 
 
 
-Ekran Görüntüleri/İstatistik.png
+![İstatistik](https://github.com/ardaunall/Library-Project/blob/main/Ekran%20Görüntüleri/İstatistik.png)
 
 
 İstatistik sayfasında en çok okunan kitap, en çok okunan yazar, en çok tercih edilen kategori ve en çok kitap okuyan bilgileri bulunmaktadır. Sayfanın altında ise anlık olarak toplam öğrenci sayısı, toplam kitap sayısı, toplam yazar ve toplam kategori bulunmaktadır. **Geri Dön** butonu yardımıyla ana sayfaya dönün. 
@@ -105,7 +104,7 @@ Hesaptan çıkış yapmak için **Çıkış** yazısına tıklayabilirsiniz.
 
 
 
-Ekran Görüntüleri/Öğrenci İşleri.png
+![Öğrenci İşleri](https://github.com/ardaunall/Library-Project/blob/main/Ekran%20Görüntüleri/Öğrenci%20İşleri.png)
 
 
 
